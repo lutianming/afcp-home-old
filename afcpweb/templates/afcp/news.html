@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% comment %}
 <!--
-  Created on 2008-10-28.
-  $Id: news.html 26 2009-08-04 22:06:00Z guolin.mobi $
+Created on 2008-10-28.
+$Id: news.html 26 2009-08-04 22:06:00Z guolin.mobi $
 -->
 {% endcomment %}
 
@@ -10,27 +10,27 @@
 
 {% block html_head %}
 
-<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/news.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/news.css"/>
 
-<title>Planet AFCP</title>
+  <title>Planet AFCP</title>
 
-{% include "utils/google_ajax_feed_api.html" %}
-{% include "utils/feeds_aggregator.html" %}
+  {% include "utils/google_ajax_feed_api.html" %}
+  {% include "utils/feeds_aggregator.html" %}
 
-<!-- <script type="text/javascript">//<![CDATA[
+  <!-- <script type="text/javascript">//<![CDATA[
 
-function initialize() {
-    var aggregator = new FeedsAggregator();
-    {% for feed in feeds %}
-        aggregator.addFeed("{{ feed.feed_link }}");
-    {% endfor %}
-    aggregator.feedsNodeId = "feeds";
-    aggregator.loadAndRender();
-}
+  function initialize() {
+  var aggregator = new FeedsAggregator();
+  {% for feed in feeds %}
+    aggregator.addFeed("{{ feed.feed_link }}");
+  {% endfor %}
+  aggregator.feedsNodeId = "feeds";
+  aggregator.loadAndRender();
+  }
 
-$(document).ready( function() { initialize(); } );
+  $(document).ready( function() { initialize(); } );
 
-//]]></script> -->
+  //]]></script> -->
 
 {% endblock %}{# html_head #}
 
@@ -43,70 +43,217 @@ $(document).ready( function() { initialize(); } );
 
 {% block sidebar_and_content %}
 
-<div id="planet-content" class="container">
-	
-	
-	<h1>AFCP-Chine首期校友沙龙暨2013归国校友迎新会</h1>
+  <div id="planet-content" class="container">
 
-<!-- <p>12月19日（周四）晚 19:00-21:00
 
-<p>为巴黎高科的校友以及所有高科兄弟院校的朋友准备了一场校友沙龙活动，欢迎各位的参与，或者谢谢帮忙转发给国内的朋友。
+    <h1>AFCP巴黎高科中法友好协会2014年度全体成员大会暨理事团成员选举</h1>
+    <p>尊敬的各位巴黎高科中法协会会员们大家好，协会将于2014年11月22日举行2014年度全体成员大会。</p>
+    <p>
+      时间：2014年11月22日14：00 </br>
 
-<p>活动信息如下： -->
+      地点：Amphi RISLER, AgroParisTech </br>
 
-<p>又是一年花相似，又是一岁人归来。
+      16 rue Claude Bernard </br>
 
-<p>从GMT+1到GMT+8，无论是今年还是往年回到中国的我们，在职业发展中与法国的联系，是否跑赢了时差？
+      75231 Paris Cedex 05
+    </p>
 
-<p>成功的喜悦，转变的迷茫，是我们大部分人共同的经历。
+    <p>欢迎各位会员的参加。</p>
+    <p>
+      以下是大会的流程： </br>
+      14：00-14：15 协会主席对协会本年度的活动做以总结</br>
+      14：15-14：30 协会财务长对会员们做财务报告</br>
+      14：30-16：00 选举 （选举章程请见: <a href="https://docs.google.com/file/d/0B_jvbduzL5ASZ2k0OGstSWFfbWM/edit?usp=docslist_api">链接</a>）
+    </p>
 
-<p>年末之际，圣诞将临，AFCP-Chine举办<strong>首期校友沙龙暨2013归国校友迎新会</strong>，以<strong>「当时区拨回GMT+8: 职业生涯，与法国还相关吗?」</strong>为主题，邀请校友们一聚。同时，我们还荣幸地邀请到三位巴黎高科及友校Sciences Po资深校友作为主讲嘉宾：
+    <h3>我们的协会：</h3>
 
-<ul>
-        <li><strong>刘波，Ecole des Ponts ParisTech，General Manager of SADE (Veolia Water Group) China</strong>
-        <li><strong>王登勇，Science Po，上海证监局期货监管处副处长</strong>
-        <li><strong>唐祺，TELECOM ParisTech，Senior Oversea Sales Manager of Alcatel-Lucent Shanghai Bell</strong>
-</ul>
+    <p>巴黎高科中法友好协会（Association amicale franco-chinoise de ParisTech，简称AFCP）是为巴黎高科所有学校的莘莘学子而服务的协会，其根本目的是促进中法学术、经济和文化的交流，为进一步巩固中法之友好作一份应有的贡献。</p>
 
-<p>让我们重逢老朋友，结实新朋友， 一起品茗嘉宾们智慧的谈话，分享彼此的经验与收获。
+    <p>我们的协会成员包括所有在巴黎高科各校就读或已毕业的学生，其中包括面向巴黎高科各校热爱中国文化的法国学生和那些远赴中国就读于巴黎高科友好中国大学的法国学生。</p>
 
-<p style="color: red;"><strong>活动信息</strong>
 
-<p><strong>时间：</strong>2013年12月19日（周四）晚 19:00-21:00
 
-<p><strong>地点：</strong>上海，享咖 Citta' Espresso Club，福州路318号2楼（附件地图）
+    <h3>我们的服务：</h3>
+    <ul>
+      <li>帮助居住在中国的学生申请就读巴黎高科各个学校;</li>
+      <li>为巴黎高科的中国学生在法国的生活给予帮助，为他们在行政手续、法语学习、以及获取关于居留情况的信息等诸方面提供指引;</li>
+      <li>为巴黎高科在读及已毕业的法国学生到中国继续学习或从事职业活动提供便利;</li>
+      <li>对于向法国及中国企业寻找实习和工作机会的学生，巴黎高科以组织论坛及面谈的形式为他们提供帮助，以期加强他们和法国企业及其他机构的联系;</li>
+      <li>在中国大学中宣传巴黎高科及其中国项目，尤其是与巴黎高科有伙伴关系的中国高校;</li>
+      <li>对于所有在巴黎高科学校中已结束这一兼具中法文化特色学业的学生，在他们的职业生涯中，不论他们身居何处，与他们保持友好联系，以及组织集体活动。</li>
+    </ul>
 
-<p><strong>交通：</strong>地铁2号线南京东路站3号出口
+    <h3>目前本协会主席团的职位需求如下 :</h3>
+    <ul>
+      <li>主席1名</li>
+      <li>副主席1名</li>
+      <li>财务长1名</li>
+      <li>副财务长1名</li>
+      <li>秘书长1名</li>
+      <li>副秘书长1名</li>
+      <li>文娱部负责人2名</li>
+      <li>企业部负责人2名</li>
+      <li>校友部负责人2名</li>
+      <li>宣传部负责人2名</li>
+      <li>IT部负责人1名</li>
+    </ul>
 
-<p><strong>活动形式：</strong>1h 嘉宾分享 + 1h 自由交流 (现场提供饮料、点心)
+    <p>上一届理事团成员有10名留任，我们共需要选出5名竞选人。</p>
 
-<p style="color: red;"><strong>报名方法与费用</strong>
 
-<p><strong>报名：</strong>请发送邮件至afcpchine[_at_]163.com，注明姓名、学校Promo、回国时间。
 
-<p>本次活动限30人，以报名邮件先后顺序为准， <strong>报名截止时间2013年12月15日（周日）晚 24h</strong>
+    <h3>参选人资格：</h3>
+    <p>
+      巴黎高科校友，在校或者毕业，博士，master，Ingénieur都包括在内。（学校列表请见<a href="http://www.paristech.fr/fr/paristech_ecoles.html">paristech ecoles</a> ） ;
+    </p>
+    <p>
+      有在AFCP组织活动及工作的经验或者对AFCP有贡献的会员 ;
+    </p>
+    <p>
+      如果涉及到有争议的竞选人，由理事团成员集体投票决定其被选举资格
+    </p>
+    <p>
+      中文和法语必须熟练掌握其中一种，了解另外一种。
+    </p>
+    <p>
+      申请表: <a href="https://docs.google.com/file/d/0B_jvbduzL5ASSXFNZjBmanpSVHc/edit?usp=docslist_api">链接</a>
+    </p>
 
-<p><strong>活动费用：</strong>2013年归国校友10RMB/人，其余20RMB/人（象征性收取，以补贴场地租用等支出）
+    <h3> 投票人资格 :</h3>
+    <p>
+      巴黎高科校友，在校或者毕业，博士，master，Ingénieur都包括在内 ;
+    </p>
 
-<p><strong>联系人</strong>
+    投票人在从即日起至<strong style="color:red">2014年11月21日24时</strong>之前必须在网上进行注册，否则选票无效
+    <p>
+      投票人注册链接如下:
+      <a href="https://docs.google.com/forms/d/1lljOH1M7C_9s8VZXzT0C03WMPRxYqH0C826CcJFEfFM/viewform?c=0&w=1&usp=mail_form_link">链接</a>
+    </p>
 
-<p>吴云峰 18621895283 yunfeng.wu1[_at_]gmail.com
+    <p>
+      投票人在全体大会当天需携带并向计票人出示有效证件。</br>
+      如果当天有投票资格的投票人无法到场的话，可以委托到场的具有投票资格的投票人代为投票，但是必须将本人有效身份证件复印件交予代为投票的人。</br>
+      竞选者将在2014年11月22日的全体大会上发表竞选演讲，大会通过不记名投票方式现场选出5名理事团成员。</br>
+    </p>
+    
+    <p>
+      巴黎高科中法友好协会享有对这次竞选的最终解释权利 </br>
+      如果有任何关于本次竞选的疑问，欢迎用邮件和我们联系：<a href="mailto:afcparistech@gmail.com">afcparistech@gmail.com</a>或者<a href="mailto:guan.pengpourss@gmail.com">guan.pengpourss@gmail.com</a> </br>
+    </p>
+    <p>
+      AFCP巴黎高科中法友好协会
+    </p>
 
-<p>张辰 13918086935 shaniashaniachen[_at_]hotmail.com 
+    <hr>
 
-<p><strong>志愿者招募</strong>
+    <h1>Assemblée Générale 2014 de l’Association amicale Franco-Chinoise de ParisTech</h1>
+    <p>
+      Chers membres,
+    </p>
+    <p>
+      Notre assemblée générale aura lieu： </br>
+      Le 22 novembre 2014 à 14：00</br>
+      Amphi RISLER, AgroParisTech</br>
+      16 rue Claude Bernard</br>
+      75231 Paris Cedex 05</br>
+    </p>
 
-<p>AFCP-Chine有越来越多的活动有待开展，我们非常希望各位校友能够参与到活动组织中，期待志愿者加入充满活力的AFCP-Chine 团队。志愿者报名，请发送邮件至afcpchine[_at_]163.com。
+    <p>
+      L'ordre du jour </br>
+      14：00-14：15 Présentation du rapport d’activités par le président</br>
+      14：15-14：30 Présentation du rapport financier par le trésorier</br>
+      14：30-16：00 Election du nouveau bureau (Vous trouverez les détails concernant cette élection ici: <a href="https://docs.google.com/file/d/0B_jvbduzL5ASNWZvakFRNnJIZTg/edit?usp=docslist_api">lien</a>)
+    </p>
 
-<hr/>
 
-<p><strong>AFCP-Chine vous attend !</strong>
+    <h3>Qui sommes nous ?</h3>
+    <p>
+      L’Association amicale Franco-Chinoise de ParisTech (AFCP) a pour objectif général de promouvoir les échanges scolaires, professionnels et culturels entre les deux pays, afin de renforcer le lien amical franco-chinois.
+    </p>
+    <p>
+      Notre association est ouverte à tous les étudiants ou diplômés des Grandes Ecoles membres de ParisTech, tout particulièrement les étudiants chinois et les étudiants français qui se rendent en Chine pour y poursuivre leurs études, y effectuer des stages ou y travailler.
+    </p>
+    <h3>Elle vise à:</h3>
+    <ul>
+      <li>
+	aider dans leurs démarches les étudiants résidant en Chine, candidats à des études complémentaires dans l’un des programmes de ParisTech ;
+      </li>
+      <li>
+	faciliter l’accueil des élèves chinois en France dans l’une des Grandes Ecoles de ParisTech, les orienter dans leurs démarches administratives, dans leur apprentissage du français, et les informer sur leurs conditions de séjour ;
+      </li>
+      <li>
+	aider les élèves et anciens élèves français à s’installer en Chine, soit dans le cadre de la poursuite de leurs études, soit dans le cadre d’activités professionnelles, ainsi que dans leur apprentissage du chinois ;
+      </li>
+      <li>
+	assurer la promotion des programmes de ParisTech auprès des entreprises françaises et chinoises, aider les membres de l’association à renforcer leurs liens avec les entreprises et d’autres organismes et les assister dans leurs recherches de stages et d’emplois par l’organisation de forums et de rencontres ;
+      </li>
+      <li>
+	faire connaître ParisTech et son programme Chine dans les universités chinoises,notamment auprès de celles qui sont partenaires du programme ;
+      </li>
+      <li>
+	maintenir des liens amicaux, d’entraide et de soutien à l’activité professionnelle et animer la communauté de tous les anciens ayant suivi un parcours biculturel franco-chinois dans les Grandes Ecoles de ParisTech et dans les universités chinoises partenaires de ParisTech.
+      </li>
+    </ul>
+    <h3>L’organigramme de notre nouveau bureau sera :</h3>
+    <ul>
+      <li>1 Président</li>
+      <li>1 Vice-président</li>
+      <li>1 Trésorier</li>
+      <li>1 Trésorier adjoint</li>
+      <li>1 Secrétaire général</li>
+      <li>1 Secrétaire général adjoint</li>
+      <li>2 Responsable du département culturel</li>
+      <li>2 Responsables du département relation entreprise</li>
+      <li>2 Responsables du département Alumni</li>
+      <li>2 Responsables de la communication</li>
+      <li>1 Responsable du département IT</li>
+    </ul>
 
-<p style="text-align: center;"><img src="{{ static_ }}/afcp/news/affiche.jpg" alt="Affiche" width="860px" height="1216px" />
+    <p>Nous allons recruter 5 membres.</p>
 
-<p style="text-align: center;"><img src="{{ static_ }}/afcp/news/carte.jpg" alt="Carte" width="762px" height="718px" />
+    <h3>Tout candidat doit répondre aux exigences suivantes :</h3>
+    <ul>
+      <li>
+	Etre un élève ou ancien élève (docteur, master, ingénieur) d’une des 12 écoles de ParisTech (la liste des écoles à consulter sur <a href="http://www.paristech.fr/fr/paristech_ecoles.html">paristech ecoles</a>)
+      </li>
+      <li>
+	Avoir déjà participé d’une manière ou d’une autre à l’organisation d’un évènement avec l’AFCP.
+      </li>
+      <li>
+	Avoir un excellent niveau en langue française ou chinoise, et comprendre correctement l’autre langue.
+      </li>
+      <li>
+	Formulaire de candidature: <a href="https://docs.google.com/file/d/0B_jvbduzL5ASSXFNZjBmanpSVHc/edit?usp=docslist_api">lien</a>
+      </li>
+    </ul>
 
-</div><!--/#planet-content-->
+    <h3>
+      Les votants doivent être élèves ou anciens élèves (docteur, master,ingénieur) d’une des 12 écoles de ParisTech.
+    </h3>
+    <p>
+      Les votants doivent impérativement s'inscrire sur internet avant <strong style="color:red">le 21 novembre 2014 à 24h</strong> pour avoir le droit de participer au vote. Le lien d’inscription est :
+
+      <a href="https://docs.google.com/forms/d/1lljOH1M7C_9s8VZXzT0C03WMPRxYqH0C826CcJFEfFM/viewform?c=0&w=1&usp=mail_form_link">lien</a>
+    </p>
+    <p>
+    Lors du vote le 22 novembre 2014, une pièce d’identité sera demandée à chaque électeur.
+    </p>
+    
+    En cas d’impossibilité de participer au vote, chaque électeur peut désigner un représentant pour voter par procuration. </br>
+
+    Les candidats doivent se présenter devant les membres pendant l’élection et exprimer leur motivation. A la suite des discours, un vote à bulletins secrets déterminera les 5 nouveaux membres du bureau.</br>
+
+    Le nouveau bureau votera en interne pour le président et attribuera les autres postes pendant la réunion suivant immédiatement l’élection.</br>
+
+    <p>
+    L'AFCP se réserve le droit d'apporter des explications complémentaires au présent processus. </br>
+
+    Si vous avez des questions concernant cette élection,vous pouvez nous contacter par mail: <a href="mailto:afcparistech@gmail.com">afcparistech@gmail.com</a> ou <a href="mailto:guan.pengpourss@gmail.com">guan.pengpourss@gmail.com</a>
+    </p>
+    <p>
+      Association Amicale Franco-Chinoise de ParisTech
+    </p>
+  </div><!--/#planet-content-->
 
 {% endblock %}{# sidebar_and_content #}
-
