@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% comment %}
+<!--
+  Created on 2008-11-14.
+  $Id: inscription.html 32 2009-09-23 21:50:28Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+{% load afcp_extra %}
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>inscription :: AFCP</title>
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="{{ static_ }}/stylesheets/sections.css"/>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar_and_content %}
+
+<div class="section"> 
+
+    {% if activity.spreadsheet_link %}
+        {{ activity.spreadsheet_link|default:""|mark_escape }}
+    {% endif %}
+    
+{% endblock %}{# sidebar_and_content #}

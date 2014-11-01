@@ -1,0 +1,208 @@
+{% extends "admin/admin.html" %}
+
+{% comment %}
+<!--
+
+  The about page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: admin_inscription.html 36 2009-10-04 17:39:25Z guolin.mobi $
+-->
+{% endcomment %}
+{% load i18n %}
+
+{% block header %}
+{% endblock %}{# header #}
+{#------------------------------------------------------------------------------------------------#}
+{% block html_title %}
+<title>Admin console</title>
+
+<script type="text/javascript">//<![CDATA[
+
+function makeZebraTable(id) {
+    $("#" + id + " tr:odd" ).addClass("odd-row");
+    $("#" + id + " tr:even").addClass("even-row");
+}
+
+$(document).ready( function() {
+    makeZebraTable("profiles");
+} );
+
+
+function markCurrentEntry() {
+    $("#entry_{{ page_name }}").addClass("current");
+}
+
+$(document).ready( function() { markCurrentEntry(); } );
+
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+function selectChangeForm() {
+   
+    $("#edit_activity").submit();
+}
+
+//]]></script>
+
+{% endblock %}{# html_title #}
+{#------------------------------------------------------------------------------------------------#}
+
+
+{% block content %}
+{% if is_admin_ %}
+
+<div class="section">
+   <h1>AFCP Admin Console</h1>
+
+	{% if info %}
+	  <div class="info message">
+		{{ info|escape }}
+		<a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+	  </div>
+	{% endif %}
+
+	{% if error %}
+	  <div class="error message">
+		{{ error|escape }}
+		<a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+	  </div>
+	{% endif %}
+  
+
+    <h3>AFCP Activities Inscriptor</h3>
+
+	<table width="100%">
+	<tr class="head-row" align="right">
+    {% if activity_chosed_id %} 
+	<td >{% if has_previous %}
+		 <a href="/admin/inscription?page={{ previous_page }}&activity_chosed_id={{activity_chosed_id}}">previous</a>/
+		 {% endif %} 
+		 {% if has_next %}
+		 <a href="/admin/inscription?page={{ next_page }}&activity_chosed_id={{activity_chosed_id}}">next</a>
+		 {% endif %}</td>
+	</tr>
+    {% else %}
+    	<td >{% if has_previous %}
+		 <a href="/admin/inscription?page={{ previous_page }}">previous</a>/
+		 {% endif %} 
+		 {% if has_next %}
+		 <a href="/admin/inscription?page={{ next_page }}">next</a>
+		 {% endif %}</td>
+	</tr>
+    {% endif %}
+    </table>
+	
+    <table width="100%">
+	<tr class="head-row">
+      <td class="nowrap">Name</td>
+      <td class="nowrap">University / Ecole</td>
+      <td class="nowrap">Email</td>
+	  <td class="nowrap">Activity</td>
+	  <td class="nowrap">isConfirmed / isSendEmail</td>
+	</tr>
+	
+    {% for inscriptor in inscriptors.object_list %}
+      <tr>
+        <td class="nowrap"><a href="{{ url_ }}/admin/inscription/show/{{ inscriptor.uid }}/">
+		{% if inscriptor.names %}
+			{{ inscriptor.names|escape }}
+		{% else %}
+			?
+		{% endif %}
+		</a>
+		</td>
+        <td class="nowrap">
+          {% if inscriptor.university %}
+            <a href="{{ url_ }}/university/{{ inscriptor.univ_id }}/">{{ inscriptor.university.name }}</a>
+		  {% else %}
+			    {% if  inscriptor.univ_id %}
+					{{ inscriptor.univ_id }}
+				{% else %}
+					?
+				{% endif %}
+          {% endif %}
+          /
+          {% if inscriptor.ecole %}
+            <a href="{{ url_ }}/ecole/{{ inscriptor.ecole_id }}/">{{ inscriptor.ecole_id }}</a>
+          {% else %}
+            	{% if  inscriptor.ecole_id %}
+					{{ inscriptor.ecole_id }}
+				{% else %}
+					?
+				{% endif %}
+          {% endif %}
+        </td>
+        <td class="nowrap">{{ inscriptor.munging_email|escape }}</td>
+
+		<td class="nowrap">{{ inscriptor.activity_name|escape }}</td>
+		<td class="nowrap">{{ inscriptor.isConfirmed|escape }} / {{ inscriptor.is_send_email|escape }}</td>
+      </tr>
+    {% endfor %}
+     <tr class="head-row" >
+		<td colspan="6"></td>
+	 </tr>
+	 </table>
+	
+	</div>	
+	
+	<div class="section-footer">
+	Currently {{ inscriptors.object_count }} inscriptors.
+	</div>
+	
+    <div class="section-footer">
+      <form id="edit_activity" action="." method="POST">
+	 	  
+        Choose l'activity:	
+
+		<select name="activity_id" onchange="selectChangeForm()">
+                <option value="">:: {% trans "Select the activity" %} ::</option>
+                {% for activity in activities %}
+                  {% ifequal activity.uid activity_chosed_id %}
+                    <option value="{{ activity.uid }}" selected="true">{{ activity.name}}</option>
+                  {% else %}
+                    <option value="{{ activity.uid }}">{{ activity.name }}</option>
+                  {% endifequal %}
+                {% endfor %}
+                
+        </select>
+        
+      </form>
+    </div>
+ 
+    <div class="section-footer">
+      Inscription operation:
+      <br/>
+      <a href="/admin/inscription/csv?activity_chosed_id={{activity_chosed_id}}">Output csv file</a>
+    </div><!--/.section-footer-->
+	
+{% else %}{# not is_admin_ #}
+
+  <div class="error message">
+    You are not allowed to access this page.
+    {% if user_ %}
+      (You are logged-in as {{ user_.email }})
+    {% else %}
+      (You are not logged-in)
+    {% endif %}
+  </div>
+  
+  <div>
+    <a href="/afcp/">Return to AFCP home.</a>
+  </div>
+
+{% endif %}{# is_admin_ #}
+
+{% endblock %}{# content #}
+
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+
+
+
+

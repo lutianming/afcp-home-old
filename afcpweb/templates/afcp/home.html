@@ -1,0 +1,293 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-10-28.
+  $Id: home.html 39 2010-03-08 21:47:02Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>AFCP Accueil</title>
+
+<link rel="stylesheet" type="text/css" media="screen"
+	href="{{ static_ }}/stylesheets/home.css" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="{{ static_ }}/stylesheets/block.css" />
+
+
+{% include "utils/google_ajax_feed_api.html" %}
+{% include "utils/feeds_aggregator.html" %}
+
+<script type="text/javascript">//<![CDATA[
+
+function initialize() {
+    var aggregator = new FeedsAggregator();
+    {% for feed in feeds %}
+        aggregator.addFeed("{{ feed.feed_link }}");
+    {% endfor %}
+    aggregator.showEntries = 4;
+    aggregator.feedsNodeId = "feeds";
+    aggregator.loadAndRender();
+}
+$(document).ready( function() {
+	initialize();
+
+	$('#header-wrapper').click(function(e) {
+		//location.href="http://afcp-paristech.blogspot.com/2011/09/2011-afcpgala-de-la-lune.html"
+		//location.href="/activities/2012gala/"
+		//location.href="http://www.forumhorizonchine.com/"
+		if (e.target.className != "subscribe") {
+			//window.open("/afcp/amusement/gala/");
+			location.href="/afcp/amusement/gala/";
+		}
+	});
+} );
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+<div title="Page du Gala de la Lune" class="banner-image" style="background: url('{{ static_ }}/afcp/images/header_gala2014.jpg') no-repeat center">
+	<!-- <a class="subscribe" target="_blank" href="http://form.jotformpro.com/form/32573239309962">Inscrivez-vous !</a> -->
+</div>
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar_and_content %}
+
+<div id="home-wrapper" class="container">
+
+	<!-- left column ///////////////////////////////////////////////////////////////////////////// -->
+
+	<div id="left-column">
+
+		<div id="announcements" class="block">
+			<div class="block-title">
+				<a href="/afcp/static/about/">{% trans "À propos de l'AFCP" %}</a>
+			</div>
+
+			<p>
+				<strong>L’Association amicale Franco Chinoise de Paristech
+					(AFCP) </strong>a pour objectif général de promouvoir les échanges
+				scolaires, professionnels et culturels entre les deux pays, afin de
+				renforcer le lien amical franco-chinois.
+			</p>
+			<p>Notre association est ouverte à tous les étudiants en cours de
+				cursus ou déjà diplômés des Grandes Ecoles membres de Paris Tech,
+				tout particulièrement les étudiants chinois et les étudiants
+				français qui se rendent en Chine pour y poursuivre leurs études, y
+				effectuer des stages ou y travailler... </p>
+
+			<div class="block-footer">
+				<a href="/afcp/static/about/">{% trans "Details de l'AFCP" %}</a>
+			</div>
+
+		</div>
+		<!--/#announcements-->
+
+		<div id="ecoles" class="block">
+			<div class="block-title">{% trans "Les activités de l'AFCP" %}</div>
+
+{% comment %}
+			<h3>Fête des lanternes</h3>
+
+			<p><span style="color: #3d85c6;">塞纳水上</span><span style="color: red;">闹元宵</span>，<span style="color: #bf9000;">波光灯影</span><span style="color: #a64d79;">共良辰</span>。</p>
+			<p><a href="/afcp/amusement/lanternes/">Page de présentation de la fête des lanternes</a>
+
+			<p>
+				<a target="_blank" title="报名 - Cliquez pour vous inscrire"
+					href="https://docs.google.com/forms/d/1OZP5Em6F8osWoKkkrbx7rjbk7EPj4cXm8RJKhroyXJE/viewform?sid=95207e95f000d0b&token=x1E4ojwBAAA.Ltty7oqH2Ws0gMkcdUU10w.rCTxZr7dLllPulGOWes1oQ">报名
+					- Page d'inscription</a>
+			</p>
+{% endcomment %}
+
+{% comment %}
+            <a href="/activities/afcp_election/">
+			AFCP巴黎高科中法友好协会理事团成员被选举人资料公示
+            </a>
+            <hr />
+
+            <h2>
+                AFCP巴黎高科中法友好协会年度大型晚会GALA DE LA LUNE
+            </h2>
+
+			<p>
+            <p>
+			<font color="#000099" size="4">你住在巴黎，你metro,boulot,dodo.</font></p>
+		<p>
+			<font color="#ff0000" size="4">你最讨厌 &lsquo;此视频仅限中国地区播放&#39; :(</font></p>
+		<p>
+			<font size="4"><font color="#6600cc">你辛辛苦苦读了个BAC+5却被人称作专科文凭</font><object apple-height="yes" apple-width="yes" data="cid:gtalk.320@goomoji.gmail" goomoji="gtalk.320" height="14" id="7b8cadc3-f55b-4f04-90a8-5960642c9032" style="margin-top: 0px; margin-right: 0.2ex; margin-bottom: 0px; margin-left: 0.2ex; vertical-align: middle; " type="application/x-apple-msg-attachment" width="14"></object></font></p>
+		<p>
+			<strong><font size="4">留法学子们，你们忍够了!!!</font></strong></p>
+		<div>
+			&nbsp;</div>
+		<div>
+			<h2>
+				<font color="#009900" size="4"><em>你以为2012的巴黎没有亮点，直到你的膝盖中了一箭</em></font></h2>
+		</div>
+		<p>
+			&nbsp;</p>
+		<p>
+			<font color="#000000" face="comic sans ms,sans-serif" size="4"><em>我存在，你深深的脑海里，你的梦里，你的心里，你的歌声里</em></font></p>
+		<div>
+			<font color="#ffffff" face="simhei,sans-serif" size="4" style="background-color: rgb(0, 0, 0); "><strong>好晚会就是我, 我就是 GALA DE LA LUNE!!!</strong></font></div>
+            </p>
+            <p>
+            详情链接:
+        <a href="/activities/2012gala">GALA DE LA LUNE</a>
+            </p>
+            <a href="/activities/2012gala/"><img src="{{ static_ }}/afcp/images/gala2012.jpg" width="400" height="700" /></a>
+
+{% endcomment %}
+
+{% comment %}
+			<h3>Forum Horizon Chine</h3>
+			<p>
+				L'AFCP organise sa sixième édition du Forum Horizon Chine le
+				<strong>jeudi 18 avril 2013</strong>. Il est l'occasion pour tous
+				les élèves sinophiles, aussi bien chinois que français, de
+				rencontrer des entreprises d'envergure internationale. Vous pourrez
+				aller à leur rencontre, ou simplement assister aux évènements
+				prévus à l'occasion de ce forum (conférences, tables rondes...). Pour
+				plus d'informations et pour vous inscrire,
+				<a href="http://www.forumhorizonchine.com/" target="_blank"> Cliquez ici</a>.
+			</p>
+{% endcomment %}
+
+{% comment %}
+			<h3>Gala de la Lune</h3>
+			<p>
+				Boustifaille exotique, gnôle moins exotique, chansons françaises
+				chantées en karaoké par nos amis chinois, et vice versa, cet
+				événement est chaque année l'occasion rêvée pour venir découvrir la
+				culture chinoise en célébrant ensemble la fête de la Lune.
+				Apprenez-en plus <a href="/afcp/amusement/gala/">en vous rendant
+					sur la page du Gala de la Lune</a> !
+			</p>
+{% endcomment %}
+
+			<h3>Table ronde</h3>
+			<p>
+				Une table ronde d'échange entre les élèves et anciens élèves de
+				ParisTech est organisée par l'AFCP. Pour plus de détail, rendez-vous
+				<a href="/afcp/misc/roundtable/">sur la page de présentation
+					(en chinois)</a>.
+			</p>
+
+
+
+			<div class="block-footer">
+				<a href="/afcp/static/about/activities/">
+				{% trans "Plus d'activités" %}</a>
+			</div>
+		</div>
+
+	</div>
+	<!--/#left-column-->
+
+	<!-- right column //////////////////////////////////////////////////////////////////////////// -->
+
+	<div id="right-column">
+
+		<!-- <div id="planet" class="block">
+			<div class="block-title">
+				<a href="http://afcp-paristech.blogspot.com/">
+				{% trans "Dernières nouvelles du blog de l'AFCP" %}</a>
+			</div>
+			<div id="feeds"></div>
+			<div class="block-footer">
+				<a href="/afcp/news/">{% trans "Plus nouvelles" %}</a>
+			</div>
+		</div> -->
+		<!--/#feeds-->
+
+		<div id="link" class="block">
+			<div class="block-title">AFCP {% trans "Links" %}</div>
+			<div id="links">
+				<table style="background-color: #fff; padding: 5px;" cellspacing=0>
+					<tr>
+						<td><h2 style="margin-top: 8px; margin-bottom: 8px;">
+								<a href="http://www.paristech.fr/" class="externel" title="巴黎高科">ParisTech</a>
+							</h2></td>
+						<td><img style="margin-left: 25px;"
+							src="{{ static_ }}/afcp/images/pt.gif" /></td>
+					</tr>
+					<tr>
+						<td><h2 style="margin-top: 8px; margin-bottom: 8px;">
+								<a href="http://www.tongji-france.com" class="externel"
+									title="法国同济校友会">ATF</a>
+							</h2></td>
+						<td><img style="margin-left: 25px;"
+							src="{{ static_ }}/afcp/images/tj.jpg" /></td>
+					</tr>
+					<tr>
+						<td><h2 style="margin-top: 8px; margin-bottom: 8px;">
+								<a href="http://www.midlandoverseas.com/" class="externel"
+									title="中原海外：协助中国企业的海外发展">Midland Overseas</a>
+							</h2></td>
+						<td><img style="margin-left: 25px;"
+							src="{{ static_ }}/afcp/images/midland_overseas_3.jpg" /></td>
+					</tr>
+				</table>
+
+			</div>
+			<!--
+      <div class="block-footer">
+        <a href="/afcp/news/">{% trans "Plus links" %}</a>
+      </div>
+      -->
+		</div>
+
+		<div id="group" class="block">
+			<div class="block-title">AFCP {% trans "Groups" %}</div>
+			<div id="group">
+				<table style="background-color: #fff; padding: 5px;" cellspacing=0>
+					<tr>
+						<td><img
+							src="http://groups.google.fr/intl/fr/images/logos/groups_logo_sm.gif"
+							height=30 width=151 alt="Google Groupes"></td>
+					</tr>
+					<tr>
+						<td>
+							<h2>
+								<a href="http://groups.google.fr/group/afcpfreechat?hl=en">AFCP
+									Free Chat</a>
+							</h2>
+							<h2>
+								<a href="http://groups.google.fr/group/afcpcom?hl=en">AFCP
+									Communication</a>
+							</h2>
+						</td>
+				</table>
+			</div>
+
+			<!--
+      <div class="block-footer">
+        <a href="/afcp/news/">{% trans "Plus links" %}</a>
+      </div>
+      -->
+		</div>
+
+
+	</div>
+	<!--/#right-column-->
+
+</div>
+<!--/#home-wrapper-->
+
+
+{% endblock %}{# sidebar_and_content #}

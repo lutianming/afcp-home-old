@@ -1,0 +1,129 @@
+{% extends "admin/admin.html" %}
+{% comment %}
+<!--
+  The admin page of the AFCP webapp.
+  
+  Created on 2008-11-20.
+  $Id: admin_activities.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% block header %}
+{% endblock %}{# header #}
+{#------------------------------------------------------------------------------------------------#}
+{% block html_title %}
+<title>Admin console</title>
+
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="{{ static_ }}//stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+function showInscription() {
+    $("#edit_activity"  ).hide();
+    $("#activity"       ).show("slow");
+}
+
+function showEditForm() {
+    $("#activity"       ).hide();
+    $("#edit_activity"  ).show("slow");
+}
+
+function submitEditForm() {
+   // $("#edit_inscription :button").attr("disabled", "disabled");
+    $("#edit_activity").submit();
+}
+//]]></script>
+{% endblock %}{# html_title #}
+{#------------------------------------------------------------------------------------------------#}
+
+{% block content %}
+{% if is_admin_ %}
+
+<div class="section">
+  <h1>AFCP Admin Console</h1>
+  
+  {% if error %}
+    <div class="error message">
+      {{ error|escape }}
+       <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+	</div>
+  {% endif %}
+  
+  {% if info %}
+    <div class="info message">
+      {{ info|escape }}
+	      <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+    </div>
+  {% endif %}
+
+    <h3>AFCP Activities list</h3>
+
+	<table width="100%">
+	<tr class="head-row" align="right">
+	<td >{% if has_previous %}
+		<a href="/admin/activity/?page={{ previous_page }}">previous</a>/
+			{% endif %} {% if has_next %}
+		<a href="/admin/activity/?page={{ next_page }}">next</a>
+		{% endif %}</td>
+	</tr>
+    </table>
+	
+    <table width="100%">
+	<tr class="head-row">
+      <td class="nowrap">Name</td>
+      <td class="nowrap">Subject</td>
+      <td class="nowrap">Address</td>
+	  <td class="nowrap">Date</td>
+	  <td class="nowrap">Closed</td>
+    </tr>
+	
+    {% for activity in activities.object_list %}
+      <tr>
+        <td class="nowrap"><a href="{{ url_ }}/admin/activity/{{ activity.uid }}/">{{ activity.name|escape }}</a></td>
+        <td class="nowrap">{{ activity.subject|escape }}</td>
+		<td class="nowrap">{{ activity.address|escape }}</td>
+		<td class="nowrap">{{ activity.date|date:"Y-m-d H:i" }}</td>
+		<td class="nowrap">{{ activity.is_closed }}</td>
+      </tr>
+    {% endfor %}
+     <tr class="head-row" >
+		<td colspan="6"></td>
+	 </tr>
+	 </table>
+  </div>
+  
+  
+  	  <div class="section-footer">
+      Activity operation:
+      <br/>
+      <a href="/admin/activity/create/">Create an activity</a>
+
+    </div><!--/.section-footer-->
+  
+{% else %}{# not is_admin_ #}
+
+  <div class="error message">
+    You are not allowed to access this page.
+    {% if user_ %}
+      (You are logged-in as {{ user_.email }})
+    {% else %}
+      (You are not logged-in)
+    {% endif %}
+  </div>
+  <div>
+    <a href="/afcp/">Return to AFCP home.</a>
+  </div>
+
+{% endif %}{# is_admin_ #}
+
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+

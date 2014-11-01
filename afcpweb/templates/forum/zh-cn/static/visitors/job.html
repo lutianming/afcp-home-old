@@ -1,0 +1,1523 @@
+{% extends "forum/zh-cn/static/base.html" %}
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+
+  The contact page of the AFCP webapp, French version (fr).
+  
+  Attention : chaque formulaire d'offre d'emploi pour envoyer une candidature a un identifiant
+		(<input type="hidden" name="id" value="3" />) unique qui match avec
+		apps/forum/resources.py, variable company_emails en bas.
+  
+  Created on 2008-11-20.
+  $Id: job.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_title %}
+<title>工作:: AFCP</title>
+{% endblock %}{# html_title #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block content %}
+
+<div class="section">
+	<h1>Offres d'emploi</h1>
+    
+	<h2>EDF DAP CHINA DIVISION</h2>
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">full-time job</div>
+			<h3>Urban planning engineer - R&amp;D</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<a target="_blank"
+						href="/static/doc/job/EDF/20120118_JOB_SustUrbDev-English_and_Chinese.pdf">打开
+                        PDF</a>
+				</p>
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">申请</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum au total
+						pour les deux fichiers. 
+						<input type="hidden" name="id" value="1" />
+						<input type="hidden" name="jobname"
+							value="Urban planning engineer - R&D" />
+						<input type="hidden" name="company" value="EDF DAP CHINA DIVISION" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div>
+	
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">full-time job</div>
+			<h3>Carbon capture processes engineer - R&amp;D</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<a target="_blank"
+						href="/static/doc/job/EDF/Job_description_CCS_-_2012-01-English_and_Chinese.pdf">打开
+                        PDF</a>
+				</p>
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">申请</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum au total
+						pour les deux fichiers. 
+						<input type="hidden" name="id" value="2" /> 
+						<input type="hidden" name="jobname"
+							value="Carbon capture processes engineer - R&D" />
+						<input type="hidden" name="company" value="EDF DAP CHINA DIVISION" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div>
+	
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">full-time job</div>
+			<h3>Open Innovation research engineer - R&amp;D</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<a target="_blank"
+						href="/static/doc/job/EDF/Job_description_OI_-_2012-01.pdf">打开
+                        PDF</a>
+				</p>
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">申请</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum au total
+						pour les deux fichiers. 
+						<input type="hidden" name="id" value="3" /> 
+						<input type="hidden" name="jobname"
+							value="Open Innovation research engineer - R&D" />
+						<input type="hidden" name="company" value="EDF DAP CHINA DIVISION" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div>
+	
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">full-time job</div>
+			<h3>Electric power grid engineer with experience - EDF Beijing R&amp;D</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<a target="_blank"
+						href="/static/doc/job/EDF/R&D_Job_description_Grid_Doctor_Engineer_Exp_201202.pdf">打开
+                        PDFF</a>
+				</p>
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">申请</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum au total
+						pour les deux fichiers. 
+						<input type="hidden" name="id" value="4" /> 
+						<input type="hidden" name="jobname"
+							value="Electric power grid engineer with experience - EDF Beijing R&D" />
+						<input type="hidden" name="company" value="EDF DAP CHINA DIVISION" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div>
+	
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">full-time job</div>
+			<h3>Electric power grid engineer - EDF Beijing R&amp;D</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<a target="_blank"
+						href="/static/doc/job/EDF/R&D_Job_description_grid_engineer_Beginer_201202.pdf">打开
+                        PDF</a>
+				</p>
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">申请</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum au total
+						pour les deux fichiers. 
+						<input type="hidden" name="id" value="5" /> 
+						<input type="hidden" name="jobname"
+							value="Electric power grid engineer - EDF Beijing R&D" />
+						<input type="hidden" name="company" value="EDF DAP CHINA DIVISION" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div>
+
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">Emploi</div>
+			<h3>Open Innovation Research Engineer - EDF Beijing R&amp;D</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<h4>EDF: A European energy leader with a worldwide presence</h4>
+				<p>The EDF （Electricité de France）Group was built in 1946. It is
+					a public company (85% sate, 15% listed in France) which integrates
+					engineering, operation, transmission and distribution activities.
+					Internationally developed, the EDF Group intends to reconcile
+					performance and sustainable development in all the countries where
+					it is present.</p>
+				<p>Key figures of EDF Group in 2008 :</p>
+				<ul>
+					<li>124.8GW total installed capacity in Europe, including
+						98.4GW in France: nuclear 63.1GW (64,2 %), hydro 20.4GW (20,8 %),
+						fossil-fired 14.8GW (15 %));</li>
+					<li>In France, EDF produced 483.9TWh per year, including 86.3%
+						from nuclear;</li>
+					<li>€64.3 billion in revenues, €3.4 billion in net income;</li>
+					<li>38.1 million customers worldwide.</li>
+				</ul>
+				<h4>EDF in China</h4>
+				<p>In 1984, EDF became the technology contractor of Daya Bay
+					Nuclear Power Station construction; in 1994, the representative
+					office was set up in Beijing for stepping up with China in nuclear,
+					hydro, fossil-fired, transmission and distribution and training. In
+					2002, EDF Asia-Pacific Branch was set up in Beijing.</p>
+				<p>EDF’s investment in companies operating coal-fired power
+					plants with a total installed capacity of 3,720MW and equity
+					installed capacity of 1,308MW makes it the leading foreign investor
+					in electricity generation in China. EDF has also developed
+					partnerships enabling it to take part in new technological
+					developments in the field of nuclear, coal-fired, hydro and renew
+					energy power facilities.</p>
+				<p>
+					<strong>EDF Investments in China:</strong>
+				</p>
+				<ul>
+					<li>Laibin B Power Plant (2 X 360MW – EDF holds 100%),</li>
+					<li>Shandong Zhonghua Power Co.Ltd. (3000MW, EDF holds 19.6%),</li>
+					<li>EDF holds 20% of Beijing United Gas Engineering and
+						Technology (BUGET).</li>
+				</ul>
+				<p>Guangdong Taishan nuclear power project: On 26th November
+					2007, EDF has signed the agreement with China Guangdong Nuclear
+					Power Holding Co. Ltd to establish a joint venture, to build and
+					operate two third-generation EPR nuclear power units in Taishan,
+					Guangdong province. On 10th August 2008, all agreements related to
+					the JV creation have been finalized. The JV will be created after
+					its approval by the Chinese Government.</p>
+				<h4>法国电力集团公司</h4>
+				<p>法国电力集团公司（Electricité de
+					France）成立于1946年，于2005年11月成功在法国上市（法国国有控股87%），是一家能源生产与经营上下游业务一体化的企业，涵盖发电、输电、配电、能源交易和能源销售等各个环节。集团依靠协同效应拓展国际业务，坚持合作并与所在国可持续发展方向一致。</p>
+				<p>法国电力集团2008年主要数据：欧洲发电装机容量为1.248亿千瓦，其中法国装机容量为9840万千瓦（核电6310万千瓦，占64.2%；水电2040万千瓦，占20.8%；火电等非核电1480万千瓦，占15%）</p>
+				<p>法国全年发电量为4839亿千瓦时,其中核电占86.3%；营业额为643亿欧元，净利润为34亿欧元；在全球拥有3810万用户.</p>
+
+				<h4>法国电力公司在中国：</h4>
+				<p>1984年担任大亚湾核电站建设的技术总承包。1994年在北京成立代表处，加强了与中国在核电、水电、火电、输配电及培训等方面的合作。2002年在北京设立亚太地区总部。</p>
+				<p>投资包括：法国电力公司90年代在中国参与燃煤发电，发电机组的总装机容量达3720兆瓦，权益装机容量1308兆瓦，其中包括广西来宾B电厂（2
+					X 36万千瓦，法国电力公司100%持股）和山东中华发电有限公司
+					（300万千瓦，法电占19.6%的股份）。2009年11月广东台山核电厂一期工程已获国务院批准，12月商务部批准了建立合资合营公司
+					。台山核电一期两台EPR核电机组，项目总装机3500兆瓦，其中法国电力集团公司占30％，权益装机1050兆瓦。</p>
+				<h4>EDF DAP CHINA DIVISION</h4>
+				<h4>Job Description</h4>
+				<p>
+					<strong>Department:</strong> R&amp;D
+				</p>
+				<p>
+					<strong>Work Place:</strong> Beijing
+				</p>
+				<p>
+					<strong>Report To:</strong> EDF Beijing R&amp;D Centre OI Director
+					for Asia
+				</p>
+				<p>
+					<strong>Starting Date:</strong> 2<sup>nd</sup> quarter 2012
+				</p>
+				<h4>THE CONTEXT</h4>
+				<p>The EDF Group Open Innovation Team In Asia is part of a
+					global international network that is looking for innovative
+					products, solutions, technologies, companies all over the world.
+					Based in Beijing the OI Team in Asia is responsible for exploring
+					the Asian (Chinese, Korean and Japanese) innovation landscape.
+					Amongst the numerous ways we use to identify innovative start-ups,
+					an important one is through an investment in in a major Chinese
+					venture fund (early stage level).</p>
+				<h4>YOUR MISSION</h4>
+				<p>Your mission is to contribute to the activities of the Open
+					Innovation Team In Asia. You will be involved in EDF Open
+					Innovation Team projects and partnerships in Asia.</p>
+				<h4>YOUR JOB</h4>
+				<p>You will have to participate in the start-up assessment
+					process. So you will need a deep knowledge of the energy business
+					technologies, namely renewable energies, power plants, grid (smart
+					and not so smart), services, energy efficiency…</p>
+				<p>You are as curious of new technologies as you are aware of
+					industrial constraints. Personal initiative, autonomous work and
+					self organization is the way you think your daily professional life
+					should follow.</p>
+				<p>If not a Chinese citizen, you read/write/speak Chinese as a
+					Chinese national. You speak/write/read fluent English and or French
+					probably because you spent some time in the USA or in Europe.</p>
+				<p>You already have more than 3 year professional experience in
+					the energy tech at large including cleantech or you are a
+					mid-career researcher in a world class university or in a high
+					profile research lab.</p>
+				<p>No financial background is necessary but a good understanding
+					of tech economics is a must have.</p>
+				<p>You will work in a team located at EDF Beijing R&amp;D
+					Centre. You will also have contacts with other engineers working on
+					other fields, at EDF, in Europe, in the USA and in China.</p>
+				<p>You will participate to meetings, conferences and technical
+					in Asia, not only in, China.</p>
+				<p>You will participate to the technico-economic assessment of
+					the products manufactured by the start-ups the team have
+					discovered. You will write periodical reports about it.</p>
+				<p>Besides, it is possible that you contribute to other projects
+					at EDF R&amp;D Beijing.</p>
+				<h4>REQUIRED SKILLS</h4>
+				<ul>
+					<li>Engineering degree (PhD not necessary but appreciated)</li>
+					<li>General understanding of the energy industry</li>
+					<li>An academic or industrial experience abroad would be
+						appreciated</li>
+				</ul>
+				<h4>LANGUAGE SKILLS</h4>
+				<ul>
+					<li>Fluent Chinese, written &amp; spoken</li>
+					<li>English: both written &amp; spoken is a must. French skill
+						is nice to have.</li>
+				</ul>
+				<h4>2012年招聘：EDF北京研发中心创新研发高级工程师</h4>
+				<p>法国电力集团北京研发中心招聘一名创新研发高级工程师，要求具备可再生能源，电厂，电网，能源服务，节能等领域的基本知识，并对相关领域的技术、产品有一定的了解。对新技术敏感，对能源市场有一定的认识。在能源领域工作经验3年以上或更多，做过研发项目者优先。熟练掌握汉语、英语，具备读、说、写的能力。最好有一定的法语应付能力，但不是必须。工作地点：北京，即可上岗。详细见英文岗位描述。</p>
+
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">Postuler</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum au total
+						pour les deux fichiers. <input type="hidden" name="id" value="13" />
+						<input type="hidden" name="jobname"
+							value="Open Innovation Research Engineer" /> <input
+							type="hidden" name="company" value="EDF DAP CHINA DIVISION" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span>
+										: champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+
+			</div>
+		</div>
+		<!-- block-job -->
+	</div>
+	
+	
+	<h2>Total</h2>
+
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">full-time job</div>
+			<h3>Assistant Manager - Aviation</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<strong>Division :</strong> SUPPLY &amp; MARKETING – ASIA PACIFIC
+				</p>
+				<p>
+					<strong>Direction :</strong> TOTAL (Fiji) Ltd.
+				</p>
+				<h4>Position within the organisation</h4>
+				(enclose a copy of your organisation chart)
+				<p>
+					Please find attached structure.<br /> This position reports
+					directly to VP- Sales &amp; Marketing, position based in Suva.
+				</p>
+				<h4>Job dimension</h4>
+				<ul>
+					<li>Account management of Aviation Portfolio Fiji and South
+						West Pacific (The Territory)</li>
+					<li>Aviation Budget = 5,000 Tons for the 1st year</li>
+					<li>DSO target = 30 Days</li>
+				</ul>
+				<h4>Activities</h4>
+				<p>
+					<strong>Aviation:</strong>
+				</p>
+				<ul>
+					<li>Proactive and efficiently manage the portfolio through the
+						following:</li>
+					<ul>
+						<li>Be the contact person with AIR TOTAL (Order, Payment,
+							issues)</li>
+						<li>Be the contact person with TFL Operations team</li>
+						<li>Be the contact person with the JUHI team</li>
+						<li>Be the contact person with Pricing team</li>
+						<li>Execute a customer visit plan</li>
+						<li>Follow-up and quick resolution of customer issues</li>
+						<li>Introduce new initiatives and products from the Group</li>
+					</ul>
+				</ul>
+				<p>
+					<strong>Aviation:</strong>
+				</p>
+				<ul>
+					<li>Prepare a Monthly activity report.</li>
+					<li>Monitor monthly volume and profitability against plan
+						&amp; prior period results and prepare an analysis report on
+						trends and variances.</li>
+					<li>Manage the portfolio activities with in the given budget.</li>
+					<li>Contribute in the process of setting the annual target for
+						the portfolio.</li>
+					<li>Facilitate tender submission.</li>
+					<li>Implement any initiatives developed by the Group.</li>
+					<li>Monitor and report competitor’s activity on regular basis.</li>
+					<li>Manage credit and assist credit collection.</li>
+				</ul>
+				<h4>Context and environment</h4>
+				<ul>
+					<li>Building and solidifying customer relationship,
+						understanding needs and anticipating future needs of clients and
+						delivering exceptionally well on the basics to provide an edge
+						over competition. The building of trust and honesty augur well for
+						long term business partnerships.</li>
+					<li>To promote further growth and market ownership</li>
+					<li>To work closely with the Terminals and Areas Managers.</li>
+				</ul>
+				<h4>Accountabilities</h4>
+				<p>Sustain and grow the Territory portfolio.</p>
+				<ul>
+					<li>Deliver the Volume target</li>
+					<li>Deliver the Credit target</li>
+					<li>Manage the Aviation portfolio and develop it</li>
+				</ul>
+				<h4>Qualifications / experience required</h4>
+				<ul>
+					<li>Tertiary qualification major in Marketing or Commerce with
+						at least 3 years accounts management experience.</li>
+					<li>Non-tertiary qualified person – 8 years of account
+						management experience.</li>
+					<li>Well versed in an oil industry and should have aviation
+						experience and, if possible, engineering or technical background.</li>
+				</ul>
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">申请</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum au total
+						pour les deux fichiers. 
+						<input type="hidden" name="id" value="6" /> 
+						<input type="hidden" name="jobname"
+							value="Assistant Manager - Aviation (SUPPLY & MARKETING – ASIA PACIFIC)" />
+						<input type="hidden" name="company" value="Total" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+		<!-- block-job -->
+	</div>
+
+
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">full-time job</div>
+			<h3>HSE Manager</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<strong>Division :</strong> REFINING &amp; MARKETING – ASIA-PACIFIC
+				</p>
+				<p>
+					<strong>Direction :</strong> Total Oil Asia-Pacific Pte. Ltd.
+				</p>
+				<h4>Position within the organisation</h4>
+				(enclose a copy of your organisation chart)
+				<p>Reports to the VP HSEQ &amp; Technical of TOTAL Refining
+					&amp; Marketing Asia-Pacific</p>
+				<h4>Job dimension</h4>
+				<ul>
+					<li>Number of business activities: 7 (Retail, Lubricants, LPG,
+						Special Fluids, Aviation, Fuels Depot, Bitumen)</li>
+					<li>Countries covered: 20 (60 affiliates)</li>
+					<li>Traded quantity of Fuels: 2400kt/y, Aviation: 420kt/y,
+						LPG: 550kt/y, Lubricants: 600kt/y, Special fluids: 50kt/y</li>
+					<li>Number of facilities : 25 fuel depots, 10 aviation depots,
+						23 LPG plants, 10 Lubes plants (34 “Seveso” sites), 600+ retail
+						stations, 300+ consumer sites</li>
+				</ul>
+				<h4>Activities</h4>
+				<p>
+					<strong>AP-TRIP</strong>
+				</p>
+				<ul>
+					<li>Develop, stimulate and coordinate the road transport
+						improvement program for light &amp; heavy vehicles in RMAP</li>
+					<li>Assist and support the affiliates in RMAP in the
+						implementation of AP-TRIP based on a roadmap</li>
+					<li>Conduct periodic review/audit of the progress of the
+						program at the affiliate level and recommend ways to improve
+						performance</li>
+				</ul>
+				<p>
+					<strong>AP-PREP</strong>
+				</p>
+				<ul>
+					<li>Develop, stimulate and coordinate the emergency/crisis
+						response preparedness program in RMAP</li>
+					<li>Guide and assist the affiliates in RMAP to draw up
+						response plans for all credible emergency situations</li>
+					<li>Monitor and feedback the completeness and up-to-datedness
+						of the ERP’s and effectiveness of periodic drills</li>
+				</ul>
+				<p>
+					<strong>Occupational Health</strong>
+				</p>
+				<ul>
+					<li>Develop, stimulate and coordinate a sustainable
+						occupational health program for RMAP as per Group direction</li>
+					<li>Review and monitor the implementation of the occupational
+						health program at the affiliate level</li>
+				</ul>
+				<p>
+					<strong>Security</strong>
+				</p>
+				<ul>
+					<li>Develop, stimulate and coordinate a site, information and
+						personnel security improvement program for RMAP as per Group
+						direction</li>
+					<li>Review and monitor the implementation of the security
+						improvement program at the affiliate level</li>
+				</ul>
+				<p>
+					<strong>Others</strong>
+				</p>
+				<ul>
+					<li>Organize the publication of HSE Newsletter and other HSE
+						communication materials, as needed</li>
+					<li>Be the back-up for monthly HSE reporting</li>
+					<li>Contribute to regional HSE training and provide local
+						training to the affiliates as needed</li>
+				</ul>
+				<h4>Context and environment</h4>
+				<ul>
+					<li>Asia-Pacific is a large geographical area with lot of
+						diversified countries and different cultures and languages.
+						Globally the environment is complex and coordination is always a
+						challenge.</li>
+					<li>The diversity poses a major challenge in the marketing and
+						distributing of Total’s products and services, that often requires
+						creative and innovative approaches to meet the business objectives
+						in each affiliate,</li>
+					<li>Coping with such challenges usually demand a good level of
+						personnel expertise and technical capability</li>
+				</ul>
+				<h4>Accountabilities</h4>
+				<ul>
+					<li>Ensure the Road Transport Safety program of RMAP is in
+						line with Group objectives,</li>
+					<li>Attain a good level of proficiency in the Emergency
+						Response Preparedness of the affiliates and Head Office</li>
+					<li>Ensure that the Occupational Health concerns of all
+						affiliates are being addressed in accordance with Group rules</li>
+					<li>Ensure that security risks in the affiliates are assessed
+						and addressed in coordination with Group support entities</li>
+				</ul>
+				<h4>Qualifications / experience required</h4>
+				<ul>
+					<li>At least 5 years experience in operational and/or HSEQ
+						position/s in the petroleum or a related industry with
+						understanding and experience in Safety, Environment and Quality
+						Management Systems.</li>
+					<li>Engineering School graduate or Master equivalent in
+						operation/HSE specialization.</li>
+					<li>High level of communication skills. International cultural
+						adjustment ability.</li>
+					<li>English-speaking</li>
+				</ul>
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">申请</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum. 
+						<input type="hidden" name="id" value="7" /> 
+						<input
+							type="hidden" name="jobname"
+							value="HSE Manager (REFINING & MARKETING – ASIA-PACIFIC)" />
+						<input type="hidden" name="company" value="Total" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+		<!-- block-job -->
+	</div>
+	
+	<h2>IBM</h2>
+	<h3><a href="http://stages-apprentissages-ibm-france.blogspot.fr/" target="_blank">点击进入IBM招聘网站</a></h3>
+	
+
+	<h2>BNP Paribas</h2>
+	
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">Stage</div>
+			<h3>Analyste Développeur IT H/F</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<strong>BNP Paribas Securities Services</strong>
+				</p>
+				<p>BNP Paribas est un acteur majeur de la banque et de la
+					finance présent dans 84 pays à travers le monde.</p>
+				<p>Le pôle Investment Solutions est l’un des 3 domaines
+					d’activité du Groupe qui réunit les métiers de l’épargne et de
+					l’investissement tels que la gestion d’actifs, la banque privée,
+					l’assurance, l’immobilier, les services titres, etc. Avec près de
+					30 000 collaborateurs dans 61 pays, le Pôle a une présence
+					internationale forte et appelée à être encore renforcée grâce à une
+					stratégie ambitieuse dans les régions à fort potentiel de
+					croissance.</p>
+				<p>BNP Paribas Securities Services est le premier fournisseur de
+					services titres en Europe et le cinquième acteur mondial en termes
+					de valeurs d'actifs en conservation. Nous rejoindre, c'est
+					travailler dans un environnement cosmopolite et dynamique, c'est
+					surtout partager nos six valeurs fondamentales : focus client,
+					excellence, respect, esprit d'équipe, innovation et fun.</p>
+				<div class="cadre">
+					<strong>Lieu de la mission :</strong> Pantin<br /> <strong>Dates
+						et durée :</strong> dès maintenant pour 6 mois
+				</div>
+
+				<h4>Missions :</h4>
+				<p>Au sein des équipes du département BP2S - Strategic Projects
+					&amp; IT, vous avez pour but la gestion des projets informatiques
+					auprès des chefs de projets IT BP2S. Ainsi, dans le cadre de votre
+					fonction, vous êtes sous la responsabilité du chef de projet dans
+					le but de l'assister dans les tâches suivantes :</p>
+				<ul>
+					<li>Recueillir les besoins auprès des chefs de projets IT de
+						BP2S</li>
+					<li>Rédiger les spécifications fonctionnelles et techniques du
+						projet</li>
+					<li>Paramétrer et customiser le projet pour mettre en œuvre
+						les demandes</li>
+					<li>Développer les interfaces</li>
+					<li>Installer les modules sur l'environnement technique de
+						BP2S</li>
+					<li>Préparez les formations auprès des chefs de projet et des
+						responsables application de BP2S</li>
+
+				</ul>
+
+				<h4>Apports de la mission :</h4>
+				<ul>
+					<li>Vue globale des métiers de BP2S</li>
+					<li>Contact régulier avec les autres chefs de projets
+						informatique de BP2S</li>
+					<li>Développement d’une expérience concrète sur différents
+						sujets :</li>
+					<ul>
+						<li>Maîtrise d'un environnement technique JAVA/J2EE de grande
+							ampleur</li>
+						<li>Découverte d'un environnement international</li>
+						<li>Programmation en PL/SQL sous Oracle</li>
+						<li>Gestion d'une base de donnée Oracle 10g</li>
+						<li>Surveillance de l'environnement technique sous WebSphere
+							et Linux</li>
+						<li>Gestion de Data Warehouse et développement des rapports
+							sous Business Object</li>
+						<li>Connaissance en gestion de projet et ressources</li>
+					</ul>
+				</ul>
+
+				<p>En fonction de votre montée en compétences et des
+					opportunités du moment :</p>
+				<ul>
+					<li>Vous pouvez évoluer vers les autres projets ou
+						applications informatiques de BP2S</li>
+					<li>Vous pouvez évoluer vers les autres entités du groupe BNP
+						Paribas, fort(e) de la connaissance fonctionnelle et technique de
+						BP2S</li>
+				</ul>
+
+				<h4>Profil recherché :</h4>
+				<p>Formation : Bac +5 - Ecole d'Ingénieur ou équivalent
+					universitaire avec une spécialisation en Informatique de gestion.</p>
+
+				<h4>Compétences et qualités souhaitées :</h4>
+				<ul>
+					<li>Anglais avancé</li>
+					<li>Informatique de gestion</li>
+					<li>Gestion et/ou Pilotage Projet</li>
+					<li>En fonction des projets, des compétences techniques
+						spécifiques vous seront demandées : JAVA, J2EE, SQL, VBA, ORACLE,
+						connaissances des normes CMMi, Business Object, Outils
+						bureautiques, Unix, C, Technologies Web</li>
+					<li>Autonomie</li>
+					<li>Organisation et rigueur</li>
+					<li>Aisance relationnelle</li>
+					<li>Capacité à travailler en équipe</li>
+					<li>Esprit d'analyse et sens critique</li>
+				</ul>
+
+
+				<div class="cadre">
+					Pour postuler, rendez-vous sur <a
+						href="http://recrutement.bnpparibas.com" target="_blank">recrutement.bnpparibas.com</a>
+					pour transmettre vos CV et Lettre de Motivation.
+				</div>
+{% comment %}
+				<!-- Formulaire pour postuler -->
+				<!-- <h5 class="apply-button">Postuler</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum.
+						<input type="hidden" name="id" value="8" /> 
+						<input
+							type="hidden" name="jobname"
+							value="Analyste Développeur IT H/F" />
+						<input type="hidden" name="company" value="BNP Paribas" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form> -->
+{% endcomment %}
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+		<!-- block-job -->
+	</div>
+
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">Stage</div>
+			<h3>Analyste Développeur Projet d’Innovation 2SlovesIT H/F</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<strong>BNP Paribas Securities Services</strong>
+				</p>
+				<p>BNP Paribas est un acteur majeur de la banque et de la
+					finance présent dans 84 pays à travers le monde.</p>
+				<p>Le pôle Investment Solutions est l’un des 3 domaines
+					d’activité du Groupe qui réunit les métiers de l’épargne et de
+					l’investissement tels que la gestion d’actifs, la banque privée,
+					l’assurance, l’immobilier, les services titres, etc. Avec près de
+					30 000 collaborateurs dans 61 pays, le Pôle a une présence
+					internationale forte et appelée à être encore renforcée grâce à une
+					stratégie ambitieuse dans les régions à fort potentiel de
+					croissance.</p>
+				<p>BNP Paribas Securities Services est le premier fournisseur de
+					services titres en Europe et le cinquième acteur mondial en termes
+					de valeurs d'actifs en conservation. Nous rejoindre, c'est
+					travailler dans un environnement cosmopolite et dynamique, c'est
+					surtout partager nos six valeurs fondamentales : focus client,
+					excellence, respect, esprit d'équipe, innovation et fun.</p>
+				<div class="cadre">
+					<strong>Lieu de la mission :</strong> Pantin<br /> <strong>Dates
+						et durée :</strong> dès maintenant pour 6 mois
+				</div>
+
+				<h4>Missions :</h4>
+				<p>Innovation de la Business Line Asset and Funds Services,
+					2SLovesIT est un projet visant à inciter les utilisateurs finaux de
+					nos systèmes informatiques à nous faire part de leur feedback
+					(degré de satisfaction &amp; proposition d’amélioration) structuré en
+					trois axes principaux : Ergonomie, Performance et Couverture
+					fonctionnelle.</p>
+				<p>Initialement complémentaire des enquêtes de satisfaction
+					menées par l’IT suite à la mise en production des nouvelles
+					releases applicatives, l’objectif de ce projet est de développer un
+					outil qui, à moyen terme, viendra se substituer à ces enquêtes.</p>
+				<p>S’inscrivant pleinement dans le cadre de notre démarche
+					d’amélioration continue, le projet permettra également d’analyser,
+					de diffuser et d’exploiter ce feedback instantané.</p>
+				<p>Ludique, intuitif et simple d’utilisation, cet outil
+					collaboratif a l’ambition de créer un lien dynamique et interactif
+					entre la population des Opérationnels et son IT en charge de la
+					livraison des projets (Change) et du Service Delivery (BAU) dans un
+					souci constant de qualité et d’efficacité. Vos missions&nbsp;:</p>
+				<ul>
+					<li>Contribuer fortement à la phase de Solution Design à la
+						fois pour la partie client et la partie serveur</li>
+					<li>Rédiger le dossier d’architecture applicative détaillé
+						pour la partie client</li>
+					<li>Rédiger le dossier de l’architecture serveur en
+						coordination avec l’équipe Architecture Technique et ITPS</li>
+					<li>Rédiger les spécifications techniques détaillées pour
+						interfacer une application Pilote avec 2SLovesIT</li>
+					<li>Coordonner avec ITPS la mise en place des environnements
+						de staging et de production</li>
+					<li>Coordonner avec le responsable de l’application Pilote
+						pour l’intégration de 2SLoves IT</li>
+					<li>Analyser et développer les différentes fonctions du projet
+						2SLovesIT : Data modelling, Teaser widget, Instant feedback
+						screen, Statistics screen</li>
+					<li>Définir la stratégie de testing</li>
+					<li>Exécuter les Integrated System Tests</li>
+					<li>Fournir un support IT aux Users Accesptance Tests</li>
+					<li>Emettre des propositions pour valoriser l’exploitation des
+						données de 2SLovesIT à la fois pour&nbsp;:
+						<ul>
+							<li>La diffusion de ces données (eg wiki website, intranet,
+								etc)</li>
+							<li>Leur transformation en Change Requests grâce à un
+								workflow simple et efficace dans le respect du cycle de vie
+								projet CMMI 3</li>
+						</ul>
+					</li>
+					<li>Organiser des présentations de l’outil auprès de la
+						communauté IT voire de la communauté</li>
+					<li>Promouvoir l’utilisation de l’outil à travers des
+						présentations ludiques et incitatives</li>
+				</ul>
+
+				<h4>Profil recherché :</h4>
+				<p>Formation : Bac+4/5 en informatique</p>
+				<p>Un premier stage en informatique dans le milieu banque /
+					finance ou chez un éditeur de logiciel serait un plus</p>
+
+				<h4>Compétences et qualités souhaitées :</h4>
+				<ul>
+					<li>Bases de données, JAVA J2E, Analyse informatique</li>
+					<li>Bon anglais écrit</li>
+					<li>Dynamisme</li>
+					<li>Force de proposition</li>
+					<li>Esprit d’équipe</li>
+					<li>Bonne capacité à convaincre</li>
+				</ul>
+
+
+				<div class="cadre">
+					Pour postuler, rendez-vous sur <a
+						href="http://recrutement.bnpparibas.com" target="_blank">recrutement.bnpparibas.com</a>
+					pour transmettre vos CV et Lettre de Motivation.
+				</div>
+{% comment %}
+				<!-- Formulaire pour postuler -->
+				<!-- <h5 class="apply-button">Postuler</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum. <input
+							type="hidden" name="id" value="9" /> <input type="hidden"
+							name="jobname"
+							value="Analyste Développeur Projet d’Innovation 2SlovesIT H/F" />
+						<input type="hidden" name="company" value="BNP Paribas" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span>
+										: champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form> -->
+{% endcomment %}
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div>
+	<!-- block-job -->
+
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">Stage</div>
+			<h3>Assistant Coordination de Projets IT H/F</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<strong>BNP Paribas Securities Services</strong>
+				</p>
+				<p>BNP Paribas est un acteur majeur de la banque et de la
+					finance présent dans 84 pays à travers le monde.</p>
+				<p>Le pôle Investment Solutions est l’un des 3 domaines
+					d’activité du Groupe qui réunit les métiers de l’épargne et de
+					l’investissement tels que la gestion d’actifs, la banque privée,
+					l’assurance, l’immobilier, les services titres, etc. Avec près de
+					30 000 collaborateurs dans 61 pays, le Pôle a une présence
+					internationale forte et appelée à être encore renforcée grâce à une
+					stratégie ambitieuse dans les régions à fort potentiel de
+					croissance.</p>
+				<p>BNP Paribas Securities Services est le premier fournisseur de
+					services titres en Europe et le cinquième acteur mondial en termes
+					de valeurs d'actifs en conservation. Nous rejoindre, c'est
+					travailler dans un environnement cosmopolite et dynamique, c'est
+					surtout partager nos six valeurs fondamentales : focus client,
+					excellence, respect, esprit d'équipe, innovation et fun.</p>
+				<div class="cadre">
+					<strong>Lieu de la mission :</strong> Pantin<br /> <strong>Dates
+						et durée :</strong> dès maintenant pour 6 mois
+				</div>
+
+				<h4>Missions :</h4>
+				<p>Au sein des équipes du département BNP Paribas Security
+					Services - Strategic Projects &amp; IT, vous assurez la gestion des
+					projets informatiques auprès des chefs de projets IT BP2S. Ainsi,
+					dans le cadre de votre fonction, vous&nbsp;:</p>
+				<ul>
+					<li>Définissez et élaborez des indicateurs de performance
+						(KPIs) permettant de mesurer l'activité du service</li>
+					<li>Définissez et mettez en place les reportings associés</li>
+					<li>Analysez l'existant</li>
+					<li>Comprenez les activités et les applications gérées</li>
+					<li>Appréhendez les fonctionnements généraux des équipes, les
+						méthodes et outils qualité</li>
+					<li>Définissez pour chaque application ou activité des
+						indicateurs de performance et de suivi d'activité et vous les
+						améliorez si nécessaire</li>
+					<li>Proposez aussi des évolutions permettant de générer ces
+						indicateurs</li>
+					<li>Proposez des adaptations sur les reportings existants et
+						élaborez de nouveaux reportings à destination du management IT /
+						Opérations / Produits</li>
+					<li>Mettez en place les différents outils permettant de
+						générer simplement les KPIs ainsi que les reportings finaux</li>
+				</ul>
+				
+				<h4>Apports de la mission :</h4>
+				<ul>
+					<li>Vous acquérez une connaissance du fonctionnel bancaire et
+						du métier titre de BP2S</li>
+					<li>Vous êtes fort d'une expérience transverse au sein de
+						plusieurs équipes travaillant sur différentes technologies et des
+						fonctionnels variés</li>
+					<li>Vous êtes en contact et vous travaillez avec des
+						responsables de différents niveaux</li>
+					<li>Vous évoluez dans un contexte exigeant de norme qualité
+						(certification CCMI3)</li>
+				</ul>
+
+				<p>En fonction de votre montée en compétences et des
+					opportunités du moment :</p>
+				<ul>
+					<li>Vous pouvez évoluer vers les autres projets ou
+						applications informatiques de BP2S</li>
+					<li>Vous pouvez évoluer vers les autres entités du groupe BNP
+						Paribas, fort(e) de la connaissance fonctionnelle et technique de
+						BP2S</li>
+
+				</ul>
+
+				<h4>Profil recherché :</h4>
+				<p>Bac +5, Ecole d'Ingénieur Informatique ou équivalent
+					universitaire avec une spécialisation en MOA ou Gestion/Management
+					de projet</p>
+
+				<h4>Compétences et qualités souhaitées :</h4>
+				<ul>
+					<li>Informatique de gestion</li>
+					<li>Gestion de projet</li>
+					<li>Pack Office</li>
+					<li>Anglais avancé</li>
+					<li>Aisance relationnelle</li>
+					<li>Esprit d'équipe</li>
+					<li>Rigueur</li>
+					<li>Esprit d'analyse</li>
+				</ul>
+
+
+				<div class="cadre">
+					Pour postuler, rendez-vous sur <a
+						href="http://recrutement.bnpparibas.com" target="_blank">recrutement.bnpparibas.com</a>
+					pour transmettre vos CV et Lettre de Motivation.
+				</div>
+{% comment %}
+				<!-- Formulaire pour postuler -->
+				<!-- <h5 class="apply-button">Postuler</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum.
+						<input type="hidden" name="id" value="10" /> 
+						<input
+							type="hidden" name="jobname"
+							value="Assistant Coordination de Projets IT H/F" />
+						<input type="hidden" name="company" value="BNP Paribas" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form> -->
+{% endcomment %}
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div> <!-- block-job -->
+
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">Stage</div>
+			<h3>Assistant Recherche Quantitative H/F</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<strong>pôle Investment Solutions- Investment Partners</strong>
+				</p>
+				<p>BNP Paribas est un acteur majeur de la banque et de la
+					finance présent dans 84 pays à travers le monde.</p>
+				<p>Le pôle Investment Solutions est l’un des 3 domaines
+					d’activité du Groupe qui réunit les métiers de l’épargne et de
+					l’investissement tels que la gestion d’actifs, la banque privée,
+					l’assurance, l’immobilier, les services titres, etc. Avec près de
+					30 000 collaborateurs dans 61 pays, le Pôle a une présence
+					internationale forte et appelée à être encore renforcée grâce à une
+					stratégie ambitieuse dans les régions à fort potentiel de
+					croissance.</p>
+				<div class="cadre">
+					<strong>Lieu de la mission :</strong> 14 rue Bergère 75009 Paris<br /> <strong>Dates
+						et durée :</strong> dès maintenant pour 6 mois
+				</div>
+
+				<h4>Missions :</h4>
+				<p>Au sein d’Investment Partners, spécialisé sur les métiers de
+					la gestion d’actifs, vous intervenez plus spécifiquement chez
+					CamGestion et travaillez avec le responsable recherche sur les
+					sujets suivant&nbsp;:</p>
+				<ul>
+					<li>Migration de la base de données recherche vers MySql</li>
+					<li>Développement et maintenance de l’outil d’administration
+						de la base de données</li>
+					<li>Suivi des processus automatiques de rapatriement des
+						données financières</li>
+				</ul>
+
+				<h4>Apports de la mission :</h4>
+				<ul>
+					<li>Travailler dans un environement professionnel proche du
+						front office</li>
+					<li>Travailler dans un environement exigeant en terme de
+						fiabilité et de réactivité des outils développés</li>
+					<li>Acquérir des compétences de modélisation informatique des
+						instruments financiers</li>
+				</ul>
+
+				<h4>Profil recherché :</h4>
+				<p>Bac + 4/5, Formation ingénieur, informatique</p>
+
+				<h4>Compétences et qualités souhaitées :</h4>
+				<ul>
+					<li>Maîtrise de la Base de données MySql</li>
+					<li>Maîtrise de Java, j2ee</li>
+					<li>Connaissance de Struts</li>
+					<li>Connaissances en finance de marché</li>
+					<li>Autonomie, rigueur</li>
+				</ul>
+				<div class="cadre">Merci de préciser dans votre candidature les périodes de stage souhaitées</div>
+
+
+				<!-- Formulaire pour postuler -->
+				<h5 class="apply-button">Postuler</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum.
+						<input type="hidden" name="id" value="11" /> 
+						<input
+							type="hidden" name="jobname"
+							value="Assistant Recherche Quantitative H/F" />
+						<input type="hidden" name="company" value="BNP Paribas" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div> <!-- block-job -->
+
+	<div class="block-job">
+		<div class="apply-button">
+			<div class="right">Stage</div>
+			<h3>Gestionnaire IT support transverse H/F</h3>
+		</div>
+		<div class="unwrapped">
+			<div>
+				<p>
+					<strong>BNP Paribas Securities Services</strong>
+				</p>
+				<p>BNP Paribas est un acteur majeur de la banque et de la
+					finance présent dans 84 pays à travers le monde.</p>
+				<p>Le pôle Investment Solutions est l’un des 3 domaines
+					d’activité du Groupe qui réunit les métiers de l’épargne et de
+					l’investissement tels que la gestion d’actifs, la banque privée,
+					l’assurance, l’immobilier, les services titres, etc. Avec près de
+					30 000 collaborateurs dans 61 pays, le Pôle a une présence
+					internationale forte et appelée à être encore renforcée grâce à une
+					stratégie ambitieuse dans les régions à fort potentiel de
+					croissance.</p>
+				<p>BNP Paribas Securities Services est le premier fournisseur de
+					services titres en Europe et le cinquième acteur mondial en termes
+					de valeurs d'actifs en conservation. Nous rejoindre, c'est
+					travailler dans un environnement cosmopolite et dynamique, c'est
+					surtout partager nos six valeurs fondamentales : focus client,
+					excellence, respect, esprit d'équipe, innovation et fun.</p>
+				<div class="cadre">
+					<strong>Lieu de la mission :</strong> Pantin<br /> <strong>Dates
+						et durée :</strong> dès maintenant pour 6 mois
+				</div>
+
+				<h4>Missions :</h4>
+				<p>Dans le Domaine du Support Transverse de l'IT GFS France, le
+					stagiaire sera intégré à l’équipe Support Transverse composée de 9
+					personnes repartie entre Chennai, Lisbonne et Paris. Le stage se
+					décompose en deux parties&nbsp;:</p>
+				<p>1) Le stagiaire devra participer au support quotidien dans
+					applications Transverse GFS. Les objectifs sont&nbsp;:</p>
+				<ul>
+					<li>Le traitement les demandes de support des applications
+						Amanda, eVa, Eurosychomore.</li>
+					<li>La gestion des incidents techniques &amp; fonctionnels.</li>
+					<li>La mise en place des process de résolution des incidents
+						et partcipation à la création des outils de surveillances des
+						serveurs et de l'architecture.</li>
+					<li>L’identification des incidents &amp; demandes de support
+						récurrents devant déboucher sur des plans d'actions à moyen et
+						long termes.</li>
+				</ul>
+				<p>2) Le stagiaire travaillera en parallèle sur l'amélioration
+					des services rendus et travaillera sur la mise en place des
+					métriques fonctionnelles &amp; techniques. Les objectifs sont de&nbsp;:</p>
+				<ul>
+					<li>Analyser les métriques existantes</li>
+					<li>Proposer de nouvelles métriques</li>
+					<li>Participer à la mise en place (ou migration) des outils de
+						support et de communication entre les différents pôles de support
+						basés à Lisbonne, Chennai et Paris vers un outil mieux adapté aux
+						exigences.</li>
+				</ul>
+				<p>Vos missions principales seront les suivantes&nbsp;:</p>
+				<ul>
+					<li>Prise en main de l’environnement de développement (Sybase,
+						UNIX, Websphere TX, …)</li>
+					<li>Prise en main de l'infrastructure technique</li>
+					<li>Prise en main des différentes applications et tâches
+						quotidiennes</li>
+					<li>Analyse des sujets</li>
+					<li>Développements ou migrations des outils</li>
+				</ul>
+
+				<h4>Profil recherché :</h4>
+				<p>Bac+4/5 formation en informatique</p>
+
+				<h4>Compétences et qualités souhaitées :</h4>
+				<ul>
+					<li>Bases de données relationnelles indispensables</li>
+					<li>Powerbuilder, Unix</li>
+					<li>Anglais courant</li>
+					<li>Adaptabilité / Flexibilité</li>
+					<li>Autonomie</li>
+					<li>Organisation / Méthode / Rigueur</li>
+					<li>Bonne capacité de communication / Bon relationnel /
+						Travail en équipe</li>
+				</ul>
+
+
+				<div class="cadre">
+					Pour postuler, rendez-vous sur <a
+						href="http://recrutement.bnpparibas.com" target="_blank">recrutement.bnpparibas.com</a>
+					pour transmettre vos CV et Lettre de Motivation.
+				</div>
+{% comment %}
+				<!-- Formulaire pour postuler -->
+				<!-- <h5 class="apply-button">Postuler</h5>
+				<form method="post" enctype="multipart/form-data"
+					action="/forum/visitors/sendmail/fr/" class="unwrapped">
+					<div>
+						Fichiers acceptés au format *.doc ou *.pdf, 1 Mo Maximum.
+						<input type="hidden" name="id" value="12" /> 
+						<input
+							type="hidden" name="jobname"
+							value="Gestionnaire IT support transverse H/F" />
+						<input type="hidden" name="company" value="BNP Paribas" />
+						<table>
+							<tr>
+								<td>Nom<span class="required">*</span></td>
+								<td><input type="text" name="nom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Prénom<span class="required">*</span></td>
+								<td><input type="text" name="prenom" required="required" /></td>
+							</tr>
+							<tr>
+								<td>e-mail<span class="required">*</span></td>
+								<td><input type="text" name="email" required="required" /></td>
+							</tr>
+							<tr>
+								<td>CV<span class="required">*</span></td>
+								<td><input type="file" name="cv" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Lettre de motivation<span class="required">*</span></td>
+								<td><input type="file" name="lm" required="required" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><small><span class="required">*</span> : champ requis</small></td>
+							<tr>
+								<td colspan="2"><input type="submit" value="Envoyer"></td>
+							</tr>
+						</table>
+					</div>
+				</form> -->
+{% endcomment %}
+				<!-- Fin du formulaire -->
+			</div>
+		</div>
+	</div> <!-- block-job -->
+	
+	<!-- end of main contents-->
+    
+		
+
+</div>
+<script type="text/javascript" src="/static/javascript/functions.js">
+</script>
+{% endblock %}{# content #}
+
+

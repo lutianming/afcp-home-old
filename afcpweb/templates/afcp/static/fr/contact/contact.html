@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-12-08.
+  $Id: contact.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_head %}
+
+{% block html_title %}
+{% endblock %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function markCurrentEntry() {
+    $("#entry_{{ page_name }}").addClass("current");
+}
+
+$(document).ready( function() { markCurrentEntry(); } );
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block content %}
+
+<div class="section contact">
+	<h1>Vous souhaitez nous contacter ?</h1>
+	
+	{% ifnotequal errmsg None %}
+		<div class="error">{{ errmsg }}</div>
+	{% endifnotequal %}
+	{% ifnotequal msgok None %}
+		<div class="info">Le message a bien été envoyé.</div>
+	{% endifnotequal %}
+	
+	<form method="post">
+		<input type="hidden" name="from" value="afcp" />
+		<div>Votre e-mail : </div>
+		<div><input type="text" name="email" /></div>
+		<div>Le message à envoyer à l'AFCP : </div>
+		<div><textarea name="message" rows="5"></textarea></div>
+		<div><input type="submit" value="Envoyer le message" /></div>
+	</form>
+		<!-- <div id="members" class="section"> -->
+		
+		
+		
+{% comment %}
+		  <table width="100%" cellspacing="0" border="1">
+			<tr class="head-row">
+			  <td class="nowrap">Name</td>
+			  <td class="nowrap">Tel./ Adresse</td>
+			</tr>
+			
+			<tr>
+				<td class="nowrap">Mr.Qunkai LIU</td>
+				<td class="nowrap">0033-627042659</td>
+			</tr>
+			<tr>
+				<td class="nowrap">Mr. Yujie SHI</td>
+				<td class="nowrap">0033-664490450</td>
+			</tr>
+			<tr>
+				<td class="nowrap">Mr. Ban ZHENG</td>
+				<td class="nowrap">0033-629984172</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="nowrap">AFCP</td>
+				<td class="nowrap">afcparistech@gmail.com</td>
+			</tr>
+		  </table>
+{% endcomment %}
+		
+		<!-- </div> --><!--/#members-->
+
+</div>
+
+{% endblock %}{# content #}
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar %}
+
+<div class="sidebar-section">
+  <div class="title" >Contact</div>
+  <ul class="list">
+    <li id="entry_contact"><a href="/afcp/static/contact/fr/">Contactez-Nous</li>
+
+  </ul>
+</div>
+
+
+
+
+
+{% endblock %}{# sidebar #}
+
+
+
+
+

@@ -1,0 +1,199 @@
+{% extends "afcp/admin/admin.html" %}
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+
+  The about page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: cancel_inscription.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+{% load i18n %}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+{% block html_title %}
+<title>Admin console</title>
+
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="static/afcp/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+function submitEditForm() {
+   // $("#edit_inscription :button").attr("disabled", "disabled");
+    $("#edit_inscription").submit();
+}
+//]]></script>
+{% endblock %}{# html_title #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+{% block content %}
+
+{% if info %}
+  <div class="info message">
+    {{ info|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+{% if error %}
+  <div class="error message">
+    {{ error|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+
+
+<div class="section">
+    
+      <!-- name -->
+	  <h1>AFCP Admin Console</h1>
+		 
+      <h3>You will cancel this inscription information:</h3>
+	  <!-- detailed info -->
+      <form  id="edit_inscription" action="." method="POST" enctype="multipart/form-data">
+	  
+	  <table>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Prenom" %} :</td>
+          <td>
+            {% if inscriptor.first_name %}
+              {{ inscriptor.first_name }}
+			{% else %}
+              <i>N/A</i>
+			{% endif %}
+          </td>
+        </tr>
+		
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Nom" %} :</td>
+          <td>
+            {% if inscriptor.last_name %}
+              {{ inscriptor.last_name }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Nom Chinois" %} :</td>
+          <td>
+            {% if inscriptor.name_zh %}
+              {{ inscriptor.name_zh }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+		
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Sex" %} :</td>
+          <td>
+            {% if inscriptor.sex %}
+              {{ inscriptor.sex }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+		
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Ecole in France" %} :</td>
+          <td>
+            {% if inscriptor.ecole %}
+              <a href="{{ url_ }}/ecole/{{ inscriptor.ecole.acronym }}/">
+                {{ inscriptor.ecole.name }} ({{ inscriptor.ecole.acronym }})
+              </a>
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+	
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "University in China" %} :</td>
+          <td>
+            {% if inscriptor.university %}
+              <a href="{{ url_ }}/university/{{ inscriptor.university.acronym }}/">
+                {{ inscriptor.university.name }} ({{ inscriptor.university.acronym }})
+              </a>
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+		
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Email" %} :</td>
+          <td>{{ inscriptor.munging_email|escape }}</td>
+	
+        </tr>
+
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Activity inscripted" %} :</td>
+          <td>{{ inscriptor.activity_name|escape }}</td>
+        </tr>
+		
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Is confirmed ?" %} :</td>
+          <td>{{ inscriptor.isConfirmed|escape }}</td>
+        </tr>
+		
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Is send email ?" %} :</td>
+          <td>{{ inscriptor.is_send_email|escape }}</td>
+        </tr>
+		
+			<tr class="hidden">
+				<td class="nowrap" width="1%" align="right">{% trans "uid" %} :</td>
+				<td class="nowrap">
+				  <input type="text" size="40" name="uid" value="{{ inscriptor.uid|escape }}"/>
+				</td>
+			 </tr>
+			
+			<tr>
+			 <td></td>
+			 <td class="nowrap">
+				<input type="button" value="{% trans "Confirm your cancel" %}" onclick="submitEditForm();"/>
+			 </td>	
+			</tr>
+		
+		</table>	
+		   
+	   </form>
+	  
+</div>  
+
+
+	
+	<div class="section-footer">
+		You have also these actions:
+		<br/>
+		 <a href="/afcp/admin/inscription/show/{{ inscriptor.uid}}">Return to the detail</a>
+		 |<a href="/afcp/admin/inscription/">Return to list</a>
+	</div>
+	
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+
+
+
+

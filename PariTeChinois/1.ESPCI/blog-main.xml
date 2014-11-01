@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>1.ESPCI</title>
+    <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.ESPCI</link>
+    <description>&#x5DF4;&#x9ECE;&#x9AD8;&#x7B49;&#x7269;&#x7406;&#x5316;&#x5DE5;&#x5B66;&#x9662;&#xFF08;&#x6CD5;&#x8BED;&#xFF1A;Ecole Sup&#xE9;rieure de Physique et de Chimie Industrielle de la Ville de Paris&#xFF0C;&#x7F29;&#x5199;&#xFF1A;ESPCI ParisTech&#xFF09;&#x662F;&#x6CD5;&#x56FD;&#x7684;&#x4E00;&#x6240;&#x8457;&#x540D;&#x7684;&#x5927;&#x5B66;&#x6821;&#x53CA;&#x5DE5;&#x7A0B;&#x5E08;&#x5B66;&#x9662;&#xFF0C;&#x96B6;&#x5C5E;&#x4E8E;&#x5DF4;&#x9ECE;&#x9AD8;&#x79D1;&#x3002;&#x5B66;&#x6821;&#x7531;&#x5DF4;&#x9ECE;&#x5E02;&#x8BAE;&#x4F1A;&#x4E8E;1882&#x5E74;&#x8BBE;&#x7ACB;&#x3002;&#x6821;&#x5740;&#x4F4D;&#x4E8E;&#x5DF4;&#x9ECE;&#x7B2C;&#x4E94;&#x533A;&#x3002;&#x5B66;&#x6821;&#x63D0;&#x4F9B;&#x56DB;&#x5E74;&#x7684;&#x6559;&#x80B2;&#xFF0C;&#x6BCF;&#x5E74;&#x7EA7;&#x6709;&#x5927;&#x7EA6;80&#x540D;&#x5B66;&#x751F;&#x3002;&#x5728;&#x4E0A;&#x6D77;&#x4EA4;&#x5927;2011&#x5E74;&#x7684;&#x4E16;&#x754C;&#x5927;&#x5B66;&#x5B66;&#x672F;&#x6392;&#x540D;&#x4E2D;&#xFF0C;&#x5DF4;&#x9ECE;&#x9AD8;&#x7B49;&#x7269;&#x7406;&#x5316;&#x5DE5;&#x5B66;&#x9662;&#x4E0E;&#x5DF4;&#x9ECE;&#x7EFC;&#x5408;&#x7406;&#x5DE5;&#x5B66;&#x9662;&#x4E00;&#x8D77;&#x88AB;&#x6392;&#x5728;&#x4E86;301-400&#x540D;&#x4E4B;&#x95F4;[3], &#x582A;&#x79F0;&#x6CD5;&#x56FD;&#x6392;&#x540D;&#x6700;&#x9AD8;&#x7684;&#x7684;&#x5DE5;&#x7A0B;&#x5E08;&#x5B66;&#x9662;&#x4E4B;&#x4E00;&#x3002;</description>
+    <iweb:dateFormat>y&#x5E74;M&#x6708;d&#x65E5;EEEE</iweb:dateFormat>
+    <iweb:baseURL>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.ESPCI</iweb:baseURL>
+    <iweb:maximumSummaryItems>10</iweb:maximumSummaryItems>
+  </channel>
+</rss>

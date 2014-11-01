@@ -1,0 +1,44 @@
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+  
+  Summary profile of the curriculum vitae.
+  
+  Created on 2008-11-24.
+  $Id: cv_summary.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+<div id="cv_summary" class="section">
+
+  {% if cv.summary %}
+  
+    <div class="section-header">Summary Profile</div>
+    <div class="section-content">{{ cv.summary|escape|linebreaks }}</div>
+  
+  {% else %}
+  
+    {% if profile.is_current_user_owner %}
+      <div class="section-header section-missing">Summary Profile</div>
+      <div class="section-content section-missing">
+        <i>Summary profile is missing in this corriculum vitae.</i>
+      </div>
+    {% endif %}
+  
+  {% endif %}
+  
+  {% if profile.is_current_user_owner %}
+    <div class="section-edit-toggle">
+      <a href="#">[edit]</a>
+    </div>
+  {% endif %}
+
+</div><!--/#cv_summary-->
+
+
+
+

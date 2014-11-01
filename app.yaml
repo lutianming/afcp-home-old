@@ -1,0 +1,53 @@
+# Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+# - http://heavyz.blogspot.com/
+# - http://buggarden.blogspot.com/
+#
+# Created on 2008-04-24
+# $Id: app.yaml 26 2009-08-04 22:06:00Z guolin.mobi $
+#
+
+application: afcp-hrd
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: 'afcpweb.settings'
+
+handlers:
+
+# Static files.
+
+- url: /paristechinois/
+  static_files: PariTeChinois/index.html
+  upload: PariTeChinois/index.html
+
+- url: /paristechinois
+  static_dir: PariTeChinois
+
+- url: /static
+  static_dir: static
+
+# Favicon.
+- url: /favicon.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon.ico
+
+# robots.txt for search engines.
+- url: /robots.txt
+  static_files: static/robots.txt
+  upload: static/robots.txt
+
+# All other incoming requests are handled by main.py.
+- url: /.*
+  script: main.app
+
+
+libraries:
+- name: django
+  version: "1.3"
+
+# EOF
+
+

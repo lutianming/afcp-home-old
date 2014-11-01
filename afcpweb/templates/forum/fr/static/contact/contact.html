@@ -1,0 +1,158 @@
+{% extends "forum/fr/static/base.html" %}
+{% comment %}
+<!--
+  The contact page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: contact.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_title %}
+<title>Contactez-nous</title>
+{% endblock %}{# html_title #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block content %}
+
+<div class="section contact">
+	<h1>Responsables du Forum Horizon Chine, édition 2012</h1>
+	<!-- <div class="fixme">Liste des contacts à mettre à jour.</div> -->
+
+	<!-- <div id="members" class="section"> -->
+
+	{% comment %}
+	<table>
+		<tr>
+			<th>姓名</th>
+			<th>职务</th>
+			<th>Nom</th>
+			<th>Titre</th>
+		</tr>
+		<tr>
+			<td>罗宇</td>
+			<td>论坛负责人</td>
+			<td>LUO Yu</td>
+			<td>Responsable de Forum Horizon Chine</td>
+		</tr>
+		<tr>
+			<td>陈瑜瑜</td>
+			<td>论坛负责人</td>
+			<td>CHEN Yuyu</td>
+			<td>Responsable de Forum Horizon Chine</td>
+		</tr>
+		<tr>
+			<td>章楠</td>
+			<td>论坛负责人</td>
+			<td>Nan ZHANG</td>
+			<td>Responsable de Forum Horizon Chine</td>
+		</tr>
+		<tr>
+			<td>朱曈</td>
+			<td>论坛负责人</td>
+			<td>ZHU Tong</td>
+			<td>Responsable de Forum Horizon Chine</td>
+		</tr>
+		<tr>
+			<td>钱祥隽</td>
+			<td>企业部负责人</td>
+			<td>QIAN Xiangjun</td>
+			<td>Responsable de Forum Horizon Chine</td>
+		</tr>
+	</table>
+	{% endcomment %}
+	
+	<table>
+		<tr>
+			<th>姓名</th>
+			<th>职务</th>
+			<th>Nom</th>
+			<th>Titre</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>M. Qi ZHU</td>
+			<td>Président de l'AFCP</td>
+		</tr>
+		<tr>
+			<td>章楠</td>
+			<td>论坛负责人</td>
+			<td>Mlle Nan ZHANG</td>
+			<td>Équipe du Forum</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>M. Zheng LI</td>
+			<td>Équipe du Forum</td>
+		</tr>
+	</table>
+	
+	{% ifnotequal errmsg None %}
+		<div class="error">{{ errmsg }}</div>
+	{% endifnotequal %}
+	{% ifnotequal msgok None %}
+		<div class="info">Le message a bien été envoyé.</div>
+	{% endifnotequal %}
+	
+	<h2>Vous souhaitez nous contacter ?</h2>
+	<form method="post">
+		<input type="hidden" name="from" value="forum" />
+		<div>Votre e-mail : </div>
+		<div><input type="text" name="email" /></div>
+		<div>Le message à envoyer à l'AFCP : </div>
+		<div><textarea name="message" rows="5"></textarea></div>
+		<div><input type="submit" value="Envoyer le message" /></div>
+	</form>
+
+{% comment %}
+		<table width="100%" cellspacing="0" border="1">
+			<tr class="head-row">
+				
+				<td class="nowrap">Nom</td>
+				<td class="nowrap">Tél. / Adresse</td>
+			</tr>
+
+			<!-- <tr>
+				<td class="nowrap">M. Ban ZHENG (président)</td>
+				<td class="nowrap">+33 (0)6 87 25 50 98</td>
+			</tr> -->
+			<tr>
+				<td class="nowrap">M. Yu LUO</td>
+				<td class="nowrap">luoyudenis<img
+					src="/static/images/at_15_arial.png" alt="[-at-]" />gmail<img
+					src="/static/images/dot_15_arial.png" alt="[-dot-]" />com
+				</td>
+			</tr>
+			<tr>
+				<td class="nowrap">Mlle Yuyu CHEN</td>
+				<td class="nowrap">lovelyyuyufish<img
+					src="/static/images/at_15_arial.png" alt="[-at-]" />gmail<img
+					src="/static/images/dot_15_arial.png" alt="[-dot-]" />com
+				</td>
+			</tr>
+
+
+
+			<tr>
+				<td class="nowrap">AFCP</td>
+				<td class="nowrap">afcparistech<img
+					src="/static/images/at_15_arial.png" alt="[-at-]" />gmail<img
+					src="/static/images/dot_15_arial.png" alt="[-dot-]" />com
+				</td>
+			</tr>
+		</table>
+{% endcomment %}
+
+	<!-- </div> -->
+	<!--/#members-->
+
+</div>
+
+{% endblock %}{# content #}
+
+

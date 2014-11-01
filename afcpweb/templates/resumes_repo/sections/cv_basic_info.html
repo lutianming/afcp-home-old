@@ -1,0 +1,99 @@
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+  
+  Basic information in curriculum vitae.
+  
+  Created on 2008-11-24.
+  $Id: cv_basic_info.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+<div id="cv_basic_info" class="container section">
+
+  {% if cv.basic_info %}
+  
+    <div class="section-content">
+      <h2>{{ cv.basic_info.name }}</h2>
+      <div>
+        <b>{{ cv.basic_info.title }}</b>
+        <br/>
+        {% if cv.basic_info.birthday %}
+          Born on {{ cv.basic_info.birthday }}
+          {% if cv.basic_info.birthplace %}
+            in {{ cv.basic_info.birthplace|escape }}
+          {% endif %}
+          <br/>
+        {% endif %}
+        {% if cv.basic_info.address %}
+          Address : {{ cv.basic_info.address|escape }}
+          <br/>
+        {% endif %}
+        {% if cv.basic_info.tels %}
+          Telephone(s) : {{ cv.basic_info.tels }}
+          <br/>
+        {% endif %}
+        {% if cv.basic_info.mobile_phone %}
+          Mobile phone: {{ cv.basic_info.mobile_phone %}
+          <br/>
+        {% endif %}
+        {% if cv.basic_info.email %}
+          Email: {{ cv.basic_info.email }}
+          <br/>
+        {% endif %}
+        {% if cv.basic_info.website %}
+          Website: <a href="{{ cv.basic_info.website }}" rel="external">{{ cv.basic_info.website }}</a>
+          <br/>
+        {% endif %}
+      </div>
+    </div>
+  
+  {% else %}
+  
+    {% if profile.is_current_user_owner %}
+      <div class="section-content section-missing">
+        <i>Basic information is missing in this curriculum vitae.</i>
+      </div>
+    {% endif %}
+  
+  {% endif %}
+  
+  {% if profile.is_current_user_owner %}
+  
+    <div class="section-edit-toggle">
+      <a href="javascript:void();" onclick="showCVEditForm('#cv_basic_info');">[edit]</a>
+    </div>
+    
+    <form class="section-edit-form hidden" action="." method="POST">
+      <input type="hidden" name="section" value="cv_basic_info"/>
+      <table width="100%">
+        <tr>
+          <td class="nowrap" width="1%">Name :</td>
+          <td><input type="text" size="40" name="name" value="{{ cv.basic_info.name|default:"" }}"/></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="button" value="Update" onclick="submitCVEditForm('#cv_basic_info');"/>
+            <input type="button" value="Cancel" onclick="hideCVEditForm('#cv_basic_info');"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+    
+    <div class="section-submitting hidden">
+      <img src="/static/fnr/images/waiting.gif" alt="Submitting"/>
+      Submitting... Please wait...
+    </div>
+  
+  {% endif %}
+
+</div><!--/#cv_basic_info-->
+
+
+
+

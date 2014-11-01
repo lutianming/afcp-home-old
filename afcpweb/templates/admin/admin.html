@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-12-08.
+  $Id: admin.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_head %}
+
+{% block html_title %}FIXME: html_title{% endblock %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<title>AFCP Admin Console</title>
+
+<script type="text/javascript">//<![CDATA[
+
+function makeZebraTable(id) {
+    $("#" + id + " tr:odd" ).addClass("odd-row");
+    $("#" + id + " tr:even").addClass("even-row");
+}
+
+$(document).ready( function() {
+    makeZebraTable("profiles");
+} );
+
+
+function markCurrentEntry() {
+    $("#entry_{{ page_name }}").addClass("current");
+}
+
+$(document).ready( function() { markCurrentEntry(); } );
+
+//]]></script>
+
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block content %}
+{% endblock %}{# content #}
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar %}
+
+<div class="sidebar-section">
+  <div class="title" >Administration Console option</div>
+  <ul class="list">
+	<!--
+    <li id="entry_members"><a href="/admin/members/">Members</li>
+    -->
+	<li id="entry_activity"><a href="/admin/activity/">Activity</li>
+  </ul>
+</div>
+
+
+{% endblock %}{# sidebar #}
+
+
+
+
+

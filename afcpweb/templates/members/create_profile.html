@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-10-28.
+  $Id: create_profile.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>Create Profile</title>
+
+<script type="text/javascript">//<![CDATA[
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+function submitCreateProfileForm() {
+    $("#create_profile :button").attr("disabled", "disabled");
+    $("#create_profile").submit();
+}
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block content %}
+
+{% if error %}
+  <div class="error message">
+    {{ error|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+<h2>Create your profile</h2>
+
+<div class="section">
+
+  {% if user_ %}
+  
+    <form id="create_profile" action="." method="POST">
+      <table width="100%">
+        <tr>
+          <td class="nowrap" width="1%" align="right">You are logged-in as :</td>
+          <td class="nowrap">{{ user_.email }}</td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">Your Name :</td>
+          <td class="nowrap"><input type="text" size="40" name="name"/></td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">Your Chinese Name :</td>
+          <td class="nowrap"><input type="text" size="40" name="name_zh"/></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="nowrap">
+            <input type="button" value="Create my profile!" onclick="submitCreateProfileForm();"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  
+  {% endif %}
+
+</div><!--/.section-->
+
+{% endblock %}{# content #}
+
+
+

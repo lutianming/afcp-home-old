@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>1.T&#xE9;l&#xE9;com ParisTech</title>
+    <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Telecom_ParisTech</link>
+    <description>&#x5DF4;&#x9ECE;&#x9AD8;&#x79D1;&#x7535;&#x4FE1;&#x5B66;&#x9662;&#x6210;&#x7ACB;&#x4E8E;1878&#x5E74;&#xFF0C;&#x60A0;&#x4E45;&#x7684;&#x5386;&#x53F2;&#x3001;&#x9AD8;&#x6C34;&#x5E73;&#x7684;&#x6559;&#x5B66;&#x8D28;&#x91CF;&#x662F;&#x5B83;&#x6210;&#x4E3A;&#x5F53;&#x4ECA;&#x6CD5;&#x56FD;&#x4E43;&#x81F3;&#x6B27;&#x6D32;&#x8457;&#x540D;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x901A;&#x4FE1;&#x6280;&#x672F;&#x5B66;&#x9662;&#x3002;&#x5B66;&#x6821;&#x6709;&#x4E24;&#x4E2A;&#x6821;&#x533A;&#xFF0C;&#x4E00;&#x4E2A;&#x5728;&#x5DF4;&#x9ECE;&#x5E02;&#x4E2D;&#x5FC3;&#xFF08;&#x5341;&#x4E09;&#x533A;&#xFF09;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#xFF08;Eurecom&#xFF09;&#x5728;&#x5C3C;&#x65AF;&#x9644;&#x8FD1;&#x7684;Sophia Antipolis&#x9AD8;&#x79D1;&#x6280;&#x56ED;&#x533A;&#x3002;&#x5B66;&#x6821;&#x63D0;&#x4F9B;&#x4FE1;&#x606F;&#x79D1;&#x5B66;&#x3001;&#x7F51;&#x7EDC;&#x3001;&#x75DB;&#x5FC3;&#x3001;&#x7535;&#x5B50;&#x3001;&#x4FE1;&#x53F7;&#x548C;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x3001;&#x793E;&#x4F1A;&#x548C;&#x4EBA;&#x6587;&#x79D1;&#x5B66;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x8BFE;&#x7A0B;&#xFF0C;&#x540C;&#x65F6;&#x5B66;&#x4E60;&#x548C;&#x73B0;&#x4EE3;&#x79D1;&#x6280;&#x76F8;&#x5173;&#x7684;&#x7ECF;&#x6D4E;&#x548C;&#x793E;&#x4F1A;&#x65B9;&#x9762;&#x7684;&#x8BFE;&#x7A0B;&#xFF08;&#x7ECF;&#x6D4E;&#x3001;&#x7BA1;&#x7406;&#x3001;&#x521B;&#x4E1A;&#xFF0C;&#x4EE5;&#x53CA;11&#x95E8;&#x8BED;&#x8A00;&#xFF09;&#x3002;</description>
+    <item>
+      <title>T&#xE9;l&#xE9;com &#x751F;&#x6D3B;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Telecom_ParisTech/tiao_mu/2012/5/13_Telecom_sheng_huo.html</link>
+      <guid isPermaLink="false">1dedffd6-74c3-44fa-bf0f-4bb5e2424c40</guid>
+      <pubDate>Sun, 13 May 2012 19:44:46 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Telecom_ParisTech/tiao_mu/2012/5/13_Telecom_sheng_huo.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Telecom&#x5B66;&#x751F;&#x8BBF;&#x8C08;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Telecom_ParisTech/tiao_mu/2012/1/28_Telecom_xue_sheng_fang_tan.html</link>
+      <guid isPermaLink="false">d8b46fc3-70b2-4d85-9035-3b3b20b20fc1</guid>
+      <pubDate>Sat, 28 Jan 2012 15:46:15 +0100</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Telecom_ParisTech/tiao_mu/2012/1/28_Telecom_xue_sheng_fang_tan.html#comment_layer"></iweb:comment>
+    </item>
+    <iweb:dateFormat>y&#x5E74;M&#x6708;d&#x65E5;EEEE</iweb:dateFormat>
+    <iweb:baseURL>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Telecom_ParisTech</iweb:baseURL>
+    <iweb:maximumSummaryItems>10</iweb:maximumSummaryItems>
+  </channel>
+</rss>

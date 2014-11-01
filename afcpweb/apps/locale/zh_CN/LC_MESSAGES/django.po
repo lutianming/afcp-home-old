@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-05-14 21:13+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\templates\afcp\home.html.py:87
+msgid "A propos d'AFCP"
+msgstr "关于AFCP"
+
+#: .\templates\afcp\home.html.py:93
+msgid "Details d'AFCP"
+msgstr "AFCP的详细情况"
+
+#: .\templates\afcp\home.html.py:99
+msgid "Les activities d'AFCP"
+msgstr "AFCP的活动"
+
+#: .\templates\afcp\home.html.py:107
+msgid "Plus activities"
+msgstr "更多活动"
+
+#: .\templates\afcp\home.html.py:118 .\templates\afcp\base.html.py:68
+msgid "Nouvelles"
+msgstr "新闻"
+
+#: .\templates\afcp\home.html.py:121
+msgid "Plus nouvelles"
+msgstr "更多新闻"
+
+#: .\templates\afcp\base.html.py:54
+msgid "Mon Profile"
+msgstr "我的资料"
+
+#: .\templates\afcp\base.html.py:55
+msgid "Logout"
+msgstr "登出"
+
+#: .\templates\afcp\base.html.py:57
+msgid "Bienvenue"
+msgstr "欢迎"
+
+#: .\templates\afcp\base.html.py:58
+msgid "Login"
+msgstr "登入"
+
+#: .\templates\afcp\base.html.py:65 .\templates\afcp\base.html.py:119
+msgid "Home"
+msgstr "主页"
+
+#: .\templates\afcp\base.html.py:67
+msgid "Forum"
+msgstr "论坛"
+
+#: .\templates\afcp\base.html.py:69
+msgid "Membres"
+msgstr "成员"
+
+#: .\templates\afcp\base.html.py:70
+msgid "Amusement"
+msgstr "娱乐"
+
+#: .\templates\afcp\base.html.py:71
+msgid "Contact"
+msgstr "联系"
+
+#: .\templates\afcp\base.html.py:120
+msgid "Members"
+msgstr "成员"
+
+#: .\templates\afcp\base.html.py:122
+msgid "About"
+msgstr "关于"
+
+#: .\templates\afcp\base.html.py:123
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: .\templates\afcp\profile.html.py:111 .\templates\afcp\profile.html.py:249
+msgid "Birthday"
+msgstr "生日"
+
+#: .\templates\afcp\profile.html.py:121 .\templates\afcp\profile.html.py:256
+msgid "ParisTech Promo."
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:131 .\templates\afcp\profile.html.py:262
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:109
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:115
+msgid "Ecole in France"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:143 .\templates\afcp\profile.html.py:278
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:122
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:128
+msgid "University in China"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:155
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:135
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:141
+#: .\templates\afcp\inscription\table_show_inscription.html.py:53
+msgid "Email"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:159 .\templates\afcp\profile.html.py:300
+msgid "Tel."
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:212
+#: .\templates\afcp\admin\activity\create_activity.html.py:90
+#: .\templates\afcp\admin\activity\show_activity.html.py:76
+#: .\templates\afcp\admin\activity\set_current_activity.html.py:78
+msgid "Name"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:218
+msgid "Chinese Name"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:224
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:98
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:104
+#: .\templates\afcp\inscription\table_inscription.html.py:32
+#: .\templates\afcp\inscription\table_show_inscription.html.py:15
+msgid "Sex"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:231
+#: .\templates\afcp\inscription\table_inscription.html.py:39
+msgid "Female"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:238
+#: .\templates\afcp\inscription\table_inscription.html.py:46
+msgid "Male"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:245
+#: .\templates\afcp\inscription\table_inscription.html.py:53
+msgid "It's a secret"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:265
+#: .\templates\afcp\inscription\table_inscription.html.py:61
+msgid "Select your Ecole in France"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:273 .\templates\afcp\profile.html.py:289
+#: .\templates\afcp\inscription\table_inscription.html.py:69
+#: .\templates\afcp\inscription\table_inscription.html.py:93
+msgid "None of the above"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:281
+#: .\templates\afcp\inscription\table_inscription.html.py:85
+msgid "Select your University in China"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:294
+#: .\templates\afcp\inscription\table_inscription.html.py:106
+msgid "Alternative Email"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:306
+msgid "Photo"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:312
+msgid "Delete my current photo"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:319
+#: .\templates\afcp\admin\activity\create_activity.html.py:124
+#: .\templates\afcp\inscription\table_inscription.html.py:118
+msgid "Update"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:320
+msgid "Cancel"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:333
+msgid "Are you sure you want to delete your profile"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:336
+msgid "Yes, delete my profile"
+msgstr ""
+
+#: .\templates\afcp\profile.html.py:337
+msgid "No, keep it for me"
+msgstr ""
+
+#: .\templates\afcp\admin\admin_inscription.html.py:150
+msgid "Select the activity"
+msgstr ""
+
+#: .\templates\afcp\admin\activity\create_activity.html.py:83
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:162
+#: .\templates\afcp\inscription\table_inscription.html.py:5
+msgid "uid"
+msgstr ""
+
+#: .\templates\afcp\admin\activity\create_activity.html.py:97
+#: .\templates\afcp\admin\activity\show_activity.html.py:86
+#: .\templates\afcp\admin\activity\set_current_activity.html.py:88
+msgid "Subject"
+msgstr ""
+
+#: .\templates\afcp\admin\activity\create_activity.html.py:104
+#: .\templates\afcp\admin\activity\show_activity.html.py:98
+#: .\templates\afcp\admin\activity\set_current_activity.html.py:100
+msgid "Address"
+msgstr ""
+
+#: .\templates\afcp\admin\activity\create_activity.html.py:111
+#: .\templates\afcp\admin\activity\show_activity.html.py:109
+#: .\templates\afcp\admin\activity\set_current_activity.html.py:111
+msgid "Date"
+msgstr ""
+
+#: .\templates\afcp\admin\activity\create_activity.html.py:126
+#: .\templates\afcp\admin\activity\set_current_activity.html.py:139
+#: .\templates\afcp\inscription\table_inscription.html.py:120
+msgid "Confirm"
+msgstr ""
+
+#: .\templates\afcp\admin\activity\show_activity.html.py:120
+msgid "Is on inscription ?"
+msgstr ""
+
+#: .\templates\afcp\admin\activity\set_current_activity.html.py:128
+msgid "Select the current Activity"
+msgstr ""
+
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:66
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:71
+#: .\templates\afcp\inscription\table_inscription.html.py:12
+msgid "Prenom"
+msgstr ""
+
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:76
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:82
+#: .\templates\afcp\inscription\table_inscription.html.py:19
+#: .\templates\afcp\inscription\table_show_inscription.html.py:5
+msgid "Nom"
+msgstr ""
+
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:87
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:93
+#: .\templates\afcp\inscription\table_inscription.html.py:26
+msgid "Nom Chinois"
+msgstr ""
+
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:141
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:147
+msgid "Activity inscripted"
+msgstr ""
+
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:146
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:152
+msgid "Is confirmed ?"
+msgstr ""
+
+#: .\templates\afcp\admin\inscription\show_inscription.html.py:151
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:157
+msgid "Is send email ?"
+msgstr ""
+
+#: .\templates\afcp\admin\inscription\cancel_inscription.html.py:171
+msgid "Confirm your cancel"
+msgstr ""
+
+#: .\templates\afcp\inscription\show_inscription.html.py:63
+msgid "Retour home"
+msgstr ""
+
+#: .\templates\afcp\inscription\show_inscription.html.py:64
+msgid "Modifier"
+msgstr ""
+
+#: .\templates\afcp\inscription\show_inscription.html.py:65
+msgid "Annuler"
+msgstr ""
+
+#: .\templates\afcp\inscription\table_inscription.html.py:58
+#: .\templates\afcp\inscription\table_show_inscription.html.py:26
+msgid "Ecole en France"
+msgstr ""
+
+#: .\templates\afcp\inscription\table_inscription.html.py:75
+msgid "Votre Ecole/Univ en France"
+msgstr ""
+
+#: .\templates\afcp\inscription\table_inscription.html.py:82
+msgid "Universite en Chine"
+msgstr ""
+
+#: .\templates\afcp\inscription\table_inscription.html.py:99
+msgid "Votre Universite en Chine"
+msgstr ""
+
+#: .\templates\afcp\inscription\table_show_inscription.html.py:39
+msgid "University en Chine"
+msgstr ""
+
+#: .\templates\forum\fr\home.html.py:65
+msgid "Bienvenu au Forum Horizon Chine 2009"
+msgstr ""
+
+#: .\templates\forum\fr\home.html.py:85
+msgid "Partenaires"
+msgstr ""
+
+#: .\templates\forum\fr\home.html.py:105
+msgid "L'ancien forum"
+msgstr ""
+
+#: .\templates\forum\fr\home.html.py:111
+msgid "Video du forum 2008"
+msgstr ""

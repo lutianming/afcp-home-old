@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-10-28.
+  $Id: admin.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>AFCP Admin Console</title>
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function makeZebraTable(id) {
+    $("#" + id + " tr:odd" ).addClass("odd-row");
+    $("#" + id + " tr:even").addClass("even-row");
+}
+
+$(document).ready( function() {
+    makeZebraTable("profiles");
+} );
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar_and_content %}
+
+{% if is_admin_ %}
+
+  <h2>AFCP Admin Console</h2>
+  
+  {% if error %}
+    <div class="error message">
+      {{ error|escape }}
+    </div>
+  {% endif %}
+  
+  {% if info %}
+    <div class="info message">
+      {{ info|escape }}
+    </div>
+  {% endif %}
+  
+  <div class="section">
+    <h3>AFCP User Profiles</h3>
+
+	<table width="100%">
+	<tr class="head-row" align="right">
+	<td >{% if has_previous %}
+		<a href="/admin?page={{ previous_page }}">previous</a>
+			{% endif %} {% if has_next %}
+		<a href="/admin?page={{ next_page }}">next</a>
+		{% endif %}</td>
+	</tr>
+    </table>
+	
+    <table width="100%">
+	<tr class="head-row">
+      <td class="nowrap">Name</td>
+      <td class="nowrap">Email.</td>
+      <td class="nowrap">University / Ecole</td>
+      <td class="nowrap">Email</td>
+      <td class="nowrap">Tel.</td>
+	  <td class="nowrap">Roles</td>
+    </tr>
+	
+	
+    {% for profile in profiles.object_list %}
+      <tr>
+        <td class="nowrap"><a href="{{ url_ }}/profile/{{ profile.uid }}/">{{ profile.names|escape }}</a></td>
+        <td class="nowrap">{{ profile.promo|default:"N/A" }}</td>
+        <td class="nowrap">
+          {% if profile.univ_id %}
+            <a href="{{ url_ }}/university/{{ profile.univ_id }}/">{{ profile.univ_id }}</a>
+          {% else %}
+            ?
+          {% endif %}
+          /
+          {% if profile.ecole_id %}
+            <a href="{{ url_ }}/ecole/{{ profile.ecole_id }}/">{{ profile.ecole_id }}</a>
+          {% else %}
+            ?
+          {% endif %}
+        </td>
+        <td class="nowrap">{{ profile.munging_email|escape }}</td>
+        <td class="nowrap">{{ profile.tel|default:"N/A"|escape }}</td>
+		<td class="nowrap">{{ profile.roles|escape }}</td>
+      </tr>
+    {% endfor %}
+     <tr class="head-row" >
+		<td colspan="6"></td>
+	 </tr>
+	 </table>
+	
+    <div>
+      <form action="." method="POST">
+        Add a new editor (email):
+        <input type="hidden" name="action" value="add_editor"/>
+        <input type="text" size="30" name="email"/>
+        <input type="submit" value="Add"/>
+      </form>
+    </div>
+  
+  </div>
+  
+  <br/>
+  <div class="section">
+	<h3>AFCP Activities Inscriptors</h3>
+	
+  </div>
+  
+{% else %}{# not is_admin_ #}
+
+  <div class="error message">
+    You are not allowed to access this page.
+    {% if user_ %}
+      (You are logged-in as {{ user_.email }})
+    {% else %}
+      (You are not logged-in)
+    {% endif %}
+  </div>
+  <div>
+    <a href="/afcp/">Return to AFCP home.</a>
+  </div>
+
+{% endif %}{# is_admin_ #}
+
+{% endblock %}{# sidebar_and_content #}
+
+
+
+

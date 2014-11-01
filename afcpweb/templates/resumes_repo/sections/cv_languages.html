@@ -1,0 +1,59 @@
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+  
+  Languages in curriculum vitae.
+  
+  Created on 2008-11-24.
+  $Id: cv_languages.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+<div id="cv_languages" class="section">
+
+  {% if cv.languages %}
+  
+    <div class="section-header">Languages</div>
+    <div class="section-content">
+      <table class="name-value-table">
+        {% for language in cv.languages %}
+          <tr>
+            <td class="name-cell">{{ language.language }} :</td>
+            <td class="value-cell">
+              <div class="entry-summary">
+                {{ language.level|escape }}
+                {% if language.aux_info %}
+                  ({{ language.aux_info|escape }})
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+  {% else %}
+  
+    {% if profile.is_current_user_owner %}
+      <div class="section-header section-missing">Languages</div>
+      <div class="section-content section-missing">
+        <i>Languages are missing in this curriculum vitae.</i>
+      </div>
+    {% endif %}
+  
+  {% endif %}
+  
+  {% if profile.is_current_user_owner %}
+    <div class="section-edit-toggle">
+      <a href="#">[edit]</a>
+    </div>
+  {% endif %}
+
+</div><!--/#cv_languages-->
+
+
+

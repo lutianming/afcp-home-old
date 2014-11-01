@@ -1,0 +1,105 @@
+{% extends "afcp/admin/admin.html" %}
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+
+  The about page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: change_inscription.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+{% load i18n %}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+{% block html_title %}
+<title>Admin console</title>
+
+<title>inscription :: AFCP</title>
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="static/afcp/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+function showInscription() {
+    $("#edit_inscription"  ).hide();
+    $("#inscription"       ).show("slow");
+}
+
+function showUnivForm(value) {
+	if( value == "None" )
+		$("#univ_inscription" ).show();
+	else
+		$("#univ_inscription" ).hide();
+}
+
+function showEcoleForm(value) {
+	if( value == "None" )
+		$("#ecole_inscription" ).show();
+	else
+		$("#ecole_inscription" ).hide();
+}
+
+function submitEditForm() {
+   // $("#edit_inscription :button").attr("disabled", "disabled");
+    $("#edit_inscription").submit();
+}
+
+//]]></script>
+{% endblock %}{# html_title #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+{% block content %}
+
+<div class="section">
+   <h1>AFCP Admin Console</h1>
+
+{% if info %}
+  <div class="info message">
+    {{ info|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+{% if error %}
+  <div class="error message">
+    {{ error|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+
+    
+    <form  id="edit_inscription" action="." method="POST" enctype="multipart/form-data">
+	 
+		<h3>Change the inscriptor's information:</h3>
+
+		{% include "afcp/inscription/table_inscription.html" %}
+    </form> 
+	
+</div><!-- section-->
+
+
+
+	
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+
+
+
+

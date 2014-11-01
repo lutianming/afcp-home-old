@@ -1,0 +1,376 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-11-14.
+  $Id: profile.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>{{ profile.name|escape }} :: AFCP</title>
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+function showProfile() {
+    $("#edit_profile"  ).hide();
+    $("#delete_profile").hide();
+    $("#profile"       ).show("slow");
+}
+
+function showEditForm() {
+    $("#profile"       ).hide();
+    $("#delete_profile").hide();
+    $("#edit_profile"  ).show("slow");
+}
+
+function submitEditForm() {
+    $("#edit_profile :button").attr("disabled", "disabled");
+    $("#edit_profile").submit();
+}
+
+function showDeleteForm() {
+    $("#edit_profile"  ).hide();
+    $("#delete_profile").show("slow");
+}
+
+function submitDeleteForm() {
+    $("#delete_profile :button").attr("disabled", "disabled");
+    $("#delete_profile").submit();
+}
+
+function submitRestoreForm() {
+    $("#restore_profile :button").attr("disabled", "disabled");
+    $("#restore_profile").submit();
+}
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar_and_content %}
+
+{% if info %}
+  <div class="info message">
+    {{ info|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+{% if error %}
+  <div class="error message">
+    {{ error|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+
+{% if not profile.deleted %}
+
+  <div id="profile">
+  
+    <div class="section">
+    
+      <!-- name -->
+      <h1>{{ profile.names|escape }}</h1>
+      
+      <!-- photo -->
+      <div class="section-float-right">
+        {% if profile.has_photo %}
+          <img src="{{ url_ }}/profile/{{ profile.uid }}/photo/" alt="Photo" width="160px"/>
+
+        {% endif %}
+      </div>
+      
+      <!-- detailed info -->
+      <table>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Birthday" %} :</td>
+          <td>
+            {% if profile.birthday %}
+              {{ profile.birthday|date:"Y-m-d" }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "ParisTech Promo." %} :</td>
+          <td>
+            {% if profile.promo %}
+              {{ profile.promo }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Ecole in France" %} :</td>
+          <td>
+            {% if profile.ecole %}
+              <a href="{{ url_ }}/ecole/{{ profile.ecole.acronym }}/">
+                {{ profile.ecole.name }} ({{ profile.ecole.acronym }})
+              </a>
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "University in China" %} :</td>
+          <td>
+            {% if profile.university %}
+              <a href="{{ url_ }}/university/{{ profile.university.acronym }}/">
+                {{ profile.university.name }} ({{ profile.university.acronym }})
+              </a>
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Email" %} :</td>
+          <td>{{ profile.munging_email|escape }}</td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Tel." %} :</td>
+          <td>
+            {% if profile.tel %}
+              {{ profile.tel|escape }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+      </table>
+    
+    </div><!--/.section-->
+    
+    <div class="section-footer">
+      Profile created on {{ profile.create_date|date:"Y-m-d" }};
+      Logged-in {{ profile.login_count }} times;
+      Last login on {{ profile.last_login|date:"Y-m-d" }}.
+      <br/>
+        <a href="{{ url_ }}/members/">back to members list</a>
+      | <a href=".">refresh</a>
+      {% if profile.is_current_user_owner %}
+        | <a href="javascript:void(0);" onclick="showEditForm();">edit</a>
+        | <a href="javascript:void(0);" onclick="showDeleteForm();">delete</a>
+      {% endif %}
+    </div><!--/.section-footer-->
+
+  </div><!--/#profile-->
+
+
+  {% if profile.is_current_user_owner %}
+
+    <form id="edit_profile" class="hidden" action="." method="POST" enctype="multipart/form-data">
+    
+      <input type="hidden" name="action" value="edit"/>
+      
+      <div class="section">
+      
+        <!-- title -->
+        <h1>Edit your profile...</h1>
+        
+        <!-- photo -->
+        <div class="section-float-right">
+          {% if profile.has_photo %}
+            <img src="{{ url_ }}/profile/{{ profile.uid }}/photo/" alt="Photo" width="160px"/>
+          {% endif %}
+
+        </div>
+        
+        <!-- form table -->
+        <table>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "Name" %} :</td>
+            <td class="nowrap">
+              <input type="text" size="40" name="name" value="{{ profile.name|escape }}"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "Chinese Name" %} :</td>
+            <td class="nowrap">
+              <input type="text" size="40" name="name_zh" value="{{ profile.name_zh|default:""|escape }}"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "Sex" %} :</td>
+            <td class="nowrap">
+              {% ifequal profile.sex "female" %}
+                <input type="radio" name="sex" value="female" checked="checked"/>
+              {% else %}
+                <input type="radio" name="sex" value="female"/>
+              {% endifequal %}
+              {% trans "Female" %}
+              
+              {% ifequal profile.sex "male" %}
+                <input type="radio" name="sex" value="male" checked="checked"/>
+              {% else %}
+                <input type="radio" name="sex" value="male"/>
+              {% endifequal %}
+              {% trans "Male" %}
+              
+              {% ifequal profile.sex "unknown" %}
+                <input type="radio" name="sex" value="unknown" checked="checked"/>
+              {% else %}
+                <input type="radio" name="sex" value="unknown"/>
+              {% endifequal %}
+              {% trans "It's a secret" %}
+            </td>
+          </tr>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "Birthday" %} :</td>
+            <td class="nowrap">
+              <input type="text" size="12" name="birthday" value="{{ profile.birthday|date:"Y-m-d" }}"/>
+              (YYYY-MM-DD)
+            </td>
+          </tr>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "ParisTech Promo." %} :</td>
+            <td class="nowrap">
+              <input type="text" size="12" name="promo" value="{{ profile.promo|default:"" }}"/> (YYYY), the year when you enter the ParisTech ecole
+            </td>
+          </tr>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "Ecole in France" %} :</td>
+            <td class="nowrap">
+              <select name="ecole_id">
+                <option value="">:: {% trans "Select your Ecole in France" %} ::</option>
+                {% for ecole in ecoles %}
+                  {% ifequal ecole.acronym profile.ecole_id %}
+                    <option value="{{ ecole.acronym }}" selected="selected">{{ ecole.acronym }}</option>
+                  {% else %}
+                    <option value="{{ ecole.acronym }}">{{ ecole.acronym }}</option>
+                  {% endifequal %}
+                {% endfor %}
+                <option value="">{% trans "None of the above" %}</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "University in China" %} :</td>
+            <td class="nowrap">
+              <select name="univ_id">
+                <option value="">:: {% trans "Select your University in China" %} ::</option>
+                {% for university in universities %}
+                  {% ifequal university.acronym profile.univ_id %}
+                    <option value="{{ university.acronym }}" selected="selected">{{ university.name }} ({{ university.acronym }})</option>
+                  {% else %}
+                    <option value="{{ university.acronym }}">{{ university.name }} ({{ university.acronym }})</option>
+                  {% endifequal %}
+                {% endfor %}
+                <option value="">{% trans "None of the above" %}</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "Alternative Email" %} :</td>
+            <td class="nowrap">
+              <input type="text" size="40" name="alt_email" value="{{ profile.alt_email|default:""|escape }}"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="nowrap" width="1%" align="right">{% trans "Tel." %} :</td>
+            <td class="nowrap">
+              <input type="text" size="40" name="tel" value="{{ profile.tel|default:""|escape }}"/>
+            </td>
+          </tr>
+          <!--
+          <tr>
+            <td class="nowrap" width="1%" align="right" valign="top">{% trans "Photo" %} :</td>
+            <td class="nowrap">
+              <input type="file" size="30" name="photo" value="{{ profile.tel|default:""|escape }}"/>
+              {% if profile.has_photo %}
+                <br/>
+                <input type="checkbox" name="delete_photo" value="1"/>
+                {% trans "Delete my current photo" %}.
+              {% endif %}
+            </td>
+          </tr>
+          -->
+          <tr>
+            <td></td>
+            <td class="nowrap">
+              <input type="button" value="{% trans "Update" %}" onclick="submitEditForm();"/>
+              <input type="button" value="{% trans "Cancel" %}" onclick="showProfile();"/>
+            </td>
+          </tr>
+        </table>
+      
+      </div><!--/.section-->
+    
+    </form><!--/#edit_profile-->
+
+    <form id="delete_profile" class="hidden" action="." method="POST">
+      <input type="hidden" name="action" value="delete"/>
+      <div class="section">
+        <p>
+          {% trans "Are you sure you want to delete your profile" %}?
+        </p>
+        <p>
+          <input type="button" value="{% trans "Yes, delete my profile" %}" onclick="submitDeleteForm();"/>
+          <input type="button" value="{% trans "No, keep it for me" %}" onclick="showProfile();"/>
+        </p>
+      </div>
+    </form><!--/#delete_profile-->
+  
+  {% endif %}{# profile.is_current_user_owner #}
+
+{% else %}{# profile.deleted #}
+
+  <div id="profile">
+    
+    {% if profile.is_current_user_owner %}
+    
+      <form id="restore_profile" action="." method="POST">
+        <input type="hidden" name="action" value="restore"/>
+        <div class="section">
+          <h1>Your profile has been deleted...</h1>
+          <p>
+            You've deleted your profile so it will no longer be visible.
+            Do you want to restore your profile?
+          </p>
+          <p>
+            <input type="button" value="OK, restore it for me." onclick="submitRestoreForm();"/>
+          </p>
+        </div>
+      </form>
+    
+    {% else %}
+    
+      <div class="section">
+        <h1>Profile not found...</h1>
+        <p>The profile <b>{{ uid }}</b> that you requested cannot be found.</p>
+        <p><a href="{{ url_ }}/members/">Check the AFCP members list.</a></p>
+      </div>
+    
+    {% endif %}
+  
+  </div><!--/#profile-->
+
+{% endif %}{# not profile.deleted #}
+
+{% endblock %}{# sidebar_and_content #}
+
+
+
+

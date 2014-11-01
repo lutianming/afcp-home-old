@@ -1,0 +1,179 @@
+{% extends "admin/admin.html" %}
+{% comment %}
+<!--
+  The about page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: create_activity.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+{% load i18n %}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+{% block html_title %}
+<title>Admin console</title>
+
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+function showInscription() {
+    $("#edit_activity"  ).hide();
+    $("#activity"       ).show("slow");
+}
+
+function showEditForm() {
+    $("#activity"       ).hide();
+    $("#edit_activity"  ).show("slow");
+}
+
+function submitEditForm() {
+   // $("#edit_inscription :button").attr("disabled", "disabled");
+    $("#edit_activity").submit();
+}
+//]]></script>
+{% endblock %}{# html_title #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+{% block content %}
+
+<div class="section">
+   <h1>AFCP Admin Console</h1>
+
+{% if info %}
+  <div class="info message">
+    {{ info|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+{% if error %}
+  <div class="error message">
+    {{ error|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+
+       
+    <form  id="edit_activity" action="." method="POST" enctype="multipart/form-data">
+
+	  {% if isUpdateMode %}
+		<h3>Update your activity information...</h3>
+	 {% else %}
+		<h3>Create your activity information...</h3>
+	 {% endif %}
+        <!-- form table -->
+        <table>
+		 <tr class="hidden">
+            <td class="nowrap" width="1%" align="right">{% trans "uid" %} :</td>
+            <td class="nowrap">
+              <input type="text" size="60" name="uid" value="{{ activity.uid|escape }}"/>
+            </td>
+          </tr>
+		  
+          <tr>
+            <td class="nowrap" width="1%" align="right">Name :</td>
+            <td class="nowrap">
+              <input type="text" size="60" name="name" value="{{ activity.name|escape }}"/>
+            </td>
+          </tr>
+		  
+		  <tr>
+            <td class="nowrap" width="1%" align="right">Subject :</td>
+            <td class="nowrap">
+              <input type="text" size="60" name="subject" value="{{ activity.subject|default:""|escape }}"/>
+            </td>
+          </tr>
+		  
+		  <tr>
+            <td class="nowrap" width="1%" align="right">Address :</td>
+            <td class="nowrap">
+              <input type="text" size="60" name="address" value="{{ activity.address|default:""|escape }}"/>
+            </td>
+          </tr>
+
+		  <tr>
+            <td class="nowrap" width="1%" align="right">Date :</td>
+            <td class="nowrap">
+              <input type="text" size="20" name="date" value="{{ activity.date|date:"Y-m-d H:i" }}"/>(YYYY-MM-DD HH:mm)
+            </td>
+          </tr>
+
+		  <tr>
+            <td class="nowrap" width="1%" align="right">Is closed ? :</td>
+            <td class="nowrap">
+             {% ifequal activity.is_closed "no" %}
+                <input type="radio" name="is_closed" value="no" checked="checked"/>
+              {% else %}
+                <input type="radio" name="is_closed" value="no"/>
+              {% endifequal %}
+              no
+              {% ifequal activity.is_closed "yes" %}
+                <input type="radio" name="is_closed" value="yes" checked="checked"/>
+              {% else %}
+                <input type="radio" name="is_closed" value="yes"/>
+              {% endifequal %}
+              yes
+            </td>
+          </tr>
+          
+		  <tr>
+            <td class="nowrap" width="1%" align="right">Spreadsheet link :</td>
+            <td class="nowrap">
+            <TEXTAREA name="spreadsheet_link" 
+            rows="4" cols="45"
+            tabindex="0">{{ activity.spreadsheet_link|default:""|escape }}
+            </TEXTAREA>
+             <h4>
+              You must firstly create a google spreadsheet doc. <br/>
+              In your google spreadsheet toolbar, you can see Form >> Embed form in webpage...<br/>
+              Choose it ,and copy the content in the dialog to this field.
+             </h4>
+            </td>
+
+          </tr>
+		  
+		  <tr>
+            <td></td>
+            <td class="nowrap">
+			{% if isUpdateMode %}
+				<input type="button" value="{% trans "Update" %}" onclick="submitEditForm();"/>
+			{% else %}
+				<input type="button" value="{% trans "Confirm" %}" onclick="submitEditForm();"/>
+			{% endif %}
+            </td>
+          </tr>	 
+
+        </table>
+    </form> 
+	
+</div><!-- section-->
+	  <div class="section-footer">
+       Your operations about this activity:
+	  <br/>
+        <a href="/admin/activity/">Return to list</a>
+
+    </div><!--/.section-footer-->
+
+	
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+
+
+
+

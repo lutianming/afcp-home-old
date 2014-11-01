@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-12-15.
+  $Id: university.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_head %}
+<title>{{ university.acronym }} :: AFCP</title>
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sidebar.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sections.css"/>
+{% endblock %}{# html_head #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block header %}{% endblock %}{# header #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block sidebar %}
+
+<div class="sidebar-section">
+  <div class="title">ParisTech Universities</div>
+  <ul class="list">
+    {% for university in universities %}
+      <li><a href="{{ url_ }}/university/{{ university.acronym }}/">{{ university.acronym }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}{# sidebar #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block content %}
+
+<div class="section">
+  <h1>{{ university.name|escape }}</h1>
+  <p>
+    {% if university.desc %}
+      {{ university.desc|escape }}
+    {% else %}
+      <i>No description.</i>
+    {% endif %}
+  </p>
+  <p>
+    <i>#TODO: how to organize university pages?</i>
+  </p>
+</div>
+
+<div class="section">
+  <h2>Members from {{ university.acronym }}</h2>
+  <p>
+    {% if members.object_list %}
+      {% for member in members.object_list %}
+        <a href="{{ url_ }}/profile/{{ member.uid }}/">{{ member.names|escape }}</a>,
+      {% endfor %}
+    {% else %}
+      <i>No members from this university.</i>
+    {% endif %}
+  </p>
+</div>
+
+<div class="section-footer">
+  {{ university.acronym|escape }} official web site:
+  <a href="{{ university.website }}" rel="external">{{ university.website }}</a>
+</div>
+
+{% endblock %}{# content #}
+
+

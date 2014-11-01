@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% comment %}
+<!--  
+  Created on 2008-11-14.
+  $Id: members.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+{% load i18n %}
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>AFCP 春节联欢</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar %}
+
+
+<div class="sidebar-section">
+ <h3></h3>
+  <div class="title" >重要信息</div>
+  <ul class="list">
+    <li><b>集合地点:</b><br/>place d'italie,中国银行门口，地铁 5,7,6线。</li>
+    <li><b>集合时间:</b><br/>2月4号,礼拜五，20:00准时发车,逾时不侯。</li>
+  </ul>
+  <p>[附]信息可能有变，以确认邮件为准。</p>
+</div>
+
+{% endblock %}{# sidebar #}
+
+
+{% block content %}
+
+<div class="section">
+  <h1>AFCP春节庄园周末狂欢游</h1>
+</div>
+
+<div id="activity" class="section">
+<table>
+		<tr>
+        <td><img src="/static/temps/spring.png"  width="48" height="48"/></td>   
+        <td>
+        <h2>欢乐春节</h2>
+		<p>2011年春节大年初二，初三，初四，2月4号晚至2月6号下午，一个周末，两天两夜。加入我们，你会和一群快乐的朋友一同度过一个不一般的春节。</p>
+        </td>
+     
+        </tr>
+        <tr>
+        <td><img src="/static/temps/temple.png"  width="48" height="48"/>
+        </td>
+        <td>
+        <h2>幽静村庄</h2>
+		<p>我们将住宿在一个保留了浓郁17世纪风格的宁静的法国小村庄。地处 loire 河地区，城堡林立，离香波堡 (Chambord) 仅10公里。
+		<a href="http://www.ecuriesdesaintcyr.com/">（古堡一览）</a></p>
+        </td>
+        </tr>
+        
+       </tr>
+        <tr>
+        <td><img src="/static/temps/food.png"  width="48" height="48"/>
+        </td>
+        <td>
+        <h2>自助美食</h2>
+		<p>我们准备了丰富的食材。我们的食物，将由朋友们合作完成。这当然这少不了包饺子等春节传统项目，相信朋友们会在一起制作美食的过程中得到乐趣。</p>
+        </td>
+        </tr>
+
+       </tr>
+        <tr>
+        <td><img src="/static/temps/activity.png"  width="48" height="48"/>
+        </td>
+        <td>
+        <h2>丰富活动</h2>
+		<p>网球，乒乓球，排球，马术，踏青，春节联欢，<b>三国杀3v3</b>(有丰富奖品，鼓励组队参加，需提前报名，查看底部<a href="#sanguosha">[三国杀报名]</a>)，80分，麻将，德州扑克等各种棋牌游戏和其他丰富活动，或静或动，或喧嚣或宁静，都任由你选择。</p>
+        </td>
+        </tr>        
+
+       </tr>
+        <tr>
+        <td><img src="/static/temps/promo.png"  width="48" height="48"/>
+        </td>
+        <td>
+        <h2>震撼低价</h2>
+		<p>两天两夜，食宿，交通，娱乐全部包括。不夸张地说，你可以口袋空空，穿上外套跟我们走，就可以度过一个美好惬意的周末。
+		而这些全部只需要 <b>88欧</b> (非会员价：98欧。<b>无论你是会员还是非会员，请统一寄送 98欧 支票</b>，详情见底部<a href="#clubprice">[附注]</a>)。</p>
+        </td>
+        </tr>  
+</table>
+
+<div style=" float:right;">
+
+<h2 style="float:left">推荐给朋友：</h2>
+<a class="addthis_button_twitter" href="http://twitter.com/home?status=Currently reading http://www.afcp-paristech.org/temps/spring"><img src="/static/temps/twitter.gif" alt="Share on Twitter" /></a>  
+<a class="addthis_button_facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.afcp-paristech.org%2Ftemps%2Fspring"><img src="/static/temps/facebook.gif" alt="Share on Facebook" /></a>
+<a class="addthis_button_google" href="http://www.google.com/buzz/post"><img src="/static/temps/google.gif" alt="Share on google" /></a>
+<script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script>
+<a href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='http://www.douban.com/recommend/?url='+e(d.location.href)+'&title='+e(d.title)+'&sel='+e(s)+'&v=1',x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r+'&r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()"><img src="/static/temps/douban.gif" alt="Share on douban" /></a>
+
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.afcp-paristech.org%2Ftemps%2Fspring&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+</div>
+
+
+
+</div><!--/#activity-->
+
+<div class="section-footer">
+  <h2>参加步骤</h2>
+  <ul class="list">
+    <li>在此链接注册：<a href="http://www.afcp-paristech.org/activities/U20101120212739944a/">注册链接</a></li>
+    <li>寄送 <b>98欧</b> 支票（会员也需要填写 98欧，支票信息应和注册表格中填写一致）
+    <br/>支票背面填写注册人姓名
+    <br/>支票收取人: <b>AMICALE FRANCO CHINOISE</b>
+    <br/>寄往以下地址: <b>GUO Lin, bat 1, 10 rue de Musselburgh, 94500 Champigny sur Marne.</b></li> 
+    <li>等待确认邮件。</li> 
+
+  </ul>
+  <p id="clubprice">[附注] AFCP Loisir club 成员, 将在活动开始时，以红包形式获得 <b>10欧</b> 的现金返还，即以 88欧 的价格参加活动。<br/>
+  						  古堡距巴黎163公里，有车的朋友可以考虑自驾前往。我们为自驾前往的同学返还现金 15欧，也可以帮助联系拼车。</p>
+  <p id="sanguosha">[三国杀报名] 曲雁涛，yantaoqu[at]gmail[dot]com </p>						  
+  
+  <p>[全程联系人] 郭麟， guolin.mobi[at]gmail[dot]com</p>
+  <p>[特别鸣谢] 全程合作伙伴：<a href="http://www.vivelevendredi.com">http://www.vivelevendredi.com</a> <b>V5网</b> 提供本次活动所需全部面粉。</p>
+</div>
+
+{% endblock %}{# content #}
+
+
+
+

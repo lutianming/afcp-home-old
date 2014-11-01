@@ -1,0 +1,25 @@
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+  
+  Curriculum vitae footer.
+  
+  Created on 2008-11-24.
+  $Id: cv_footer.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+<div id="cv_footer">
+  Curriculum vitae of {{ cv.name }} &lt;{{ profile.munging_google_account }}&gt;,
+  last revised on {{ cv.revise_date|date:"Y-m-d" }}, revision {{ cv.revision }},
+  language: {{ cv.lang_code }}
+  <br/>
+  <a href="/afcp/profile/{{ profile.uid }}/">Return to profile page</a>
+  <br/>
+</div>
+
+

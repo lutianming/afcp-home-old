@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% comment %}
+<!--
+  The base template for the AFCP webapp.
+  
+  Created on 2008-10-28.
+  $Id: base.html 39 2010-03-08 21:47:02Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="webapp" content="buggarden.apps.afcp" />
+<meta name="models_revision" content="{{ models_revision_ }}" />
+<meta name="author"
+	content="ZHENG Zhong (heavyzheng nospam-at gmail D0T com)" />
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="/static/stylesheets/common.css" />
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" media="screen" href="/static/stylesheets/all_ie.css"/>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen"
+	href="/static/stylesheets/sidebar.css" />
+
+{% block html_head %}{% endblock %}
+{% include "forum/google_ajax_apis.html" %}
+{% include "forum/jquery.html" %}
+
+</head>
+
+<body>
+    <div id="outer-wrapper">
+    
+    
+    
+      <div id="topbar-wrapper">
+      
+        <div class="logo">
+          <a href="/forum/home/fr/"><img src="/static/forum/images/ForumChine.jpg" alt="AFCP Logo"/></a>
+        </div><!--/.logo-->
+        
+        <div class="links">
+      
+       	  <br />
+		  <!-- <a href="/afcp/">AFCP</a> | -->
+          <a href="/forum/home/fr/">Accueil</a> |
+          <a href="/forum/visitors/program/fr/">Visiteur</a> |
+          <a href="/forum/exhibitors/visitors/fr/">Exposants</a> |
+          <a href="/forum/contact/contact/fr/">Contact</a> |
+		  
+         {% block language %}
+          <a href="/forum/home/fr/"><img src="/static/forum/images/lang_fr.gif" alt="fr"/></a>
+          <a href="/forum/home/zh-cn/"><img src="/static/forum/images/lang_zh-cn.gif" alt="zh-cn"/></a>
+         {% endblock %}
+          
+        </div><!--/.links-->
+      
+      </div><!--/#topbar-wrapper-->
+      
+      <div id="header-wrapper">
+        {% block header %}FIXME: header block{% endblock %}
+      </div><!--/#header-wrapper-->
+      
+	 
+      <div id="navbar-wrapper">
+        {% block navbar %}{% endblock %}
+      </div><!--/#navbar-wrapper-->
+      
+      <div id="sidebar-and-content-wrapper" class="container">
+      
+        {% block sidebar_and_content %}
+        
+          <div id="sidebar-wrapper">
+            {% block sidebar %}
+              {% include "afcp/sidebar.html" %}
+            {% endblock %}
+          </div><!--/#sidebar-wrapper-->
+          
+          <div id="content-wrapper">
+		  <a id="top"></a>
+            {% block content %}FIXME: content block{% endblock %}
+          <div class="section-footer">
+			<p class="hide"><a href="#top">Retour au haut</a></p>
+		 </div>
+		  </div><!--/#content-wrapper-->
+        
+        {% endblock %}{# sidebar_and_content #}
+      
+      </div><!--/#sidebar-and-content-wrapper-->
+      
+      <div id="footer-wrapper" class="container">
+      
+          <a href="/afcp/">AFCP</a> |
+          <a href="/forum/home/fr/">FORUM</a> |
+          <a href="/forum/visitors/program/fr/">Visiteur</a> |
+          <a href="/forum/exhibitors/visitors/fr/">Exposants</a> |
+          <a href="/forum/contact/contact/fr/">Contact</a>
+        <br/>
+
+        <a href="http://www.zhengzhong.net/" rel="external">Thanks ZhengZhong</a> |
+        <a href="/afcp/">Made in afcpweb team</a><!--  |
+        <a href="http://validator.w3.org/check?uri=referer" rel="external">Valid XHTML 1.0!</a> |
+        <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="external">Valid CSS!</a> -->
+       
+      </div><!--/#footer-wrapper-->
+
+    </div><!--/#outer-wrapper-->
+    
+  </body>
+  
+
+</html>
+
+
+

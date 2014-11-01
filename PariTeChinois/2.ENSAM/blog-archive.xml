@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>2.ENSAM</title>
+    <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/2.ENSAM</link>
+    <description>&#x6CD5;&#x56FD;&#x56FD;&#x7ACB;&#x9AD8;&#x7B49;&#x5DE5;&#x7A0B;&#x6280;&#x672F;&#x5B66;&#x9662;&#x521B;&#x529E;&#x4E8E;1780&#x5E74;&#xFF0C;&#x8FC4;&#x4ECA;&#x5DF2;&#x57F9;&#x517B;&#x4E86;7.5&#x4E07;&#x540D;&#x5DE5;&#x7A0B;&#x5E08;&#x3002;&#x56F4;&#x7ED5;&#x4E09;&#x4E2A;&#x65B9;&#x5411;&#x8BBE;&#x7F6E;&#x4E13;&#x4E1A;: 1.&#x529B;&#x5B66;&#x3001;&#x6750;&#x6599;&#x5B66;&#x3001;&#x5DE5;&#x827A; (M&#xE9;canique, Mat&#xE9;riaux, Proc&#xE9;d&#xE9;s (M2P)) 2.&#x6D41;&#x4F53;&#x548C;&#x80FD;&#x6E90;&#x7CFB;&#x7EDF; (Fluide et Syst&#xE8;mes &#xC9;nerg&#xE9;tiques (FISE)) 3.&#x8BBE;&#x8BA1;&#x3001;&#x5DE5;&#x4E1A;&#x3001;&#x98CE;&#x9669;&#x3001;&#x51B3;&#x7B56; (Conception, Industrialisation, Risque, D&#xE9;cisions (CIRD))&#x3002;&#x76EE;&#x524D;&#x5728;&#x6CD5;&#x56FD;&#x5DF4;&#x9ECE;&#xFF0C;&#x6602;&#x70ED;&#xFF0C;&#x91CC;&#x5C14;&#xFF0C;&#x6CE2;&#x5C14;&#x591A;&#xFF0C;&#x9999;&#x69DF;&#x6C99;&#x9686;&#xFF0C;&#x514B;&#x9C81;&#x5C3C;&#xFF0C;&#x6885;&#x5179;&#xFF0C;&#x57C3;&#x514B;&#x65AF;-&#x666E;&#x7F57;&#x65FA;&#x65AF;&#x8BBE;&#x6709;&#x5DF4;&#x9ECE;&#x6821;&#x533A;&#xFF0C;&#x5E76;&#x5728;&#x79D1;&#x897F;&#x5609;&#x5C9B;&#xFF0C;&#x62C9;&#x74E6;&#x5C14;&#x7B49;&#x5730;&#x8BBE;&#x6709;&#x7814;&#x7A76;&#x4E2D;&#x5FC3;&#x3002;</description>
+    <item>
+      <title>&#x738B;&#x8302;&#x534E;&#x8C08;&#x6BD5;&#x4E1A;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/2.ENSAM/tiao_mu/2012/5/10_wang_mao_hua_tan_bi_ye.html</link>
+      <guid isPermaLink="false">e473d0e9-06d1-4b39-93f1-ed8bcb44eb4d</guid>
+      <pubDate>Thu, 10 May 2012 22:53:58 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/2.ENSAM/tiao_mu/2012/5/10_wang_mao_hua_tan_bi_ye.html#comment_layer"></iweb:comment>
+    </item>
+    <iweb:dateFormat>y&#x5E74;M&#x6708;d&#x65E5;EEEE</iweb:dateFormat>
+    <iweb:baseURL>file://localhost/Users/Luc/Documents/AE/PariTeChinois/2.ENSAM</iweb:baseURL>
+    <iweb:maximumSummaryItems>10</iweb:maximumSummaryItems>
+  </channel>
+</rss>

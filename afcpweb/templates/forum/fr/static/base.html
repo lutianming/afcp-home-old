@@ -1,0 +1,126 @@
+{% extends "forum/fr/base.html" %}
+{% comment %}
+<!--
+  Created on 2008-12-08.
+  $Id: base.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_head %}
+
+{% block html_title %}FIXME: html_title{% endblock %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="/static/stylesheets/sections.css"/>
+
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block language %}
+    <a href="/forum/{{supage_name}}/{{ page_name }}/fr/"><img src="/static/forum/images/lang_fr.gif" alt="fr"/></a>
+    <a href="/forum/{{supage_name}}/{{ page_name }}/zh-cn/"><img src="/static/forum/images/lang_zh-cn.gif" alt="zh-cn"/></a>	
+{% endblock %}{# language #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block content %}
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar %}
+<!--
+<div class="sidebar-section">
+  <div class="title">A propo de AFCP</div>
+  <ul class="list">
+    
+    <li><a href="/afcp/">AFCP Website</a></li>
+
+  </ul>
+</div>
+-->
+
+<div class="sidebar-section">
+	<div class="title">Espace visiteurs</div>
+{% comment %}
+	<a class="button" href="/forum/inscript/forum/fr/">Inscrivez-vous !</a>
+{% endcomment %}
+
+	<ul class="list">
+		<!--
+			id="entry_visitors_program"
+			id="entry_visitors_exhibitors"
+			id="entry_visitors_job"
+			id="entry_visitors_inscription"
+		-->
+		<li {% ifequal thispage "entry_visitors_program" %}class="current"{% endifequal %}><a
+			href="/forum/visitors/program/fr/">Programme</a></li>
+		<li {% ifequal thispage "entry_visitors_exhibitors" %}class="current"{% endifequal %}><a
+			href="/forum/visitors/exhibitors/fr/">Exposants</a></li>
+		<li {% ifequal thispage "entry_visitors_job" %}class="current"{% endifequal %}><a
+			href="/forum/visitors/job/fr/">Offres d'emploi</a></li>
+		<li {% ifequal thispage "entry_visitors_inscription" %}class="current"{% endifequal %}><a
+			href="/forum/visitors/inscription/fr/">Inscription</a></li>
+	</ul>
+</div>
+
+<div class="sidebar-section">
+	<div class="title">Espace exposants</div>
+	<ul class="list">
+		<!--
+			id="entry_exhibitors_letter" 
+			id="entry_exhibitors_visitors" 
+			id="entry_exhibitors_services" 
+		-->
+		<!-- <li {% ifequal thispage "entry_exhibitors_letter" %}class="current"{% endifequal %}><a href="/forum/exhibitors/letter/fr/">Lettre d'invitation</a></li> -->
+		<li {% ifequal thispage "entry_exhibitors_visitors" %}class="current"{% endifequal %}><a
+			href="/forum/exhibitors/visitors/fr/">Visiteurs</a></li>
+		<li {% ifequal thispage "entry_exhibitors_services" %}class="current"{% endifequal %}><a
+			href="/forum/exhibitors/services/fr/">Nos Services</a></li>
+	</ul>
+</div>
+
+<div class="sidebar-section">
+	<div class="title">À propos du Forum</div>
+	<ul class="list">
+		<!--
+			id="entry_contact_access" 
+			id="entry_contact_contact" 
+		-->
+		<li {% ifequal thispage "entry_contact_access" %}class="current"{% endifequal %}><a
+			href="/forum/contact/access/fr/">Accès au Forum</a></li>
+		<li {% ifequal thispage "entry_contact_balance" %}class="current"{% endifequal %}><a
+			href="/forum/contact/balance/fr/">Bilan 2011</a></li>
+		<li {% ifequal thispage "entry_contact_contact" %}class="current"{% endifequal %}><a
+			href="/forum/contact/contact/fr/">Contactez-nous</a></li>
+	</ul>
+</div>
+
+<div class="sidebar-section">
+	<div class="title">À propos de l'AFCP</div>
+	<ul class="list">
+		<li><a href="/common/lang/?url=%2Fafcp%2F&lang=fr">Page d'accueil</a></li>
+
+	</ul>
+</div>
+
+<div class="sidebar-section">
+	<div class="entry">
+		<a href="/forum/{{supage_name}}/{{ page_name }}/fr/"><img
+			src="/static/forum/images/lang_fr.gif" alt="fr" /></a> <a
+			href="/forum/{{ supage_name }}/{{ page_name }}/zh-cn/"><img
+			src="/static/forum/images/lang_zh-cn.gif" alt="zh-cn" /></a>
+	</div>
+</div>
+
+{% endblock %}{# sidebar #}
+
+

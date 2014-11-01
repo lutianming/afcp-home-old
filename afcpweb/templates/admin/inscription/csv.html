@@ -1,0 +1,3 @@
+Last Name;First Name;Promo;e-mail;School
+{% for inscriptor in inscriptors %}{{inscriptor.last_name|addslashes}};{{ inscriptor.first_name|addslashes}};{% if inscriptor.promo %}{{ inscriptor.promo|escape}}{% else %}{% endif %};{{ inscriptor.alt_email|addslashes}};{{inscriptor.ecole_id|escape}}
+{% endfor %}

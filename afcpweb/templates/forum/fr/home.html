@@ -1,0 +1,193 @@
+{% extends "forum/fr/base.html" %} 
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+
+  Created on 2008-10-28.
+  $Id: home.html 39 2010-03-08 21:47:02Z guolin.mobi $
+-->
+{% endcomment %} 
+
+{% load i18n %}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>AFCP Forum</title>
+
+<link rel="stylesheet" type="text/css" media="screen"
+	href="/static/stylesheets/home.css" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="/static/stylesheets/block.css" />
+
+<style type="text/css">
+/* <!-- */
+#header-wrapper {
+	margin: 0 0 10px 0;
+	padding: 0;
+	width: 900px;
+	height: 270px;
+	background: #888888
+		url("/static/forum/images/{{ banner_image.id }}.jpg") no-repeat top;
+	border-width: 4px 0 4px 0;
+	border-style: solid;
+	border-color: #888888;
+}
+/* --> */
+</style>
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+<div class="banner-image">
+	{% if banner_image.url and banner_image.title %} 
+		<a href="{{ banner_image.url }}" rel="external">{{ banner_image.title|escape }}</a> 
+	{% endif %}
+	<br /> 
+	{{ banner_image.desc|default:""|escape }}
+</div>
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar_and_content %}
+
+<div id="home-wrapper" class="container">
+
+	{% comment %}
+	<!-- left column ///////////////////////////////////////////////////////////////////////////// -->
+
+	<div id="left-column">
+
+		<div id="announcements" class="block">
+			<img src="/static/forum/images/Affiche_forum_2012_redim.jpg" width="420"
+				height="594" />
+
+		</div>
+    </div>
+	<!--/#left-column-->
+	{% endcomment %}
+
+	<!-- right column //////////////////////////////////////////////////////////////////////////// -->
+
+	{% comment %}<!--div id="right-column"> <!-- right-column -->{% endcomment %}
+	<div id="all"> <!-- one column : all -->
+		<div class="block">
+			<div class="block-title">
+				<h4>Bienvenue au <em>Forum Horizon Chine</em></h4>
+			</div>
+			
+			{% comment %}
+			<p>Merci d'être aussi nombreux à l'édition 2012 du Forum Horizon
+				Chine. La prochaine édition du Forum, au printemps 2013, se tiendra
+				à HEC. Pour de plus amples informations et pour les inscriptions,
+				nous vous invitons à repasser plus tard.</p>
+			<p>
+				Les informations concernant l'édition 2012 (<a
+					href="/forum/visitors/program/fr/">programme</a>, <a
+					href="/forum/visitors/exhibitors/fr/">exposants</a>...) ainsi que <a
+					href="/forum/visitors/job/fr/">les offres d'emploi</a> restent
+				disponibles sur le site.
+			</p>
+			{% endcomment %}
+
+
+
+			<p>Co-organisé par l’Association Amicale Franco-Chinoise de
+				ParisTech (AFCP) et ParisTech, le Forum Horizon Chine est un espace
+				de recrutement d'étudiants et de diplômés chinois et français
+				sinophones issus des Grandes Écoles d'ingénieurs et de commerce de
+				ParisTech.</p>
+
+			<p>Cette année, sa sixième édition se tiendra à <strong>Mines ParisTech</strong>
+				le <strong>18 avril 2013</strong>. Unique en son genre, cet évènement attire les
+				étudiants et jeunes diplômés les plus prometteurs pour une carrière
+				franco-chinoise. Il comprendra un salon de recrutement et des
+				espaces de conférence où vous pourrez :</p>
+			<ul>
+				<li>Rencontrer les jeunes talents chinois en cours de cursus ou déjà diplômés ainsi que des étudiants et jeunes diplômés français souhaitant faire carrière en Chine,</li>
+				<li>Présenter votre entreprise et votre stratégie de développement en Chine et en Asie,</li>
+				<li>Communiquer avec d’autres entreprises et représentants des zones économiques spéciales chinoises, afin de connaître le marché chinois, son environnement réglementaire et les possibilités d’implantation.</li>
+			</ul>
+			<p>Nous vous proposerons une série de conférences et de tables rondes en fin de journée suivie d'un cocktail.</p>
+			<p>Ce forum est co-organisé par l’Association Amicale Franco-Chinoise de ParisTech (AFCP) et ParisTech, avec le soutien de l'Ambassade de Chine.</p>
+			
+			<div class="info">Vous souhaitez obtenir un stand pour votre entreprise ?</div>
+			<p>N'hésitez pas à <a href="/forum/contact/contact/fr/">nous contacter</a> pour recevoir nos offres.</p>
+			<div class="info">Vous êtes étudiant ou ancien élève de ParisTech ?</div>
+			<p>Les inscriptions ouvriront un à deux mois avant le forum.</p>
+			{% comment %}<p class="info"><strong>Changement d'horaire : le Forum commence à 9h.</strong></p>{% endcomment %}
+			{% comment %}<h3>Le 12 avril 2012, de 9h à 19h</h3>
+			<h3>Télécom ParisTech<br/>
+			Site Barrault<br/>
+			46, rue Barrault<br/>
+			75013 Paris</h3>
+			<p>Nous vous invitons à participer à ce grand événement, afin de
+				rencontrer les grandes entreprises françaises et chinoises !</p>
+			<a href="/forum/visitors/inscription/fr/"> <img
+				src="/static/forum/images/inscrivez_redim_200.jpg" width="200" />
+			</a>
+			{% endcomment %}
+			<br>
+			<br>
+			<br>
+			
+			
+			
+		</div>
+
+
+	<!-- TODO: intégrer le lien vers la nouvelle brochure ici -->
+        <!-- hide the brochure 
+		<div id="ecoles" class="block">
+			<div class="block-title">{% trans "Forum précédent" %}</div>
+			<div class="modified">Contenu du bloc à vérifier</div>
+			<p>Vous pouvez obtenir plus de détail concernant l'édition 2011 du forum Horizon Chine 
+			en consultant <a href="/static/doc/ForumHorizonChine2011.pdf">la brochure du forum de 2011</a>.</p>
+			<div class="fixme">Rajoute-t-on un lien vers la brochure de cette année ?</div>
+		</div>
+        -->
+         
+		<div id="planet" class="block">
+			<div class="block-title">{% trans "Organisateurs" %}</div>
+			<!--
+            <div class="modified">Lien sur les images, texte en dessous supprimé</div>
+             -->
+             
+			<div>
+				<table CELLSPACING="10">
+					<tr>
+						<td><a href="/common/lang/?url=%2Fafcp%2F&lang=fr"><img src="/static/forum/images/logo/afcp_logo_redim_250.jpg"
+							width="250" height="36" /></a></td>
+						<td><a href="http://www.paristech.org"><img src="/static/forum/images/logo/paristech_redim_150.jpg"
+							width="150" height="41" /></a></td>
+					</tr>
+				</table>
+			</div>
+
+		</div> <!--/#feeds-->
+	</div> <!--/#right-column-->
+
+</div> <!--/#home-wrapper-->
+
+
+{% endblock %}{# sidebar_and_content #}
+
+
+
+
+
+
+
+
+
+
+

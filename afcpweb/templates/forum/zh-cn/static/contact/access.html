@@ -1,0 +1,70 @@
+﻿{% extends "forum/zh-cn/static/base.html" %}
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+
+  The contact page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: access.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_title %}
+<title>论坛位置:: AFCP</title>
+{% endblock %}{# html_title #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block content %}
+<div class="section">
+  <h1>论坛位置</h1>
+
+    <p>
+    <strong>Télécom ParisTech</strong>
+	</p>
+	<p>
+    <strong>Site Barrault<br/>
+		46, rue Barrault<br/>
+		75013 Paris<br/>
+    </strong>
+	</p>
+
+			<table>	
+			<tr><td>
+			<h2></h2>
+			</td></tr>			
+			<tr><td>
+			<!-- <img src="/static/forum/images/logo/carte.png"  width="680" height="600" />
+			!-->
+                <div style="width: 600px; height: 640px">
+                    <iframe width="600" height="600" frameborder="0" scrolling="no"
+                        marginheight="0" marginwidth="0"
+                        src="http://maps.google.com/maps?f=q&source=s_q&hl=fr&geocode=&q=46%2C%2Brue%2BBarrault%2B-%2B75013%2BParis@48.826270,2.346454&ie=UTF8&z=14&t=m&iwloc=A&output=embed"></iframe>
+                    <br/>
+                    <small><a href="http://maps.google.com/maps?f=q&source=s_q&hl=fr&geocode=&q=46%2C%2Brue%2BBarrault%2B-%2B75013%2BParis@48.826270,2.346454&ie=UTF8&z=14&t=m&iwloc=near">Agrandir
+                        le plan</a></small>
+                </div>
+                
+                <h3>Accès Rue Barrault</h3>
+                <ul>
+                    <li>Métro : ligne 6 (Corvisart)</li>
+                    <li>RER : ligne B (Denfert-Rochereau) puis métro ligne 6 (direction Nation)</li>
+                    <li>Bus : ligne 62 (Vergniaud), 21 (Daviel) ou 67 (Bobillot)</li>
+                    <li>Vélib' : stations 13022 (face aux 27 et 36, rue de la Butte aux Cailles), 13048 (face au 20, rue Wurtz) ou 13024 (face au 81, rue Bobillot)</li>
+                </ul>
+                <p>Site de Télécom ParisTech :<br/>
+                <a href="http://www.telecom-paristech.fr/telecom-paristech/adresses-acces-contacts.html">Page d'accès au site</a><br/>
+                <a href="http://www.telecom-paristech.fr/telecom-paristech/adresses-acces-contacts/acces-rue-barrault.html">Page d'accès depuis les grandes gares et aéroports</a>
+                </p>
+			
+			<!-- end of main contents-->
+
+</div>
+{% endblock %}{# content #}
+
+

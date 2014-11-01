@@ -1,0 +1,62 @@
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+  
+  Educations in curriculum vitae.
+  
+  Created on 2008-11-24.
+  $Id: cv_educations.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+<div id="cv_educations" class="section">
+
+  {% if cv.educations %}
+  
+    <div class="section-header">Educations</div>
+    <div class="section-content">
+      <table class="name-value-table">
+        {% for education in cv.educations %}
+          <tr>
+            <td class="name-cell">{{ education.time }} :</td>
+            <td class="value-cell">
+              <div class="entry-summary">
+                <b>{{ education.college|escape }}</b>
+                {% if education.degree and education.major %}
+                  <br/>
+                  {{ education.degree|escape }}, {{ education.major|escape }}
+                {% endif %}
+                {% if education.aux_info %}
+                  <br/>
+                  {{ entry.aux_info|escape }}
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  
+  {% else %}
+  
+    {% if profile.is_current_user_owner %}
+      <div class="section-header section-missing">Educations</div>
+      <div class="section-content section-missing">
+        <i>Educations are missing in this curriculum vitae.</i>
+      </div>
+    {% endif %}
+  
+  {% endif %}
+  
+  {% if profile.is_current_user_owner %}
+    <div class="section-edit-toggle">
+      <a href="#">[edit]</a>
+    </div>
+  {% endif %}
+
+</div><!--/#cv_educations-->
+

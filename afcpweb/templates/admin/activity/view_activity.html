@@ -1,0 +1,164 @@
+{% extends "admin/admin.html" %}
+{% comment %}
+<!--
+  The about page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: show_activity.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+{% load i18n %}
+{% load afcp_extra %}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+{% block html_title %}
+<title>Admin console</title>
+
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+function showInscription() {
+    $("#edit_activity"  ).hide();
+    $("#activity"       ).show("slow");
+}
+
+function showEditForm() {
+    $("#activity"       ).hide();
+    $("#edit_activity"  ).show("slow");
+}
+
+function submitEditForm() {
+   // $("#edit_inscription :button").attr("disabled", "disabled");
+    $("#edit_activity").submit();
+}
+//]]></script>
+{% endblock %}{# html_title #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+{% block content %}
+
+<div class="section">
+   <h1>AFCP Admin Console</h1>
+{% if info %}
+  <div class="info message">
+    {{ info|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+{% if error %}
+  <div class="error message">
+    {{ error|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+      <h3>Copy this link for disribute this inscription:</h3>
+      <input type="text" size="80" value="http://www.afcp-paristech.org/activities/{{ activity.uid }}/"></input>
+      <div>
+      <h3>Show the activity detail:</h3>
+      <table>
+
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Name" %} :</td>
+          <td>
+            {% if activity.name %}
+              {{ activity.name }}
+			{% endif %}
+          </td>
+        </tr>
+
+
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Subject" %} :</td>
+          <td>
+            {% if activity.subject %}
+              {{ activity.subject }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+
+
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Address" %} :</td>
+          <td>
+            {% if activity.address %}
+              {{ activity.address }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+		
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Date" %} :</td>
+          <td>
+            {% if activity.date %}
+              {{ activity.date|date:"Y-m-d H:i"}}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Is closed ?" %} :</td>
+          <td>
+            {% if activity.is_closed %}
+              {{ activity.is_closed }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>		
+        
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Spreadsheet link" %} :</td>
+          <td>
+    
+            {% if activity.spreadsheet_link %}
+             {{ activity.spreadsheet_link|mark_escape }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+            
+          </td>
+        </tr>
+
+	</table>
+	</div>
+
+	
+</div>  
+
+	  <div class="section-footer">
+      Your operations about this activity:
+	  <br/>
+        <a href="/admin/activity/">Return to list</a>
+      | <a href="/admin/activity/create/{{ activity.uid}}/">Change the activity info</a>
+	  | <a href="/admin/activity/delete/{{ activity.uid}}/">Delete this activity</a> 
+    </div><!--/.section-footer-->
+
+	
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+
+
+
+

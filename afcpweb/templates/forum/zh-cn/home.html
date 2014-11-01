@@ -1,0 +1,162 @@
+{% extends "forum/zh-cn/base.html" %} 
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+
+  Created on 2008-10-28.
+  $Id: home.html 39 2010-03-08 21:47:02Z guolin.mobi $
+-->
+{% endcomment %} 
+
+{% load i18n %}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>AFCP Forum</title>
+
+<link rel="stylesheet" type="text/css" media="screen"
+	href="/static/stylesheets/home.css" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="/static/stylesheets/block.css" />
+
+<style type="text/css">
+<!--
+#header-wrapper {
+	margin: 0 0 10px 0;
+	padding: 0;
+	width: 900px;
+	height: 270px;
+	background: #888888
+		url("/static/forum/images/{{ banner_image.id }}.jpg") no-repeat top;
+	border-width: 4px 0 4px 0;
+	border-style: solid;
+	border-color: #888888;
+}
+-->
+</style>
+
+{% include "afcp/google_ajax_feed_api.html" %} 
+{% include "afcp/feeds_aggregator.html" %}
+
+<script type="text/javascript">//<![CDATA[
+
+function initialize() {
+    var aggregator = new FeedsAggregator();
+    {% for feed in feeds %}
+        aggregator.addFeed("{{ feed.feed_link }}");
+    {% endfor %}
+    aggregator.showEntries = 10;
+    aggregator.feedsNodeId = "feeds";
+    aggregator.loadAndRender();
+}
+
+$(document).ready( function() { initialize(); } );
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+<div class="banner-image">
+	{% if banner_image.url and banner_image.title %} 
+		<a href="{{ banner_image.url }}" rel="external">{{ banner_image.title|escape }}</a> 
+	{% endif %} 
+	<br /> 
+	{{ banner_image.desc|default:""|escape }}
+</div>
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+{% block sidebar_and_content %}
+
+<div id="home-wrapper" class="container">
+
+	<!-- left column ///////////////////////////////////////////////////////////////////////////// -->
+
+	<div id="left-column">
+		<div id="announcements" class="block">
+			<img src="/static/forum/images/Affiche_forum_2012_redim.jpg" width="420"
+				height="594" />
+		</div>
+	</div>
+
+	<!--/#left-column-->
+
+
+
+
+	<!-- right column //////////////////////////////////////////////////////////////////////////// -->
+
+	<div id="right-column"> <!-- right-column -->
+		<div class="block">
+			<div class="block-title">
+				<h4>
+					欢迎来到<em>2012“中国地平线”</em>招聘论坛
+				</h4>
+			</div>
+
+			<p>由巴黎高科中法友好协会（AFCP）与巴黎高科（ParisTech）联合主办的第五届“中国地平线”招聘论坛（Forum
+				Horizon Chine 2012）将于2012年4月12日在巴黎高科国立巴黎高等电信大学校（Télécom ParisTech）举行。</p>
+			<p>
+				作为留法学子与中法大中型企业面对面交流的平台，本次论坛将为大家提供现场申请工作与实习的机会。<br>
+			</p>
+			<p class="info"><strong>Changement d'horaire : le Forum commence à 9h.</strong></p>
+			<h4>
+				时间：2012年4月12日 9时至19时 <br>
+			</h4>
+			<h4>
+				地点：巴黎高科国立巴黎高等电信大学校（Télécom ParisTech）
+				46, rue Barrault - 75013 Paris
+			</h4>
+			<p>我们诚挚邀请您参加此次论坛。</p>
+
+			<a href="/forum/inscription/"> <img
+				src="/static/forum/images/inscrivez.jpg" width="200" />
+			</a><br> <br> <br>
+		</div>
+
+        <!-- hide the brochure
+
+		<div id="ecoles" class="block">
+			<div class="block-title">论坛的介绍</div>
+			<P>您能够获取我们的宣传册
+			<P>
+				<h> <a href="/static/doc/ForumHorizonChine2011.pdf">Brochure
+					2011</a></h>
+		</div>
+        -->
+		<div id="planet" class="block">
+			<div class="block-title">主办方</div>
+
+			<div>
+				<table CELLSPACING="10">
+
+                    <tr>
+						<td><a href="/common/lang/?url=%2Fafcp%2F&lang=fr"><img src="/static/forum/images/logo/afcp_logo_redim_250.jpg"
+							width="250" height="36" /></a></td>
+						<td><a href="http://www.paristech.org"><img src="/static/forum/images/logo/paristech_redim_150.jpg"
+							width="150" height="41" /></a></td>
+					</tr>
+					
+				</table>
+			</div>
+
+		</div>
+		<!--/#feeds-->
+
+	</div>
+	<!--/#right-column-->
+
+</div>
+<!--/#home-wrapper-->
+
+
+{% endblock %}{# sidebar_and_content #}

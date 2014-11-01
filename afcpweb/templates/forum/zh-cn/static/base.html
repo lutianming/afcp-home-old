@@ -1,0 +1,98 @@
+{% extends "forum/zh-cn/base.html" %}
+{% comment %}
+<!--
+  Created on 2008-12-08.
+  $Id: base.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_head %}
+
+{% block html_title %}FIXME: html_title{% endblock %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="/static/stylesheets/sections.css"/>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block language %}
+    <a href="/forum/{{supage_name}}/{{ page_name }}/fr/"><img src="/static/forum/images/lang_fr.gif" alt="fr"/></a>
+    <a href="/forum/{{supage_name}}/{{ page_name }}/zh-cn/"><img src="/static/forum/images/lang_zh-cn.gif" alt="zh-cn"/></a>	
+{% endblock %}{# language #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block content %}
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar %}
+<!--
+<div class="sidebar-section">
+  <div class="title">关于AFCP</div>
+  <ul class="list">
+    
+    <li><a href="/afcp/">AFCP主页</a></li>
+
+  </ul>
+</div>
+-->
+
+<div class="sidebar-section">
+  <div class="title">学生到访</div>
+  <a class="button" href="/forum/inscript/forum/zh-cn/">点击注册 !</a>
+  <ul class="list">
+    <li {% ifequal thispage "entry_visitors_program" %}class="current"{% endifequal %}><a href="/forum/visitors/program/zh-cn/">活动安排</a></li>
+    <li {% ifequal thispage "entry_visitors_exhibitors" %}class="current"{% endifequal %}><a href="/forum/visitors/exhibitors/zh-cn/">受邀企业</a></li>
+    <li {% ifequal thispage "entry_visitors_job" %}class="current"{% endifequal %}><a href="/forum/visitors/job/zh-cn/">职位信息</a></li>
+	<li {% ifequal thispage "entry_visitors_inscription" %}class="current"{% endifequal %}><a href="/forum/visitors/inscription/zh-cn/">学生注册</a></li>
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="title">企业到访</div>
+  <ul class="list">
+    <!-- <li {% ifequal thispage "entry_exhibitors_letter" %}class="current"{% endifequal %}><a href="/forum/exhibitors/letter/zh-cn/">邀请信</a></li> -->
+    <li {% ifequal thispage "entry_exhibitors_visitors" %}class="current"{% endifequal %}><a href="/forum/exhibitors/visitors/zh-cn/">受邀学生</a></li>
+    <li {% ifequal thispage "entry_exhibitors_services" %}class="current"{% endifequal %}><a href="/forum/exhibitors/services/zh-cn/">我们的服务</a></li>
+  
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="title">联系我们</div>
+  <ul class="list">
+    <li {% ifequal thispage "entry_contact_access" %}class="current"{% endifequal %}><a href="/forum/contact/access/zh-cn/">我们的位置</a></li>
+		<li {% ifequal thispage "entry_contact_balance" %}class="current"{% endifequal %}><a
+			href="/forum/contact/balance/zh-cn/">Bilan 2011</a></li>
+    <li {% ifequal thispage "entry_contact_contact" %}class="current"{% endifequal %}><a href="/forum/contact/contact/zh-cn/">我们的团队</a></li>
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="title">关于论坛</div>
+  <ul class="list">
+    <li><a href="/forum/home/zh-cn/">论坛主页</a></li>
+
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="entry">
+    <a href="/forum/{{supage_name}}/{{ page_name }}/fr/"><img src="/static/forum/images/lang_fr.gif" alt="fr"/></a>
+    <a href="/forum/{{ supage_name }}/{{ page_name }}/zh-cn/"><img src="/static/forum/images/lang_zh-cn.gif" alt="zh-cn"/></a>
+  </div>
+</div>
+
+{% endblock %}{# sidebar #}
+
+

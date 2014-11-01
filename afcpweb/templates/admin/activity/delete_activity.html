@@ -1,0 +1,79 @@
+{% extends "admin/admin.html" %}
+{% comment %}
+<!--
+  The about page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: show_activity.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+{% load i18n %}
+{% load afcp_extra %}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+{% block html_title %}
+<title>Admin console</title>
+
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+function submitEditForm() {
+    $("#delete_activity").submit();
+}
+//]]></script>
+{% endblock %}{# html_title #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+{% block content %}
+
+<div class="section">
+   <h1>AFCP Admin Console</h1>
+{% if info %}
+  <div class="info message">
+    {{ info|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+{% if error %}
+  <div class="error message">
+    {{ error|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+    <div>
+
+     <h3>Are you sure to delete this activity?</h3>
+     
+     <form id="delete_activity" action="." method="POST" enctype="form-data">
+     	<input type="button" value="{% trans "Confirm" %}" onclick="submitEditForm();"/>
+     </form>
+     
+	</div>
+	
+</div>  
+
+	  <div class="section-footer">
+       Your operations about this activity:
+	  <br/>
+        <a href="/admin/activity/">Return to list</a>
+      | <a href="/admin/activity/create/{{ activity.uid}}/">Change the activity info</a>
+    </div><!--/.section-footer-->
+
+	
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+
+
+
+

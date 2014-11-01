@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-10-28.
+  $Id: news.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/news.css"/>
+
+<title>Planet AFCP</title>
+
+{% include "utils/google_ajax_feed_api.html" %}
+{% include "utils/feeds_aggregator.html" %}
+
+<!-- <script type="text/javascript">//<![CDATA[
+
+function initialize() {
+    var aggregator = new FeedsAggregator();
+    {% for feed in feeds %}
+        aggregator.addFeed("{{ feed.feed_link }}");
+    {% endfor %}
+    aggregator.feedsNodeId = "feeds";
+    aggregator.loadAndRender();
+}
+
+$(document).ready( function() { initialize(); } );
+
+//]]></script> -->
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar_and_content %}
+
+<div id="planet-content" class="container">
+	
+	
+	<h1>AFCP-Chine首期校友沙龙暨2013归国校友迎新会</h1>
+
+<!-- <p>12月19日（周四）晚 19:00-21:00
+
+<p>为巴黎高科的校友以及所有高科兄弟院校的朋友准备了一场校友沙龙活动，欢迎各位的参与，或者谢谢帮忙转发给国内的朋友。
+
+<p>活动信息如下： -->
+
+<p>又是一年花相似，又是一岁人归来。
+
+<p>从GMT+1到GMT+8，无论是今年还是往年回到中国的我们，在职业发展中与法国的联系，是否跑赢了时差？
+
+<p>成功的喜悦，转变的迷茫，是我们大部分人共同的经历。
+
+<p>年末之际，圣诞将临，AFCP-Chine举办<strong>首期校友沙龙暨2013归国校友迎新会</strong>，以<strong>「当时区拨回GMT+8: 职业生涯，与法国还相关吗?」</strong>为主题，邀请校友们一聚。同时，我们还荣幸地邀请到三位巴黎高科及友校Sciences Po资深校友作为主讲嘉宾：
+
+<ul>
+        <li><strong>刘波，Ecole des Ponts ParisTech，General Manager of SADE (Veolia Water Group) China</strong>
+        <li><strong>王登勇，Science Po，上海证监局期货监管处副处长</strong>
+        <li><strong>唐祺，TELECOM ParisTech，Senior Oversea Sales Manager of Alcatel-Lucent Shanghai Bell</strong>
+</ul>
+
+<p>让我们重逢老朋友，结实新朋友， 一起品茗嘉宾们智慧的谈话，分享彼此的经验与收获。
+
+<p style="color: red;"><strong>活动信息</strong>
+
+<p><strong>时间：</strong>2013年12月19日（周四）晚 19:00-21:00
+
+<p><strong>地点：</strong>上海，享咖 Citta' Espresso Club，福州路318号2楼（附件地图）
+
+<p><strong>交通：</strong>地铁2号线南京东路站3号出口
+
+<p><strong>活动形式：</strong>1h 嘉宾分享 + 1h 自由交流 (现场提供饮料、点心)
+
+<p style="color: red;"><strong>报名方法与费用</strong>
+
+<p><strong>报名：</strong>请发送邮件至afcpchine[_at_]163.com，注明姓名、学校Promo、回国时间。
+
+<p>本次活动限30人，以报名邮件先后顺序为准， <strong>报名截止时间2013年12月15日（周日）晚 24h</strong>
+
+<p><strong>活动费用：</strong>2013年归国校友10RMB/人，其余20RMB/人（象征性收取，以补贴场地租用等支出）
+
+<p><strong>联系人</strong>
+
+<p>吴云峰 18621895283 yunfeng.wu1[_at_]gmail.com
+
+<p>张辰 13918086935 shaniashaniachen[_at_]hotmail.com 
+
+<p><strong>志愿者招募</strong>
+
+<p>AFCP-Chine有越来越多的活动有待开展，我们非常希望各位校友能够参与到活动组织中，期待志愿者加入充满活力的AFCP-Chine 团队。志愿者报名，请发送邮件至afcpchine[_at_]163.com。
+
+<hr/>
+
+<p><strong>AFCP-Chine vous attend !</strong>
+
+<p style="text-align: center;"><img src="{{ static_ }}/afcp/news/affiche.jpg" alt="Affiche" width="860px" height="1216px" />
+
+<p style="text-align: center;"><img src="{{ static_ }}/afcp/news/carte.jpg" alt="Carte" width="762px" height="718px" />
+
+</div><!--/#planet-content-->
+
+{% endblock %}{# sidebar_and_content #}
+

@@ -1,0 +1,450 @@
+{% extends "afcp/static/fr/about/about.html" %}
+{% comment %}
+<!--
+  The office page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: bureau.html 39 2010-03-08 21:47:02Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_title %}
+<title>AFCP bureau 2009</title>
+{% endblock %}{# html_title #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block content %}
+
+<div class="section contact">
+	<h1>AFCP bureau 2012</h1>
+	
+	<table>
+		<tr>
+			<th>姓名</th>
+			<th>职务</th>
+			<th>Nom</th>
+			<th>Titre</th>
+		</tr>
+		<tr>
+			<td>朱琪</td>
+			<td>主席</td>
+			<td>ZHU Qi</td>
+			<td>Président</td>
+		</tr>
+		<tr>
+			<td>雨果</td>
+			<td>副主席</td>
+			<td>PHILIPPART Ugo</td>
+			<td>Vice-président</td>
+		</tr>
+		<tr>
+			<td>章楠</td>
+			<td>副主席</td>
+			<td>ZHANG Nan</td>
+			<td>Vice-président</td>
+		</tr>
+		<tr>
+			<td>官鹏</td>
+			<td>秘书长</td>
+			<td>GUAN Peng</td>
+			<td>Secrétaire Général</td>
+		</tr>
+		<tr>
+			<td>高润</td>
+			<td>财务长</td>
+			<td>GAO Run</td>
+			<td>Trésorier</td>
+		</tr>
+		<tr>
+			<td>罗宇</td>
+			<td>副财务长</td>
+			<td>LUO Yu</td>
+			<td>Trésorier adjoint</td>
+		</tr>
+		<tr>
+			<td>雷力伟</td>
+			<td>中法交流部负责人</td>
+			<td>LE RIGOLEUR Olivier</td>
+			<td>Conseiller culturel franco-chinois</td>
+		</tr>
+		<tr>
+			<td>曾志舟</td>
+			<td>中法交流部负责人</td>
+			<td>ZENG Zhizhou</td>
+			<td>Conseiller culturel franco-chinois</td>
+		</tr>
+		<tr>
+			<td>罗恒 </td>
+			<td>宣传部负责人</td>
+			<td>ERIGNOUX Laurent</td>
+			<td>Responsable de la communication</td>
+		</tr>
+		<tr>
+			<td>曲雁涛</td>
+			<td>宣传部负责人</td>
+			<td>QU Yantao</td>
+			<td>Responsable de la communication</td>
+		</tr>
+		<tr>
+			<td>廉和</td>
+			<td>宣传部负责人</td>
+			<td>LIAN He</td>
+			<td>Responsable de la communication</td>
+		</tr>
+		<tr>
+			<td>石飞</td>
+			<td>IT部负责人</td>
+			<td>SHI Fei</td>
+			<td>Responsable IT</td>
+		</tr>
+		<tr>
+			<td>邓垦</td>
+			<td>企业部负责人</td>
+			<td>DENG Ken</td>
+			<td>Responsable de la relation avec les entreprises</td>
+		</tr>
+		<tr>
+			<td>陈瑜瑜</td>
+			<td>校友部负责人</td>
+			<td>CHEN Yuyu</td>
+			<td>Responsable du pôle Alumni</td>
+		</tr>
+		<tr>
+			<td>张翼</td>
+			<td>文娱部负责人</td>
+			<td>ZHANG Yi</td>
+			<td>Responsable culturel</td>
+		</tr>
+	</table>
+
+	{% comment %}
+	<table>
+		<tr>
+			<th>姓名</th>
+			<th>职务</th>
+			<th>Nom</th>
+			<th>Titre</th>
+		</tr>
+		<tr>
+			<td>刘群凯</td>
+			<td>中方荣誉主席</td>
+			<td>LIU Qunkai</td>
+			<td>Président d’honneur chinois</td>
+		</tr>
+		<tr>
+			<td>博思</td>
+			<td>法方荣誉主席</td>
+			<td>Pascal Gerbert-Gaillard</td>
+			<td>Président d’honneur français</td>
+		</tr>
+		<tr>
+			<td>郑坂</td>
+			<td>主席</td>
+			<td>ZHENG Ban</td>
+			<td>Président</td>
+		</tr>
+		<tr>
+			<td>潘伯良</td>
+			<td>副主席</td>
+			<td>Yannick BENICHOU</td>
+			<td>Vice-président</td>
+		</tr>
+		<tr>
+			<td>曾志舟</td>
+			<td>副主席</td>
+			<td>ZENG Zhizhou</td>
+			<td>Vice-président</td>
+		</tr>
+		<tr>
+			<td>陈天帆</td>
+			<td>秘书长</td>
+			<td>CHEN Tianfan</td>
+			<td>Secrétaire Général</td>
+		</tr>
+		<tr>
+			<td>潘楷</td>
+			<td>财务长</td>
+			<td>PAN Kai</td>
+			<td>Trésorier</td>
+		</tr>
+		<tr>
+			<td>曲雁涛</td>
+			<td>宣传部负责人</td>
+			<td>QU Yantao</td>
+			<td>Département Communication (Responsable)</td>
+		</tr>
+		<tr>
+			<td>朱琪</td>
+			<td>企业部负责人</td>
+			<td>ZHU Qi</td>
+			<td>Département Entreprise (Responsable)</td>
+		</tr>
+		<tr>
+			<td>高润</td>
+			<td>企业部负责人</td>
+			<td>GAO Run</td>
+			<td>Département Entreprise (Responsable)</td>
+		</tr>
+		<tr>
+			<td>程铁</td>
+			<td>校友部负责人</td>
+			<td>CHENG Tie</td>
+			<td>Département Alumni (Responsable)</td>
+		</tr>
+		<tr>
+			<td>屈思啸</td>
+			<td>校友部负责人</td>
+			<td>QU Sixiao</td>
+			<td>Département Alumni (Responsable)</td>
+		</tr>
+		<tr>
+			<td>官鹏</td>
+			<td>文娱部负责人</td>
+			<td>GUAN Peng</td>
+			<td>Département Culture (Responsable)</td>
+		</tr>
+		<tr>
+			<td>何姗</td>
+			<td>中法交流部负责人</td>
+			<td>Sarah Hoessler</td>
+			<td>Département Échanges Franco-Chinois</td>
+		</tr>
+		<tr>
+			<td>廉和</td>
+			<td>宣传部负责人</td>
+			<td>LIAN He</td>
+			<td>Département Communication (Responsable)</td>
+		</tr>
+		<tr>
+			<td>眭阳</td>
+			<td>中国负责人</td>
+			<td>SUI Yang</td>
+			<td>Responsable en Chine</td>
+		</tr>
+		<tr>
+			<td>郭振华</td>
+			<td>上海负责人</td>
+			<td>GUO Zhenhua</td>
+			<td>Responsable Shanghai</td>
+		</tr>
+		<tr>
+			<td>石飞</td>
+			<td>IT部负责人</td>
+			<td>SHI Fei</td>
+			<td>Département IT (Responsable)</td>
+		</tr>
+		<tr>
+			<td>安东尼</td>
+			<td>IT部负责人</td>
+			<td>ORY-LAMBALLE Antoine</td>
+			<td>Département IT</td>
+		</tr>
+	</table>
+	{% endcomment %}
+
+	{% comment %}
+	<table cellspacing="0" border="1">		
+		<tr><td colspan="2"><h2>Président<h2></td></tr>
+		<tr>
+		<td><img src="/static/afcp/images/bureau/LIUQunkai.jpg"  width="120" height="150"/></td>
+		<td ><p><b>刘群凯 (LIU Qunkai)</b></p>
+		<p>e-mail : qunkai.liu@gmail.com  Tél. : 06 27 04 26 59</p>
+		<ul>
+			<li>Ancien Elève d'Ingénieur de TELECOM ParisTech la promotion 2005</li>
+			<li>Maîtrise ès science (BAC+4) en Electronique et Informatique de l'Université de Nanjing en 2003</li>
+			<li>Actuellement Marketing Manager (zone AMEA & Belgique) chez Orange Business Services</li>
+		</ul>
+		</td>
+		</tr>
+		
+		<tr><td colspan="2"><h2>Vice-Président<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/Pascal.jpg"  width="120" height="150"/></td>
+		<td ><p><b>Pascal Gerbert-Gaillard </b></p>
+		<p>e-mail : pgg@melix.net 	Tél. : 06 16 10 09 44</p>
+		<ul>
+			<li>Ancien Elève de l’Ecole polytechnique promotion 2000</li>
+			<li>Ingénieur de l’Ecole des Mines promotion 2002</li>
+			<li>Master de Sciences Po promotion 2006</li>
+			<li>Actuellement directeur Japon et Asie chez DIAM International SAS</li>
+			<li>Fondateur de l’Association « Les Routes de la Soie »</li>
+			<li>Membre du Bureau de l’Association des Anciens Eleves et Etudiants de Grandes Ecoles section Asie, fondateur de la section de Beijing</li>
+
+		</ul>
+		</td>
+		</tr>
+	
+		<tr><td colspan="2"><h2>Vice-Président<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/Yannick.jpg"  width="120" height="150"/></td>
+		<td ><p><b>Yannick BENICHOU</b></p>
+		<p>e-mail : yannick.benichou@gmail.com         Tel : 06 65 35 02 94</p>
+		<ul>
+			<li>Ancien Elève de l’Ecole Polytechnique promotion 2003</li>
+			<li>Master en Génie Atomique à l’université Tsinghua (Pékin)</li>
+			<li>Actuellement ingénieur d’études chez Areva, en charge de calculs de neutronique pour l’EPR vendu à la Chine</li>
+		</ul>
+		</td>
+		</tr>
+
+        <tr><td colspan="2"><h2>Vice-Président<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/SUIYang.jpg"  width="120" height="150"/></td>
+		<td ><p><b>眭阳 (SUI Yang)</b></p>
+		<p>e-mail : soleil.chine@gmail.com Tél :06 27 14 47 55</p>
+		<ul>
+			<li>Ingénieur de l’ENST- ParisTech promotion 2008</li>
+			<li>Maîtrise en Télécommunication de l’Université de Nanjing, Chine promotion 2005</li>
+			<li>Actuellement consultant chez ASTEK </li>
+		</ul>
+		</td>
+		</tr>
+        
+        <tr><td colspan="2"><h2>Vice-Président<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/ZHENGBan.jpg"  width="120" height="150"/></td>
+		<td ><p><b>郑坂 (ZHENG Ban)</b></p>
+		<p>e-mail : wisezb@hotmail.com  Tél. :06 29 98 41 72</p>
+		<ul>
+			<li>Diplôme d’ingénieur de l’Ecole Nationale de la Statistique et de l’Administration Economique(prévu en 2009)</li>
+			<li>Diplôme d’ingénieur de l’Ecole Polytechnique </li>
+			<li>Diplôme d’ingénieur de l’Université de Tongji en 2005</li>
+			<li>Stage dans l’équipe d’ingénierie pour Hedge Fund et prop-trading chez Société Générale en 2007</li>
+		</ul>
+		</td>
+		</tr>	
+        
+       <tr><td colspan="2"><h2>Vice-Président<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/CUILei.jpg"  width="120" height="150"/></td>
+		<td ><p><b>崔蕾 (CUI Lei)</b></p>
+		<p>e-mail : cuilei1985@gmail.com	Tel. : 06 03 06 09 00</p>
+		<ul>
+			<li>Diplôme d’ingénieur de l’Ecole Nationale de la Statistique et de l’Administration Economique(prévu en 2009)</li>
+			<li>Diplôme d’ingénieur de l’Ecole Polytechnique </li>
+			<li>Diplôme d’ingénieur de l’Université de Tongji en 2005</li>
+			<li>Stage dans l’équipe d’ingénierie pour Hedge Fund et prop-trading chez Société Générale en 2007</li>
+		</ul>
+		</td>
+		</tr>	
+
+
+		<tr><td colspan="2"><h2>Secrétaire Général<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/CHENTianfan.jpg"  width="120" height="150"/></td>
+		<td ><p><b>陈天帆 (CHEN Tianfan)</b></p>
+		<p>e-mail : chentianfan@gmail.com   Tél. : 06 69 93 80 83</p>
+		<ul>
+			<li>Actuellement Ingénieur de Audio Hardware Verification chez SIGMA DESIGNS EUROPE</li>
+			<li>Ingénieur de l'ENST - TelecomParisTech promotion 2008</li>
+			<li>Maîtrise en Electronique de l'Université de Sud-Est, Chine promotion 2006</li>
+		</ul>
+		</td>
+		</tr>
+
+		<tr><td colspan="2"><h2>Trésorier<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/PANKai.jpg"  width="120" height="150"/></td>
+		<td ><p><b>潘楷 (PAN Kai)</b></p>
+		<p>e-mail : kai.pan@gadz.org   Tél. : 06 23 42 59 93</p>
+		<ul>
+			<li>Actuellement master en robotique à l'Université Pierre et Marie CURIE</li>
+			<li>Ingénieur de l’ENSAM - ParisTech promotion 2009</li>
+            <li>Maîtrise en Génie mécanique et automatisme de SJTU (Université Jiao
+Tong de Shanghai), Chine promotion 2007</li>
+		</ul>
+		</td>
+		</tr>
+
+
+		<tr><td colspan="2"><h2>Responsable de la Relation Amicale Franco-Chinoise<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/ZHOUDishan.jpg"  width="120" height="150"/></td>
+		<td ><p><b>ZHOU Dishan</b></p>
+		<p>e-mail : zhoudishan@gmail.com</p>
+		<ul>
+			<li>Ingénieur de ENST (Télécom ParisTech), Promo 2008</li>
+			<li>Diplôme d’ingénieur de l’Université de Wuhan en 2006</li>
+			<li>-	Actuellement travail chez Astek, prestataire en réseaux transmission SDH de Alcatel-Lucent, Villarceaux</li>
+		</ul>
+		</td>
+		</tr>
+	
+		<tr><td colspan="2"><h2>Responsable de la Relation Enterprise<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/WANGJunzhe.jpg"  width="120" height="150"/></td>
+		<td ><p><b>王俊哲 (WANG Junzhe)</b></p>
+		<p>e-mail : junzhe.wang.x07@gmail.com   Tél. : 06 75 01 33 31</p>
+		<ul>
+			<li>Ingénieur de l’Ecole Polytechnique : « Quantitative Economics and Finance » , Promotion X2007, France</li>
+			<li>Ingénieur de Université Nationale de Singapour : « Ingénierie des Systèmes Industriels </li>
+		</ul>
+		</td>
+		</tr>
+
+	
+		<tr><td colspan="2"><h2>Responsable de le Relation Alumni<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/WANGRu.jpg"  width="120" height="150"/></td>
+		<td ><p><b>王茹 (WANG Ru)</b></p>
+		<p>e-mail : wangru181@yahoo.com.cn   Tél. : 0615865394</p>
+		<ul>
+			<li>Ingénieur de l'AGROPARISTECH(INA P-G)  promotion 2007</li>
+			<li>Ingénieur en Food science and technology  de NJAU (Université Agriculture de Nanjing), Chine promotion 2003</li>
+			<li>Actuellement stage chez Danone</li>
+		</ul>
+		</td>
+		</tr>
+	
+		<tr><td colspan="2"><h2>Responsable Culture<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/GUOZhenhua.jpg"  width="120" height="150"/></td>
+		<td ><p><b>郭振华 (GUO Zhenhua)</b></p>
+		<p>e-mail : guozhenhua.sjtu@gmail.com  Tél : 06 98 40 35 88</p>
+		<ul>
+			<li>Elève-ingénieur de TELECOM ParisTech promotion2010</li>
+			<li>Maîtrise en Ingénierie d'Information de SJTU (Université Jiao Tong de Shanghai) promotion 2007</li>
+
+		</ul>
+		</td>
+		</tr>
+
+		<tr><td colspan="2"><h2>Responsable de la Communication<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/SHIYujie.jpg"  width="120" height="150"/></td>
+		<td ><p><b>史宇杰 (SHI Yujie)</b></p>
+		<p>e-mail : eugene.shi@gmail.com  Tél : 06 64 49 04 50</p>
+		<ul>
+			<li>Ingénieur de l’ENST Paris (Télécom ParisTech) Promo 2004, France</li>
+			<li>Bachelor of Computer Science, Nanjing University, Promo 2002, China</li>
+			<li>Fondateur et Secrétaire Générale de l’Association des Anciens Elèves de NJU en France (AAENF)</li>
+			<li>Ingénieur du Système d’Opération et Management WCDMA (3G UMTS) chez Alcatel-Lucent depuis fin 2006</li>
+		</ul>
+		</td>
+		</tr>
+
+		<tr><td colspan="2"><h2>Responsable IT<h2></td></tr>	
+		<tr>
+		<td><img src="/static/afcp/images/bureau/GUOLin.jpg"  width="120" height="150"/></td>
+		<td ><p><b>郭麟 (GUO Lin)</b></p>
+		<p>e-mail : guolin.mobi[at]gmail[dot]com  Tél : 06 28 93 34 73</p>
+		<ul>
+			<li>Ingénieur de l’ENST- ParisTech promotion 2008</li>
+			<li>Bachelor en Automatisation de l’Université de Wuhan, Chine promotion 2006</li>
+			<li>Actuellement ingénieur chez Praxedo</li>
+		</ul>
+		</td>
+		</tr>
+		
+	</table>
+{% endcomment %}
+</div>
+
+
+
+{% endblock %}{# content #}
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="B70DF9EF-BD4E-44A2-82E1-EA190F3CC5E6">
+  <lastEdited clientType="local-build-20120518" date="2012-05-18 15:01:03 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>Paristechinois</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>&#x738B;&#x8302;&#x534E;&#x66FE;&#x5728;&#x591A;&#x4E2A;&#x77E5;&#x540D;&#x4F01;&#x4E1A;&#xFF08;&#x963F;&#x5C14;&#x65AF;&#x901A;&#xFF0C;&#x6B27;&#x83B1;&#x96C5;&#x7B49;&#xFF09;&#x4E2D;&#x4ECE;&#x4E8B;&#x91C7;&#x8D2D;&#x76F8;&#x5173;&#x804C;&#x4F4D;&#xFF0C;&#x5305;&#x62EC; &#x9AD8;&#x94C1;&#x4FE1;&#x53F7;&#x7CFB;&#x7EDF;&#x91C7;&#x8D2D;&#x3001;&#x751F;&#x4EA7;&#x8BBE;&#x5907;&#x7CFB;&#x7EDF;&#x91C7;&#x8D2D;&#x3001;&#x5305;&#x88C5;&#x673A;&#x68B0;&#x7684;&#x91C7;&#x8D2D;&#x7B49;&#x3002;&#xD;&#xD;&#x540C;&#x5927;&#x591A;&#x6570;&#x4EBA;&#x4E00;&#x6837;&#xFF0C;&#x627E;&#x5DE5;&#x4F5C;&#x7684;&#x4E00;&#x5F00;&#x59CB;&#x90FD;&#x662F;&#x6492;&#x7F51;&#x5F0F;&#x6295;&#x7B80;&#x5386;&#xFF0C;&#x540E;&#x6765;&#x63A5;&#x89E6;&#x5230;&#x91C7;&#x8D2D;&#x65B9;&#x9762;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x9010;&#x6E10;&#x559C;&#x6B22;&#x4E0A;&#x4E86;&#x81EA;&#x5DF1;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#xD;&#xD;&#x4ECA;&#x5E74;&#x7684;&#x8DF3;&#x69FD;&#x662F;&#x56E0;&#x4E3A;&#x524D;&#x4E00;&#x4EFD;&#x5DE5;&#x4F5C;80%&#x7684;&#x65F6;&#x95F4;&#x5728;&#x51FA;&#x5DEE;&#xFF0C;&#x4E0D;&#x80FD;&#x5E73;&#x8861;&#x5DE5;&#x4F5C;&#x751F;&#x6D3B;&#x3002;&#xD;&#x63D0;&#x51FA;&#x8981;&#x505A;&#x6709;&#x4E2D;&#x56FD;&#x5317;&#x4EAC;&#x7684;&#x6CD5;&#x56FD;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x4E86;&#x89E3;&#x6CD5;&#x4E2D;&#x6587;&#x5316;&#x3002;&#xD;&#x4E0A;&#x5B66;&#x671F;&#x95F4;&#x8981;&#x591A;&#x53C2;&#x52A0;&#x805A;&#x4F1A;&#xFF0C;&#x62D3;&#x5C55;&#x4EBA;&#x9645;&#x7F51;&#x7EDC;&#x3002;&#x4ED6;&#x73B0;&#x5728;&#x7684;&#x670B;&#x53CB;&#x5708;&#x5B50;&#x4E2D;&#x6CD5;&#x56FD;&#x4EBA;&#x5C45;&#x591A;&#xFF0C;&#x4ED6;&#x670B;&#x53CB;&#x5708;&#x5B50;&#x7684;&#x62D3;&#x5C55;&#x4E3B;&#x8981;&#x5F97;&#x76CA;&#x4E8E;ENSAM&#x5F3A;&#x5927;&#x7684;&#x6821;&#x53CB;&#x4F1A;&#x3002;&#xD;&#x901A;&#x8FC7;&#x6821;&#x53CB;&#x7F51;&#x591A;&#x63A5;&#x89E6;&#x5404;&#x79CD;&#x4EBA;&#xFF0C;&#x5404;&#x79CD;&#x5E74;&#x9F84;&#x548C;&#x5DE5;&#x4F5C;&#x7684;&#x7FA4;&#x4F53;&#x3002;&#xD;&#xD;&#x5173;&#x4E8E;&#x9891;&#x7E41;&#x6362;&#x5DE5;&#x4F5C;&#xFF0C;&#x4ED6;&#x8BF4;&#xFF1A;&#x6362;&#x5DE5;&#x4F5C;&#x5C31;&#x50CF;&#x53BB;soir&#xE9;e&#xFF0C;&#x8981;&#x4E60;&#x60EF;&#x4E8E;&#x8BA4;&#x8BC6;&#x65B0;&#x4EBA;&#xFF0C;&#xD;&#xD;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>&#x738B;&#x8302;&#x534E;&#x8C08;&#x6BD5;&#x4E1A;</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="10_wang_mao_hua_tan_bi_ye_files/shapeimage_1.png" left="0px" top="0px" width="300px" height="225px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>2012&#x5E74;5&#x6708;10&#x65E5;&#x661F;&#x671F;&#x56DB;</richText>
+  </textBox>
+</content>

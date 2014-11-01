@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>1.Ecole des Ponts</title>
+    <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Ecole_des_Ponts</link>
+    <description>&#x56FD;&#x7ACB;&#x6865;&#x8DEF;&#x5B66;&#x6821;&#xFF08;&#x6CD5;&#x8BED;&#xFF1A;&#xC9;cole nationale des Ponts et Chauss&#xE9;es&#xFF09;&#x662F;&#x6CD5;&#x56FD;&#x7B2C;&#x4E00;&#x6240;&#x5DE5;&#x7A0B;&#x5E08;&#x5B66;&#x6821;&#xFF0C;&#x4E5F;&#x662F;&#x5168;&#x4E16;&#x754C;&#x7B2C;&#x4E00;&#x6240;&#x5DE5;&#x7A0B;&#x9662;&#x6821;&#x3002; &#x8BE5;&#x6821;&#x7531;&#x8DEF;&#x6613;&#x5341;&#x4E94;&#x4E8E;1747&#x5E74;&#x4E0B;&#x4EE4;&#x8981;&#x6C42;&#x5EFA;&#x7ACB;&#x4E00;&#x6240;&#x56FD;&#x5BB6;&#x5DE5;&#x7A0B;&#x5E08;&#x5B66;&#x6821;&#x2014;&#x2014;&#x7687;&#x5BB6;&#x6865;&#x8DEF;&#x5B66;&#x6821;&#xFF0C;&#x65E8;&#x5728;&#x57F9;&#x517B;&#x6865;&#x8DEF;&#x65B9;&#x9762;&#x7684;&#x9886;&#x8896;&#x4EBA;&#x624D;&#x3002;&#x8BE5;&#x6821;&#x5728;1775&#x5E74;&#x88AB;&#x91CD;&#x65B0;&#x547D;&#x540D;&#x4E3A;&#x56FD;&#x7ACB;&#x6865;&#x8DEF;&#x5B66;&#x6821;&#x3002;&#x968F;&#x7740;&#x65F6;&#x4EE3;&#x7684;&#x53D8;&#x8FC1;&#xFF0C;&#x8BE5;&#x6821;&#x57F9;&#x517B;&#x6865;&#x8DEF;&#x5DE5;&#x7A0B;&#x5E08;&#x7684;&#x521D;&#x8877;&#x9010;&#x6E10;&#x6F14;&#x53D8;&#xFF0C;&#x6210;&#x4E3A;&#x4E00;&#x6240;&#x57F9;&#x517B;&#x201C;&#x901A;&#x7528;&#x201D;&#xFF08;g&#xE9;n&#xE9;raliste&#xFF09;&#x5DE5;&#x7A0B;&#x5E08;&#x7684;&#x591A;&#x5B66;&#x79D1;&#x4EA4;&#x53C9;&#x7684;&#x7CBE;&#x82F1;&#x5B66;&#x6821;&#xFF0C;&#x5C24;&#x5176;&#x5728;&#x571F;&#x6728;&#x5DE5;&#x7A0B;&#x3001;&#x57CE;&#x5E02;&#x89C4;&#x5212;&#x3001;&#x516C;&#x5171;&#x5DE5;&#x7A0B;&#x3001;&#x5546;&#x4E1A;&#x7BA1;&#x7406;&#x3001;&#x91D1;&#x878D;&#x5DE5;&#x7A0B;&#x7B49;&#x9886;&#x57DF;&#x4EAB;&#x6709;&#x76DB;&#x8A89;&#x3002;</description>
+    <item>
+      <title>&#x5DE6;&#x5A77;&#x5A77;&#x8BBF;&#x8C08;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Ecole_des_Ponts/tiao_mu/2012/1/28_zuo_ting_ting_fang_tan.html</link>
+      <guid isPermaLink="false">071b3892-99bf-4acc-a671-b4ecd2ad36dc</guid>
+      <pubDate>Sat, 28 Jan 2012 15:46:29 +0100</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Ecole_des_Ponts/tiao_mu/2012/1/28_zuo_ting_ting_fang_tan.html#comment_layer"></iweb:comment>
+    </item>
+    <iweb:dateFormat>y&#x5E74;M&#x6708;d&#x65E5;EEEE</iweb:dateFormat>
+    <iweb:baseURL>file://localhost/Users/Luc/Documents/AE/PariTeChinois/1.Ecole_des_Ponts</iweb:baseURL>
+    <iweb:maximumSummaryItems>10</iweb:maximumSummaryItems>
+  </channel>
+</rss>

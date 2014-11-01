@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% comment %}
+<!--
+  The AFCP members page.
+  
+  Created on 2008-11-14.
+  $Id: members.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block html_head %}
+
+<title>AFCP Members</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function makeZebraTable(id) {
+    $("#" + id + " tr:odd" ).addClass("odd-row");
+    $("#" + id + " tr:even").addClass("even-row");
+}
+
+$(document).ready( function() {
+    makeZebraTable("members");
+} );
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar_and_content %}
+
+<div class="section">
+  <h1>AFCP Members</h1>
+</div>
+
+<div id="members" class="section">
+
+<table width="100%">
+<tr class="head-row" align="right">
+  <td>{% if has_previous %}
+    <a href="/afcp/members?page={{ previous_page }}">previous</a>/
+    {% endif %} 
+	{% if has_next %}
+    <a href="/afcp/members?page={{ next_page }}">next</a>
+    {% endif %}</td>
+</tr>
+
+</table>
+
+  <table width="100%">
+  
+    <tr class="head-row">
+      <td class="nowrap">Name</td>
+      <td class="nowrap">Promo.</td>
+      <td class="nowrap">University / Ecole</td>
+      <td class="nowrap">Email</td>
+      <td class="nowrap">Tel.</td>
+    </tr>
+    
+    {% for member in members.object_list %}
+      <tr>
+        <td class="nowrap"><a href="{{ url_ }}/profile/{{ member.uid }}/">{{ member.names|escape }}</a></td>
+        <td class="nowrap">{{ member.promo|default:"N/A" }}</td>
+        <td class="nowrap">
+          {% if member.univ_id %}
+            <a href="{{ url_ }}/university/{{ member.univ_id }}/">{{ member.univ_id }}</a>
+          {% else %}
+            ?
+          {% endif %}
+          /
+          {% if member.ecole_id %}
+            <a href="{{ url_ }}/ecole/{{ member.ecole_id }}/">{{ member.ecole_id }}</a>
+          {% else %}
+            ?
+          {% endif %}
+        </td>
+        <td class="nowrap">{{ member.munging_email|escape }}</td>
+        <td class="nowrap">{{ member.tel|default:"N/A"|escape }}</td>
+      </tr>
+    {% endfor %}{# member in members #}
+  
+  </table>
+
+</div><!--/#members-->
+
+<div class="section-footer">
+  Currently {{ members.object_count }} members.
+</div>
+
+{% endblock %}{# sidebar_and_content #}
+
+
+
+

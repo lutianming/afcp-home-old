@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-12-08.
+  $Id: about.html 39 2010-03-08 21:47:02Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_head %}
+
+{% block html_title %}FIXME: html_title{% endblock %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="/static/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function markCurrentEntry() {
+    $("#entry_{{ page_name }}").addClass("current");
+}
+
+$(document).ready( function() { markCurrentEntry(); } );
+
+//]]></script>
+
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block content %}
+{% endblock %}{# content #}
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar %}
+
+<div class="sidebar-section">
+  <div class="title" >À propos de l'AFCP</div>
+  <ul class="list">
+    <li id="entry_nous"><a href="/afcp/static/about/nous/fr/">Qui sommes-nous ?</a></li>
+    <li id="entry_paristech"><a href="/afcp/static/about/paristech/fr/">Qui est ParisTech ?</a></li>
+	<li id="entry_paristechchine"><a href="/afcp/static/about/paristechchine/fr/">ParisTech en Chine</a></li>
+	<li id="entry_activities"><a href="/afcp/static/about/activities/fr/">Nos activités</a></li>
+	<li id="entry_bureau"><a href="/afcp/static/about/bureau/fr/">AFCP Bureau 2012</a></li>
+  </ul>
+</div>
+
+
+{% endblock %}{# sidebar #}
+
+
+
+
+

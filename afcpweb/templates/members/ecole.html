@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-12-15.
+  $Id: ecole.html 26 2009-08-04 22:06:00Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_head %}
+<title>{{ ecole.acronym }} :: AFCP</title>
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sidebar.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sections.css"/>
+{% endblock %}{# html_head #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block header %}{% endblock %}{# header #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block sidebar %}
+
+<div class="sidebar-section">
+  <div class="title">ParisTech Ecoles</div>
+  <ul class="list">
+    {% for ecole in ecoles %}
+      <li><a href="{{ url_ }}/ecole/{{ ecole.acronym }}/">{{ ecole.acronym }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}{# sidebar #}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block content %}
+
+<div class="section">
+  <h1>{{ ecole.name|escape }}</h1>
+  <p>
+    {% if ecole.desc %}
+      {{ ecole.desc|escape }}
+    {% else %}
+      <i>No description.</i>
+    {% endif %}
+  </p>
+  <p>
+    <i>#TODO: how to organize ecole pages?</i>
+  </p>
+</div>
+
+<div class="section">
+  <h2>Members from {{ ecole.acronym }}</h2>
+  <p>
+    {% if members.object_list %}
+      {% for member in members.object_list %}
+        <a href="{{ url_ }}/profile/{{ member.uid }}/">{{ member.names|escape }}</a>,
+      {% endfor %}
+    {% else %}
+      <i>No members from this école.</i>
+    {% endif %}
+  </p>
+</div>
+
+<div class="section-footer">
+  {{ ecole.acronym|escape }} official web site:
+  <a href="{{ ecole.website }}" rel="external">{{ ecole.website }}</a>
+</div>
+
+{% endblock %}{# content #}
+
+

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>&#x7533;&#x8BF7;&#x76F8;&#x5173;</title>
+    <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan</link>
+    <description>&#x60F3;&#x7533;&#x8BF7;&#x5374;&#x4E0D;&#x77E5;&#x9053;&#x4ECE;&#x54EA;&#x91CC;&#x4E0B;&#x624B;&#xFF1F;
+&#x6765;&#x8FD9;&#x91CC;&#x770B;&#x770B;&#x5427;&#xFF01;</description>
+    <item>
+      <title>&#x5218;&#x7ACB;&#x817E;&#x7684;&#x7533;&#x8BF7;&#x603B;&#x7ED3;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/18_liu_li_teng_de_shen_qing_zong_jie.html</link>
+      <guid isPermaLink="false">f5034c83-16fc-49dd-ae0c-395689c52655</guid>
+      <pubDate>Fri, 18 May 2012 14:20:18 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/18_liu_li_teng_de_shen_qing_zong_jie.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>&#x674E;&#x6021;&#x8431;&#x7684;EP&#x7533;&#x8BF7;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/13_li_yi_xuan_deEP_shen_qing.html</link>
+      <guid isPermaLink="false">8ce5e9d0-d356-465f-a4be-806296d36cac</guid>
+      <pubDate>Sun, 13 May 2012 22:10:17 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/13_li_yi_xuan_deEP_shen_qing.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>&#x5F20;&#x8FB0;&#x8C08;&#x7533;&#x8BF7;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/13_zhang_chen_tan_shen_qing.html</link>
+      <guid isPermaLink="false">734d85e2-ea22-4904-8952-43453e956be4</guid>
+      <pubDate>Sun, 13 May 2012 19:16:46 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/13_zhang_chen_tan_shen_qing.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>&#x8212;&#x5DDD;&#x7684;&#x6CD5;&#x56FD;&#x7533;&#x8BF7;&#x603B;&#x7ED3;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/10_shu_chuan_de_fa_guo_shen_qing_zong_jie.html</link>
+      <guid isPermaLink="false">5f0af18e-0fa3-4e2d-b69f-d8b3d3d4eeb5</guid>
+      <pubDate>Thu, 10 May 2012 19:43:13 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/10_shu_chuan_de_fa_guo_shen_qing_zong_jie.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>&#x4E01;&#x6BC5;&#x8C08;&#x7533;&#x8BF7;</title>
+      <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/10_ding_yi_tan_shen_qing.html</link>
+      <guid isPermaLink="false">0755766c-183e-4378-b504-4f6f43059b3a</guid>
+      <pubDate>Thu, 10 May 2012 19:34:56 +0200</pubDate>
+      <iweb:comment enabled="0" count="0" link="file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan/tiao_mu/2012/5/10_ding_yi_tan_shen_qing.html#comment_layer"></iweb:comment>
+    </item>
+    <iweb:dateFormat>y&#x5E74;M&#x6708;d&#x65E5;EEEE</iweb:dateFormat>
+    <iweb:baseURL>file://localhost/Users/Luc/Documents/AE/PariTeChinois/shen_qing_xiang_guan</iweb:baseURL>
+    <iweb:maximumSummaryItems>10</iweb:maximumSummaryItems>
+  </channel>
+</rss>

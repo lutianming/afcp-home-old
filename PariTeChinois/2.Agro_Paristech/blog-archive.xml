@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>2.Agro Paristech</title>
+    <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/2.Agro_Paristech</link>
+    <description>INA-PG(&#x56FD;&#x7ACB;&#x519C;&#x827A;&#x5B66;&#x6821;)&#x3001; ENGREF(&#x56FD;&#x7ACB;&#x6797;&#x4E1A;&#x3001;&#x6C34;&#x548C;&#x73AF;&#x5883;&#x5B66;&#x6821;)&#x4EE5;&#x53CA; ENSIA(&#x56FD;&#x7ACB;&#x9AD8;&#x7B49;&#x519C;&#x4E1A;&#x4E0E;&#x98DF;&#x54C1;&#x5DE5;&#x4E1A;&#x5B66;&#x9662;)&#x5408;&#x5E76;&#x6210;&#x4E3A;AgroParisTech, &#x5176;&#x4E2D;INA-PG&#x548C;ENGREF&#x6BCF;&#x5E74;&#x901A;&#x8FC7;&#x90FD;&#x5DF4;&#x9ECE;&#x9AD8;&#x79D1;&#x9879;&#x76EE;&#x5F55;&#x53D6;&#x4E2D;&#x56FD;&#x5B66;&#x751F;&#x3002;&#x89C4;&#x6A21;&#x8F83;&#x5927;,&#x662F;&#x6CD5;&#x56FD;&#x5728;&#x519C;&#x4E1A;&#x65B9;&#x9762;&#x6700;&#x597D;&#x7684;&#x5B66;&#x6821;,&#x5176;&#x4ED6;&#x7684;&#x4E13;&#x4E1A;&#x8BBE;&#x7F6E;&#x4E5F;&#x8F83;&#x4E3A;&#x9F50;&#x5168;;ENGREF &#x5C0F;&#x800C;&#x7CBE;&#x608D;,&#x5728;&#x6C34;&#xFF0C;&#x6797;&#x4E1A;&#x3001;&#x73AF;&#x5883;&#x7BA1;&#x7406;&#x7B49;&#x65B9;&#x9762;&#x66F4;&#x5177;&#x4F18;&#x52BF;&#x3002;&#x73AF;&#x5883;&#x7BA1;&#x7406;&#x662F;ENGREF&#x7684;&#x5F3A;&#x9879;;&#x53E6;&#x5916;,ENGREF &#x7684;&#x8BFE;&#x7A0B;&#x975E;&#x5E38;&#x6709;&#x8DA3;,&#x4E0D;&#x540C;&#x7684;&#x8BFE;&#x7A0B;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x57CE;&#x5E02;&#x4E0A;,&#x9700;&#x8981;&#x4E00;&#x76F4;&#x8FC7;&#x7740;&#x8FC1;&#x5F99;&#x7684;&#x751F;&#x6D3B;,&#x5E76;&#x4F1A;&#x8BA9;&#x5B66;&#x751F;&#x627F;&#x62C5; project,&#x4ECE;&#x4E2D;&#x57F9;&#x517B;&#x89E3;&#x51B3;&#x5B9E;&#x9645;&#x95EE;&#x9898;&#x7684;&#x80FD;&#x529B;,&#x9664;&#x4E86;&#x8BFE;&#x5802;project&#x8FD8;&#x6709;&#x5728;&#x516C;&#x53F8;&#x7684;&#x5B9E;&#x4E60;&#x673A;&#x4F1A;&#x3002;
+</description>
+    <iweb:dateFormat>y&#x5E74;M&#x6708;d&#x65E5;EEEE</iweb:dateFormat>
+    <iweb:baseURL>file://localhost/Users/Luc/Documents/AE/PariTeChinois/2.Agro_Paristech</iweb:baseURL>
+    <iweb:maximumSummaryItems>10</iweb:maximumSummaryItems>
+  </channel>
+</rss>

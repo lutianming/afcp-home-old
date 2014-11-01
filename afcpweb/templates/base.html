@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% comment %}
+<!--
+  The base template for the AFCP webapp.
+  
+  Created on 2008-10-28.
+  $Id: base.html 33 2009-09-30 23:22:08Z guolin.mobi $
+-->
+{% endcomment %}
+
+{% load i18n %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="webapp" content="buggarden.apps.afcp" />
+<meta name="models_revision" content="{{ models_revision_ }}" />
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="{{ static_ }}/stylesheets/common.css" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/all_ie.css"/>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen"
+	href="{{ static_ }}/stylesheets/sidebar.css" />
+
+{% include "utils/google_ajax_apis.html" %}
+{% include "utils/jquery.html" %}
+{% block html_head %}{% endblock %}
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push([ '_setAccount', 'UA-44275600-2' ]);
+	_gaq.push([ '_trackPageview' ]);
+
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</head>
+  
+  <body>
+    
+    <div id="outer-wrapper">
+    
+      <div id="topbar-wrapper">
+      
+        <div class="logo">
+          <a href="/afcp/"><img src="{{ static_ }}/afcp/images/afcp_logo.jpg" alt="AFCP Logo"/></a>
+        </div><!--/.logo-->
+        
+
+		
+        <div class="links">
+       
+          {% if user_ %}
+              {{ user_.email }}
+            | <a href="/members/my_profile/">{% trans "Mon Profile" %}</a>
+            | <a href="{{ log_url_ }}">{% trans "Logout" %}</a>
+          {% else %}
+              {% trans "Bienvenue" %} !
+            | <a href="{{ log_url_ }}">{% trans "Login" %}</a>
+          {% endif %}
+          {% if is_admin_ %}
+            | <a href="/admin/">Admin</a>
+          {% endif %}
+          |
+          {% for lang in languages_ %}
+            {% if lang.is_current %}
+              <img src="{{ static_ }}/images/lang_{{ lang.code }}.gif" alt="{{ lang.code }}"/>
+            {% else %}
+              <a href="{{ lang.url }}">
+                <img src="{{ static_ }}/images/lang_{{ lang.code }}.gif" alt="{{ lang.code }}"/>
+              </a>
+            {% endif %}
+          {% endfor %}
+		<br />
+          
+          <a href="/afcp/">{% trans "Home" %}</a> |
+		  <a href="/afcp/static/about/">AFCP</a> |
+		  <a href="http://www.forumhorizonchine.com" target="_blank">{% trans "Forum" %}</a> |
+		  <a href="/afcp/news/">{% trans "Nouvelles" %}</a> |
+		  <!--<a href="/afcp/members/">{% trans "Membres" %}</a> |-->
+		  <a href="/afcp/amusement/">{% trans "Loisirs" %}</a> |
+		  <a href="/afcp/research/">{% trans "Research" %}</a> |
+		  <a href="/afcp/afcpchine/">{% trans "AFCP Chine" %}</a> |
+		  <a href="/afcp/misc/">{% trans "Divers" %}</a> |
+          <a href="/afcp/static/contact/">{% trans "Contact" %}</a>
+          
+        </div><!--/.links-->
+      
+      </div><!--/#topbar-wrapper-->
+      
+      <div id="header-wrapper">
+        {% block header %}FIXME: header block{% endblock %}
+      </div><!--/#header-wrapper-->
+      
+      <div id="navbar-wrapper">
+        {% block navbar %}{% endblock %}
+      </div><!--/#navbar-wrapper-->
+      
+      <div id="sidebar-and-content-wrapper" class="container">
+      
+        {% block sidebar_and_content %}
+        
+          <div id="sidebar-wrapper">
+            {% block sidebar %}
+              {% include "afcp/sidebar.html" %}
+            {% endblock %}
+          </div><!--/#sidebar-wrapper-->
+          
+          <div id="content-wrapper">
+			<a id="top"></a>
+            {% block content %}FIXME: content block{% endblock %}
+			<div class="section-footer">
+				<p class="hide"><a href="#top">Retour</a></p>
+			</div>	
+          </div><!--/#content-wrapper-->
+        
+          {% endblock %}{# sidebar_and_content #}
+      
+      </div><!--/#sidebar-and-content-wrapper-->
+      <div id="footer-wrapper" class="container">
+      
+        <a href="/afcp/">{% trans "Home" %}</a> |
+        <a href="/afcp/amusement/">Planet AFCP</a> |
+        <a href="/afcp/static/about/">{% trans "About" %} AFCP</a> |
+        <a href="/afcp/static/contact/">{% trans "Contact Us" %}</a> |
+        {% for lang in languages_ %}
+          {% if lang.is_current %}
+            <img src="{{ static_ }}/images/lang_{{ lang.code }}.gif" alt="{{ lang.code }}"/>
+          {% else %}
+            <a href="{{ lang.url }}">
+              <img src="{{ static_ }}/images/lang_{{ lang.code }}.gif" alt="{{ lang.code }}"/>
+            </a>
+          {% endif %}
+        {% endfor %}
+        <br/>
+       
+        <a href="http://www.zhengzhong.net/" rel="external">Thanks</a> |
+        <a href="http://validator.w3.org/check?uri=referer" rel="external">Valid XHTML 1.0!</a> |
+        <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="external">Valid CSS!</a>
+      
+      	<div class="clear"></div>
+      </div><!--/#footer-wrapper-->
+      
+    </div><!--/#outer-wrapper-->
+    
+  </body>
+
+<!--
+    Client request info:
+    * http_referer : {{ http_referer_ }}
+    * remote_addr  : {{ remote_addr_  }}
+    * remote_host  : {{ remote_host_  }}
+    -->
+
+</html>
+
+
+

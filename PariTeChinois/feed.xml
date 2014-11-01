@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:AB697D7D-C3CB-4786-A3BF-88E871773ECC</id>
+ <title>Page list Atom feed</title>
+ <updated>2012-05-18T17:00:37+02:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:317A22FD-D5A7-4AC5-B015-C045C9CB196D</id>
+  <title>首页</title>
+  <title xmlns="urn:iweb:">首页</title>
+  <in-navbar xmlns="urn:iweb:">317A22FD-D5A7-4AC5-B015-C045C9CB196D</in-navbar>
+  <link rel="alternate" href="shou_ye.html"/>
+  <updated>2012-05-18T17:00:37.001+02:00</updated>
+  <content>首页</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:0D7BCCC5-EEEF-4628-A712-B59BB99D9FED</id>
+  <title>申请相关</title>
+  <title xmlns="urn:iweb:">申请相关</title>
+  <in-navbar xmlns="urn:iweb:">0D7BCCC5-EEEF-4628-A712-B59BB99D9FED</in-navbar>
+  <link rel="alternate" href="shen_qing_xiang_guan/shen_qing_xiang_guan.html"/>
+  <updated>2012-05-18T17:00:37.002+02:00</updated>
+  <content>申请相关</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:2660BB0C-8ED8-4904-9C52-D8F1A0F7A6D4</id>
+  <title>在校生活</title>
+  <title xmlns="urn:iweb:">在校生活</title>
+  <in-navbar xmlns="urn:iweb:">2660BB0C-8ED8-4904-9C52-D8F1A0F7A6D4</in-navbar>
+  <link rel="alternate" href="zai_xiao_sheng_huo.html"/>
+  <updated>2012-05-18T17:00:37.003+02:00</updated>
+  <content>在校生活</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:3E12A3EC-64FB-4125-B2EA-847DC7514BBB</id>
+  <title>毕业之后</title>
+  <title xmlns="urn:iweb:">毕业之后</title>
+  <in-navbar xmlns="urn:iweb:">3E12A3EC-64FB-4125-B2EA-847DC7514BBB</in-navbar>
+  <link rel="alternate" href="bi_ye_zhi_hou.html"/>
+  <updated>2012-05-18T17:00:37.004+02:00</updated>
+  <content>毕业之后</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:69E5D3D5-E765-480A-B646-BA0B3028A1F1</id>
+  <title>人人小组</title>
+  <title xmlns="urn:iweb:">人人小组</title>
+  <in-navbar xmlns="urn:iweb:">69E5D3D5-E765-480A-B646-BA0B3028A1F1</in-navbar>
+  <link rel="alternate" href="ren_ren_xiao_zu.html"/>
+  <updated>2012-05-18T17:00:37.005+02:00</updated>
+  <content>人人小组</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:A716CC59-D797-452E-A3F3-F88BEC8EBEC5</id>
+  <title>联系我们</title>
+  <title xmlns="urn:iweb:">联系我们</title>
+  <in-navbar xmlns="urn:iweb:">A716CC59-D797-452E-A3F3-F88BEC8EBEC5</in-navbar>
+  <link rel="alternate" href="lian_xi_wo_men.html"/>
+  <updated>2012-05-18T17:00:37.006+02:00</updated>
+  <content>联系我们</content>
+ </entry>
+</feed>

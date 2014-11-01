@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>2.ENSTA</title>
+    <link>file://localhost/Users/Luc/Documents/AE/PariTeChinois/2.ENSTA</link>
+    <description>Ecole Nationale Superieure de Techniques Avancees&#xFF0C;&#x56FD;&#x7ACB;&#x9AD8;&#x7B49;&#x5148;&#x8FDB;&#x6280;&#x672F;&#x5B66;&#x6821;&#xFF0C;&#x524D;&#x8EAB;&#x662F;Genie Maritime&#xFF08;&#x6CD5;&#x56FD;&#x6D77;&#x519B;&#x5B66;&#x6821;&#xFF0C;1741&#x5E74;&#xFF09;&#xFF1B;ENSTA&#x662F;&#x4E24;&#x6240;&#x6CD5;&#x56FD;&#x56FD;&#x9632;&#x90E8;&#x76F4;&#x5C5E;&#x7684;&#x5B66;&#x6821;&#x4E4B;&#x4E00;&#xFF08;&#x53E6;&#x5916;&#x4E00;&#x6240;&#x5C31;&#x662F;EP&#xFF09;&#x3002;ENSTA&#x7684;&#x4E13;&#x4E1A;&#x4E3B;&#x8981;&#x6709;&#x4E09;&#x4E2A;&#x5927;&#x65B9;&#x5411;&#xFF1A;&#x6570;&#x5B66;&#xFF08;&#x91D1;&#x878D;&#x6570;&#x5B66;&#x3001;&#x6700;&#x4F18;&#x5316;&#x3001;&#x81EA;&#x52A8;&#x5316;....&#xFF09;&#x3001;&#x529B;&#x5B66;&#xFF08;&#x8239;&#x8236;&#x6D77;&#x6D0B;&#x5DE5;&#x7A0B;&#x3001;&#x8F66;&#x8F86;&#x94C1;&#x8DEF;&#x4EA4;&#x901A;&#x3001;&#x822A;&#x7A7A;&#x3001;&#x6838;&#x7535;&#x3001;&#x5149;&#x5B66;&#x3001;&#x5DE5;&#x4E1A;&#x5DE5;&#x7A0B;&#x3001;&#x5316;&#x5B66;&#x73AF;&#x5883;....&#xFF09;&#x3001;&#x7535;&#x5B50;&#x8BA1;&#x7B97;&#x673A;&#xFF08;&#x673A;&#x5668;&#x4EBA;&#x4E0E;&#x5D4C;&#x5165;&#x5F0F;&#x7CFB;&#x7EDF;&#x3001;&#x901A;&#x4FE1;....&#xFF09;&#x3002;5&#x4E2A;&#x5B9E;&#x9A8C;&#x5BA4;&#xFF1A;&#x5E94;&#x7528;&#x6570;&#x5B66;&#x3001;&#x529B;&#x5B66;&#xFF08;&#x56FA;&#x4F53;&#x529B;&#x5B66;&#x3001;&#x6D41;&#x4F53;&#x529B;&#x5B66;&#xFF09;&#x3001;&#x5E94;&#x7528;&#x5149;&#x5B66;&#xFF08;&#x5168;&#x90E8;&#x5EFA;&#x6210;&#x540E;&#x662F;&#x6B27;&#x6D32;&#x6700;&#x5927;&#x7684;&#x5149;&#x5B66;&#x5B9E;&#x9A8C;&#x5BA4;&#xFF09;&#x3001;&#x7535;&#x5B50;&#xFF08;&#x4E3B;&#x8981;&#x505A;&#x673A;&#x5668;&#x4EBA;&#xFF09;&#x3001;&#x5316;&#x5B66;&#x3002;
+</description>
+    <iweb:dateFormat>y&#x5E74;M&#x6708;d&#x65E5;EEEE</iweb:dateFormat>
+    <iweb:baseURL>file://localhost/Users/Luc/Documents/AE/PariTeChinois/2.ENSTA</iweb:baseURL>
+    <iweb:maximumSummaryItems>10</iweb:maximumSummaryItems>
+  </channel>
+</rss>

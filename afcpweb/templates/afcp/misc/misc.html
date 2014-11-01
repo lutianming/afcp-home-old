@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% comment %}
+<!--
+  Created on 2008-12-08.
+  $Id: amusement.html 28 2009-08-09 00:02:26Z guolin.mobi $
+-->
+{% endcomment %}
+
+{# ---------------------------------------------------------------------------------------------- #}
+
+{% block html_head %}
+
+<title>{% block html_title %}FIXME::AFCP{% endblock %}</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ static_ }}/stylesheets/sections.css"/>
+{% endblock %}{# html_head #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+{% block content %}
+{% endblock %}{# content #}
+{#------------------------------------------------------------------------------------------------#}
+
+{% block sidebar %}
+
+<div class="sidebar-section">
+  <div class="title">Divers</div>
+  <ul class="list">
+    <li {% ifequal page_name "nuitdechine" %}class="current"{% endifequal %}><a href="/afcp/misc/nuitdechine/">Nuit de Chine</a></li>
+    <li {% ifequal page_name "itineraire-x" %}class="current"{% endifequal %}><a href="/afcp/misc/itineraire-x/">Itinéraire vers l'X</a></li>
+    <li {% ifequal page_name "seminaire" %}class="current"{% endifequal %}><a href="/afcp/misc/seminaire/">Séminaire</a></li>
+    <li {% ifequal page_name "roundtable" %}class="current"{% endifequal %}><a href="/afcp/misc/roundtable/">Round Table</a></li>
+  </ul>
+</div>
+
+
+{% endblock %}{# sidebar #}
+
+
+
+
+

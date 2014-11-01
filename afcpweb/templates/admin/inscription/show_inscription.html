@@ -1,0 +1,182 @@
+{% extends "afcp/admin/admin.html" %}
+{% comment %}
+<!--
+  Copyright (C) 2008 ZHENG Zhong <heavyzheng nospam-at gmail D0T com>
+  - http://heavyz.blogspot.com/
+  - http://buggarden.blogspot.com/
+
+  The about page of the AFCP webapp, French version (fr).
+  
+  Created on 2008-11-20.
+  $Id: show_inscription.html 36 2009-10-04 17:39:25Z guolin.mobi $
+-->
+{% endcomment %}
+{% load i18n %}
+
+{% block header %}
+{% endblock %}{# header #}
+
+{#------------------------------------------------------------------------------------------------#}
+{% block html_title %}
+<title>Admin console</title>
+
+
+<link rel="stylesheet" type="text/css" media="screen,print" href="static/afcp/stylesheets/sections.css"/>
+
+<script type="text/javascript">//<![CDATA[
+
+function closeMessage() {
+    $(".message").hide("slow");
+}
+
+//]]></script>
+{% endblock %}{# html_title #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+{% block content %}
+
+{% if info %}
+  <div class="info message">
+    {{ info|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+{% if error %}
+  <div class="error message">
+    {{ error|escape }}
+    <a href="javascript:void(0);" onclick="closeMessage();">[close]</a>
+  </div>
+{% endif %}
+
+
+
+<div class="section">
+    
+      <!-- name -->
+	  <h1>AFCP Admin Console</h1>
+		 
+      <h3>Show your inscription information:</h3>
+	        <!-- detailed info -->
+      <table>
+	  
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Prenom" %} :</td>
+          <td>
+            {% if inscriptor.first_name %}
+              {{ inscriptor.first_name }}
+			{% else %}
+              <i>N/A</i>
+			{% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Nom" %} :</td>
+          <td>
+            {% if inscriptor.last_name %}
+              {{ inscriptor.last_name }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Nom Chinois" %} :</td>
+          <td>
+            {% if inscriptor.name_zh %}
+              {{ inscriptor.name_zh }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+		
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Sex" %} :</td>
+          <td>
+            {% if inscriptor.sex %}
+              {{ inscriptor.sex }}
+            {% else %}
+              <i>N/A</i>
+            {% endif %}
+          </td>
+        </tr>
+		
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Ecole in France" %} :</td>
+          <td>
+            {% if inscriptor.ecole %}
+              <a href="{{ url_ }}/ecole/{{ inscriptor.ecole.acronym }}/">
+                {{ inscriptor.ecole.name }} ({{ inscriptor.ecole.acronym }})
+              </a>
+            {% else %}
+              {{ inscriptor.ecole_id }} 
+            {% endif %}
+          </td>
+        </tr>
+	
+        <tr>
+          <td class="nowrap" width="1%" align="right">{% trans "University in China" %} :</td>
+          <td>
+            {% if inscriptor.university %}
+              <a href="{{ url_ }}/university/{{ inscriptor.university.acronym }}/">
+                {{ inscriptor.university.name }} ({{ inscriptor.university.acronym }})
+              </a>
+            {% else %}
+             {{ inscriptor.univ_id }} 
+            {% endif %}
+          </td>
+        </tr>
+		
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Email" %} :</td>
+          <td>{{ inscriptor.munging_email|escape }}</td>
+	
+        </tr>
+
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Activity inscripted" %} :</td>
+          <td>{{ inscriptor.activity_name|escape }}</td>
+        </tr>
+		
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Is confirmed ?" %} :</td>
+          <td>{{ inscriptor.isConfirmed|escape }}</td>
+        </tr>
+		
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Is send email ?" %} :</td>
+          <td>{{ inscriptor.is_send_email|escape }}</td>
+        </tr>
+
+		<tr>
+          <td class="nowrap" width="1%" align="right">{% trans "Present atelier C.V. ?" %} :</td>
+          <td>{{ inscriptor.present_plus_activity|escape }}</td>
+        </tr>
+      </table>
+</div>  
+
+    <div class="section-footer">
+      Inscriptor created on {{ inscriptor.create_date|date:"Y-m-d H:M" }};
+	  Your have these operations about this inscriptor:
+      <br/>
+        <a href="/afcp/admin/inscription/">Return to list</a>
+      | <a href="/afcp/admin/inscription/change/{{ inscriptor.uid}}/">Change this profile</a>
+	  | <a href="/afcp/admin/inscription/cancel/{{ inscriptor.uid}}/">Cancel this profile</a>
+	  | <a href="/afcp/admin/inscription/confirm/{{ inscriptor.uid}}/">Confirm</a>
+	  | <a href="/afcp/admin/inscription/confirmandemail/{{ inscriptor.uid}}/">Confirm and send Email</a>
+    </div><!--/.section-footer-->
+	
+{% endblock %}{# content #}
+
+{#------------------------------------------------------------------------------------------------#}
+
+
+
+
+
+
+
